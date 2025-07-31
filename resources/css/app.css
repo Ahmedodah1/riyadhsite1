@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@import 'trix/dist/trix.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
