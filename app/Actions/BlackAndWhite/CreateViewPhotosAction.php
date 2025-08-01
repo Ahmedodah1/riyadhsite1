@@ -14,6 +14,6 @@ class CreateViewPhotosAction
     public function handle()
     {
 
-      return view('blackAndWhite.create');
+      return view('BlackAndWhite.create');
     }
 }
