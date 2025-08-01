@@ -42932,7 +42932,7 @@ class Execute extends XFAObject {
     this.connection = attributes.connection || "";
     this.executeType = getStringOption(attributes.executeType, ["import", "remerge"]);
     this.id = attributes.id || "";
-    this.runAt = getStringOption(attributes.runAt, ["client", "both", "server"]);
+    this.runAt = getStringOption(attributes.runAt, ["Client", "both", "server"]);
     this.use = attributes.use || "";
     this.usehref = attributes.usehref || "";
   }
@@ -44533,7 +44533,7 @@ class Script extends StringObject {
     this.contentType = attributes.contentType || "";
     this.id = attributes.id || "";
     this.name = attributes.name || "";
-    this.runAt = getStringOption(attributes.runAt, ["client", "both", "server"]);
+    this.runAt = getStringOption(attributes.runAt, ["Client", "both", "server"]);
     this.use = attributes.use || "";
     this.usehref = attributes.usehref || "";
   }
@@ -47194,12 +47194,12 @@ class Rename extends ContentObject {
 }
 class RenderPolicy extends OptionObject {
   constructor(attributes) {
-    super(CONFIG_NS_ID, "renderPolicy", ["server", "client"]);
+    super(CONFIG_NS_ID, "renderPolicy", ["server", "Client"]);
   }
 }
 class RunScripts extends OptionObject {
   constructor(attributes) {
-    super(CONFIG_NS_ID, "runScripts", ["both", "client", "none", "server"]);
+    super(CONFIG_NS_ID, "runScripts", ["both", "Client", "none", "server"]);
   }
 }
 class config_Script extends XFAObject {

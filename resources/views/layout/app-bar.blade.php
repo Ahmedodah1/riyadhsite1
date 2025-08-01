@@ -38,7 +38,7 @@
                 <div
                     class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
                     <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100">صور آبيض وآسود</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100">صور ملونه</a>
+                    <a href="{{route('colorphoto')}}" class="block px-4 py-2 hover:bg-gray-100">صور ملونه</a>
                 </div>
             </div>
 

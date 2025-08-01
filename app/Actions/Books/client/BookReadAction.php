@@ -14,14 +14,14 @@ class BookReadAction
     public function handle($id)
     {
         $book = Book::findOrFail($id);
-        return view('books.client.read', compact('book'));
+        return view('books.Client.read', compact('book'));
     }
 
 
     public function readCertificatePdf($id)
     {
         $certificate = Certificate::findOrFail($id);
-        return view('certificate.client.read', compact('certificate'));
+        return view('certificate.Client.read', compact('certificate'));
     }
 
 

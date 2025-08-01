@@ -12,6 +12,6 @@ class CertificateClientIndex
     public function handle()
     {
         $certificates = Certificate::query()->get();
-        return view('certificate.client.certificate', compact('certificates'));
+        return view('certificate.Client.certificate', compact('certificates'));
     }
 }
