@@ -11,6 +11,6 @@ class BlackAndWhite
     public function handle()
     {
         $clients=\App\Models\BlackAndWhite::query()->get();
-        return view('clientBlackAndWhite.BlackAndWhite', compact('clients'));
+        return view('ClientBlackAndWhite.BlackAndWhite', compact('clients'));
     }
 }
