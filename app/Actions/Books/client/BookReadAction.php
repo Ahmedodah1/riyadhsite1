@@ -14,7 +14,7 @@ class BookReadAction
     public function handle($id)
     {
         $book = Book::findOrFail($id);
-        return view('books.Client.read', compact('book'));
+        return view('books.client.read', compact('book'));
     }
 
 
