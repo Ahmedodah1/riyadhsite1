@@ -40,7 +40,7 @@ Route::get('/blog', \App\Actions\Blog::class)->name('blog');
 
 
 Route::get('/paintings', \App\Actions\Pintings::class)->name('paintings');
-Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::class)->name('colorphoto');
+Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::class)->name('colorphotos');
 
 
 
