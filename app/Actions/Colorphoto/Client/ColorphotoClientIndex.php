@@ -12,6 +12,6 @@ class ColorphotoClientIndex
     public function handle()
     {
         $colorphotos = Colorphoto::query()->get();
-        return view('colorphoto.Client.colorphoto', compact('colorphotos'));
+        return view('colorphoto.client.Colorphoto', compact('colorphotos'));
     }
 }
