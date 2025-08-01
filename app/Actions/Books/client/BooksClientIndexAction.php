@@ -13,6 +13,6 @@ class BooksClientIndexAction
     {
         $books = Book::query()->take(4)->get();
 
-        return view('books.Client.index', compact('books'));
+        return view('books.client.index', compact('books'));
     }
 }
