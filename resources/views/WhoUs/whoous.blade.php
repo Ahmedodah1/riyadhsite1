@@ -9,7 +9,7 @@
         <div class="relative lg:max-w-7xl w-full bg-white rounded-lg p-9 border border-gray-200 hover:scale-105 duration-300 ease-in-out transform mb-20">
 
             <div class="flex justify-center">
-                <img src="{{asset('storage/' . $notes->image)}}" class="w-36 h-36 rounded-full shadow-lg border-4 border-white">
+                <img src="{{asset('public/storage/' . $notes->image)}}" class="w-36 h-36 rounded-full shadow-lg border-4 border-white">
             </div>
 
             <div class="text-gray-700 text-lg leading-relaxed text-justify space-y-6 mt-8 font-bold">

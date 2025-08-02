@@ -6,7 +6,7 @@
             <div class="bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
                 <div class="relative group">
                     <img
-                        src="{{ $certificate->image ? asset('storage/' . $certificate->image) : asset('1.jpg') }}"
+                        src="{{ $certificate->image ? asset('public/storage/' . $certificate->image) : asset('1.jpg') }}"
                         alt="صورة الشهادة"
                         class="w-full h-56 object-cover object-center transform transition duration-500 group-hover:scale-105"
                     />
