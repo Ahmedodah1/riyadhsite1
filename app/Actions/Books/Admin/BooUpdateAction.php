@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Actions\Books\admin;
+namespace App\Actions\Books\Admin;
 
 use App\Models\Book;
 use Lorisleiva\Actions\Concerns\AsAction;
 
-class BookDeleteAction
+class BooUpdateAction
 {
     use AsAction;
 
     public function handle(Book $book)
     {
-        $book->delete();
-        return back();
+        return view('books.admin.edit', compact('book'));
     }
 }

@@ -89,9 +89,9 @@ Route::prefix('auth')->group(function () {
     Route::post('/book/delete/{book}', \App\Actions\Books\Admin\BookDeleteAction::class)->name('book.delete');
     Route::post('/book/update/{book}', \App\Actions\Books\Admin\BooUpdateViewAction::class)->name('book.update');
     Route::post('/book/edit/{book}', \App\Actions\Books\Admin\BooUpdateAction::class)->name('book.edit');
-    Route::get('/books', \App\Actions\Books\admin\BooksIndexAction::class)->name('books');
-    Route::get('/book-create', \App\Actions\Books\admin\BookCreateView::class)->name('book-create');
-    Route::post('/book-post', \App\Actions\Books\admin\BookPostAction::class)->name('book-post');
+    Route::get('/books', \App\Actions\Books\Admin\BooksIndexAction::class)->name('books');
+    Route::get('/book-create', \App\Actions\Books\Admin\BookCreateView::class)->name('book-create');
+    Route::post('/book-post', \App\Actions\Books\Admin\BookPostAction::class)->name('book-post');
     Route::get('/Admin-create-who-us', \App\Actions\WhoUs\AdminWhoUsCreateAction::class)->name('admin.create.who.us');
     Route::get('/whous-index', \App\Actions\WhoUs\AdminWhoUsIndex::class)->name('whous-index');
     Route::post('/create-notes', \App\Actions\WhoUs\CreateNotesAction::class)->name('create.notes');
