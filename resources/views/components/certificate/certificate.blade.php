@@ -12,9 +12,7 @@
                         alt="صورة الشهادة"
                         class="w-full aspect-[3/2] object-cover object-center transition duration-500 group-hover:scale-105"
                     />
-                    <span class="absolute top-3 right-3 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                        جديد
-                    </span>
+
                 </div>
 
                 <!-- Text content -->
