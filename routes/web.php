@@ -25,7 +25,7 @@ Route::middleware('web')->group(function () {
 
 
 
-Route::get('/signup', \App\Actions\Auth\RegisterViewAction::class)->name('signup');
+// Route::get('/signup', \App\Actions\Auth\RegisterViewAction::class)->name('signup');
 Route::get('/signin', \App\Actions\Auth\LogInViewAction::class)->name('signin');
 Route::post('/signup-post', \App\Actions\Auth\RegisterPostAction::class)->name('signup.post');
 Route::post('/signin-post', \App\Actions\Auth\LoginPostAction::class)->name('signin.post');
