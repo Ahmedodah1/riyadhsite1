@@ -24,7 +24,7 @@
             @if($blog->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
-                    <img src="{{ asset('storage/' . $blog->image) }}" class="h-24 rounded">
+                    <img src="{{ asset('public/storage/' . $blog->image) }}" class="h-24 rounded">
                 </div>
             @endif
 

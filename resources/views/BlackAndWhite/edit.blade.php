@@ -23,14 +23,14 @@
             @if($blackAndWhite->cover_url)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الملف الحالي:</label>
-                    <a href="{{ asset('storage/' . $blackAndWhite->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
+                    <a href="{{ asset('public/storage/' . $blackAndWhite->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
                 </div>
             @endif
 
             @if($blackAndWhite->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
-                    <img src="{{ asset('storage/' . $blackAndWhite->image) }}" class="h-24 rounded">
+                    <img src="{{ asset('public/storage/' . $blackAndWhite->image) }}" class="h-24 rounded">
                 </div>
             @endif
 

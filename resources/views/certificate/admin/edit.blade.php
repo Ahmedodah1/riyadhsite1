@@ -23,7 +23,7 @@
             @if($certificate->cover_url)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الملف الحالي:</label>
-                    <a href="{{ asset('storage/' . $certificate->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
+                    <a href="{{ asset('public/storage/' . $certificate->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
                 </div>
             @endif
 
@@ -36,7 +36,7 @@
             @if($certificate->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
-                    <img src="{{ asset('storage/' . $certificate->image) }}" class="h-24 rounded">
+                    <img src="{{ asset('public/storage/' . $certificate->image) }}" class="h-24 rounded">
                 </div>
             @endif
 
