@@ -14,6 +14,6 @@ class UpdateViewPhotosAction
     public function handle(BlackAndWhite $blackAndWhite)
     {
 
-      return view('blackAndWhite.edit', compact('blackAndWhite'));
+      return view('BlackAndWhite.edit', compact('blackAndWhite'));
     }
 }
