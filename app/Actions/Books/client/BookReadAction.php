@@ -38,7 +38,7 @@ class BookReadAction
 
         return response($pdfContent)
             ->header('Content-Type', 'application/pdf')
-            ->header('Content-Disposition', '; filename="book.pdf"')
+            ->header('', 'inline; filename="book.pdf"')
             ->header('Access-Control-Allow-Origin', '*');
 
 
