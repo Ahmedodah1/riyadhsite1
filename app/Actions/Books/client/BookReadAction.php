@@ -21,7 +21,7 @@ class BookReadAction
     public function readCertificatePdf($id)
     {
         $certificate = Certificate::findOrFail($id);
-        return view('certificate.Client.read', compact('certificate'));
+        return view('certificate.client.read', compact('certificate'));
     }
 
 
