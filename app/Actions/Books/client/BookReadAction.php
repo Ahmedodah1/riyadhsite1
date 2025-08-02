@@ -17,11 +17,15 @@ class BookReadAction
         return view('books.client.read', compact('book'));
     }
 
+
     public function readCertificatePdf($id)
     {
         $certificate = Certificate::findOrFail($id);
         return view('certificate.client.read', compact('certificate'));
     }
+
+
+
 
     public function pdf($id)
     {
@@ -31,13 +35,17 @@ class BookReadAction
             abort(404, 'الملف غير موجود');
         }
 
+
         $pdfContent = Storage::disk('public')->get($book->cover_url);
 
         return response($pdfContent)
             ->header('Content-Type', 'application/pdf')
             ->header('Content-Disposition', 'inline; filename="book.pdf"')
-            ->header('Access-Control-Allow-Origin', '*');
+        ->header('Access-Control-Allow-Origin', '*');
+
+
     }
+
 
     public function pdfCertificate($id)
     {
@@ -46,12 +54,6 @@ class BookReadAction
         if (!Storage::disk('public')->exists($certificate->pdf)) {
             abort(404, 'الملف غير موجود');
         }
-
-        $pdfContent = Storage::disk('public')->get($certificate->pdf);
-
-        return response($pdfContent)
-            ->header('Content-Type', 'application/pdf')
-            ->header('Content-Disposition', 'inline; filename="certificate.pdf"')
-            ->header('Access-Control-Allow-Origin', '*');
     }
-}
+
+    }
