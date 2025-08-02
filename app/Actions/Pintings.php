@@ -11,7 +11,7 @@ class Pintings
     public function handle()
     {
 
-        return view('Paintings.Paintings');
+        return view('paintings.paintings');
 
     }
 }
