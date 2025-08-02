@@ -25,8 +25,6 @@ class BookReadAction
     }
 
 
-
-
     public function pdf($id)
     {
         $book = Book::findOrFail($id);
@@ -41,7 +39,7 @@ class BookReadAction
         return response($pdfContent)
             ->header('Content-Type', 'application/pdf')
             ->header('Content-Disposition', 'inline; filename="book.pdf"')
-        ->header('Access-Control-Allow-Origin', '*');
+            ->header('Access-Control-Allow-Origin', '*');
 
 
     }
@@ -54,15 +52,6 @@ class BookReadAction
         if (!Storage::disk('public')->exists($certificate->pdf)) {
             abort(404, 'الملف غير موجود');
         }
-
-
-        $pdfContent = Storage::disk('public')->get($certificate->pdf);
-
-        return response($pdfContent)
-            ->header('Content-Type', 'application/pdf')
-            ->header('Content-Disposition', 'inline; filename="book.pdf"')
-            ->header('Access-Control-Allow-Origin', '*');
-
-
     }
+
 }
