@@ -36,7 +36,7 @@
                         <td class="px-4 py-2 border-b">{{ $book->created_at->format('Y-m-d') }}</td>
                         <td class="px-4 py-2 border-b">
                             @if($book->image)
-                                <img src="{{ asset('storage/' . $book->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
+                                <img src="{{ asset('public/storage/' . $book->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
                             @else
                                 لا يوجد
                             @endif
