@@ -78,7 +78,7 @@
                         @foreach($blogs as $blog)
                             <div class="swiper-slide w-full max-lg:max-w-xl lg:w-1/2 group">
                                 <div class="flex items-center mb-9">
-                                    <img src="{{asset('storage/' . $blog->image)}}" alt="blogs tailwind section" class="rounded-2xl w-full object-cover h-114">
+                                    <img src="{{asset('public/storage/' . $blog->image)}}" alt="blogs tailwind section" class="rounded-2xl w-full object-cover h-114">
                                 </div>
                                 <h3 class="text-xl text-gray-900 font-medium leading-8 mb-4 group-hover:text-indigo-900">{{ $blog->title }}</h3>
                                 <p class="text-gray-500 leading-6 transition-all duration-500 mb-8">
