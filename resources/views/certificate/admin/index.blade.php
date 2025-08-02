@@ -35,7 +35,7 @@
                         <td class="px-4 py-2 border-b">{{ $certificate->created_at->format('Y-m-d') }}</td>
                         <td class="px-4 py-2 border-b">
                             @if($certificate->image)
-                                <img src="{{ asset('storage/' . $certificate->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
+                                <img src="{{ asset('public/storage/' . $certificate->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
                             @else
                                 لا يوجد
                             @endif
