@@ -3,7 +3,7 @@
 
         <div class="rounded-xl overflow-hidden shadow-lg border">
             <iframe
-                src="{{ route('books.pdf', $book->id) }} #toolbar=0&download=false&print=false"
+                src="{{ route('books.pdf', $book->id) }}"
                 width="100%"
                 height="800px"
                 class="w-full">
