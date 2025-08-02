@@ -23,7 +23,7 @@
                 @if(!empty($note->image))
                     <div class="mt-4">
                         <p class="text-sm text-gray-600 mb-2">الصورة الحالية:</p>
-                        <img src="{{ asset('storage/' . $note->image) }}" class="h-24 rounded">
+                        <img src="{{ asset('public/storage/' . $note->image) }}" class="h-24 rounded">
                     </div>
                 @endif
             </div>
