@@ -35,7 +35,7 @@
                         <td class="px-4 py-2 border-b">{{ $colorphoto->created_at->format('Y-m-d') }}</td>
                         <td class="px-4 py-2 border-b">
                             @if($colorphoto->image)
-                                <img src="{{ asset('public_html/storage/' . $colorphoto->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
+                                <img src="{{ asset('public/storage/' . $colorphoto->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
                             @else
                                 لا يوجد
                             @endif
