@@ -48,12 +48,6 @@ class BookReadAction
             abort(404, 'الملف غير موجود');
         }
 
-        $pdfContent = Storage::disk('public')->get($certificate->pdf);
 
-        return response($pdfContent)
-            ->header('Content-Type', 'application/pdf')
-            ->header('Content-Disposition', 'inline; filename="certificate.pdf"')
-            ->header('Access-Control-Allow-Origin', '*')
-            ->header('X-Content-Type-Options', 'nosniff');
+
     }
-}
