@@ -6,7 +6,7 @@
             <div class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
                 <div class="relative overflow-hidden rounded-t-xl">
                     <img
-                        src="{{ $book->image ? asset('storage/' . $book->image) : asset('1.jpg') }}"
+                        src="{{ $book->image ? asset('public/storage/' . $book->image) : asset('1.jpg') }}"
                         alt="غلاف الكتاب"
                         class="w-full h-120 object-cover object-center transition-transform duration-500 hover:scale-105"
                     />
