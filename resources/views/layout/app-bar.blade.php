@@ -32,7 +32,7 @@
 
             <div class="relative group">
                 <a href="#" class="hover:underline flex items-center">
-                    <span>معرض الصور</span>
+                    <span>تصويري </span>
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
                 </a>
                 <div
@@ -40,6 +40,12 @@
                     <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100">صور آبيض وآسود</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100">صور ملونه</a>
                 </div>
+            </div>
+
+            <div class="relative group">
+                <a href="{{route('paintings')}}" class="hover:underline flex items-center">
+                    <span> صور الديكورات</span>
+                </a>
             </div>
 
             <div class="relative group">
@@ -56,7 +62,7 @@
 
             <div class="relative group">
                 <a href="{{route('blog')}}" class="hover:underline flex items-center">
-                    <span>المدونة</span>
+                    <span>الإنجازات الهندسية</span>
                 </a>
             </div>
 
