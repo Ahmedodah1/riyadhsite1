@@ -104,7 +104,7 @@
     </div>
     <div class="relative group">
         <a href="#" class="hover:underline flex items-center space-x-1">
-            <span>معرض الصور</span>
+            <span> تصويري</span>
             <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
         </a>
         <div
@@ -115,6 +115,9 @@
         </div>
     </div>
     <div>
+        <a href="" class="hover:underline">صور الديكورات </a>
+    </div>
+    <div>
         <a href="" class="hover:underline">معرض اللوحات</a>
     </div>
 
@@ -122,7 +125,7 @@
         <a href="" class="hover:underline">الشهادات والدورات</a>
     </div>
     <div>
-        <a href="" class="hover:underline">المدونة</a>
+        <a href="" class="hover:underline">الإنجازات الهندسية</a>
     </div>
 </div>
 
