@@ -60,7 +60,7 @@
         <div class="max-w-2xl mx-auto">
             <section class="py-24 px-4">
                 <h1 class="text-2xl md:text-3xl font-semibold text-white text-center leading-snug opacity-0 translate-y-5 animate-fade-in-up shadow-md">
-                    هنا أضع كتبي وصوري... خليط من الحرف والضوء، من الفكرة واللحظة. أهلاً بك في عالمي.
+                     خليط من الحرف والضوء، من الفكرة واللحظة. أهلاً بك في عالمي.
                 </h1>
             </section>
         </div>
