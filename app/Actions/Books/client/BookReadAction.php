@@ -31,19 +31,19 @@ class BookReadAction
     {
         $book = Book::findOrFail($id);
 
-        if (!Storage::disk('public')->exists($book->cover_url)) {
+        // مسار الملف داخل storage/app/public
+        $path = storage_path('app/public/' . $book->cover_url);
+
+        // تحقق من وجود الملف فعليًا
+        if (!file_exists($path)) {
             abort(404, 'الملف غير موجود');
         }
 
-
-        $pdfContent = Storage::disk('public')->get($book->cover_url);
-
-        return response($pdfContent)
-            ->header('Content-Type', 'application/pdf')
-            ->header('Content-Disposition', 'inline; filename="book.pdf"')
-        ->header('Access-Control-Allow-Origin', '*');
-
-
+        // إرسال الملف مباشرة إلى المتصفح
+        return response()->file($path, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="book.pdf"',
+        ]);
     }
 
 
