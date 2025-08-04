@@ -21,7 +21,7 @@
             style="height: 1000px;">
 
             <iframe
-                src="{{ asset('public/web/compressed.tracemonkey-pldi-09.pdf') }}?file={{ urlencode(route('books.pdf', $book->id)) }}#toolbar=0&download=false&print=false"
+                src="{{ ('public/pdfjs/web/compressed.tracemonkey-pldi-09.pdf') }}?file={{ urlencode(route('books.pdf', $book->id)) }}#toolbar=0&download=false&print=false"
                 width="100%"
                 height="100%"
                 class="w-full h-full border-0"
