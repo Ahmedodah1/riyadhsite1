@@ -27,24 +27,6 @@ class BookReadAction
 
 
 
-    public function pdf($id)
-    {
-        $book = Book::findOrFail($id);
-
-        // مسار الملف داخل storage/app/public
-        $path = storage_path('app/public/' . $book->cover_url);
-
-        // تحقق من وجود الملف فعليًا
-        if (!file_exists($path)) {
-            abort(404, 'الملف غير موجود');
-        }
-
-        // إرسال الملف مباشرة إلى المتصفح
-        return response()->file($path, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="book.pdf"',
-        ]);
-    }
 
 
     public function pdfCertificate($id)
