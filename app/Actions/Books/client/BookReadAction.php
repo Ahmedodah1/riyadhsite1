@@ -39,7 +39,7 @@ class BookReadAction
         $pdfContent = Storage::disk('public')->get($book->cover_url);
 
         return response($pdfContent)
-            ->header('Content-Type', 'application/pdfs')
+            ->header('Content-Type', 'application/pdf')
             ->header('Content-Disposition', 'inline; filename="book.pdf"')
         ->header('Access-Control-Allow-Origin', '*');
 
