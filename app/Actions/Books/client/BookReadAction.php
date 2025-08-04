@@ -36,7 +36,7 @@ class BookReadAction
         }
 
 
-        $pdfContent = Storage::disk('storage/public')->get($book->cover_url);
+        $pdfContent = Storage::disk('public/storage/')->get($book->cover_url);
 
         return response($pdfContent)
             ->header('Content-Type', 'application/pdfs')
