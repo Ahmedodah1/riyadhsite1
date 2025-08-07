@@ -71,7 +71,7 @@ Route::prefix('auth')->group(function () {
 
     Route::get('/Decor/index', [\App\Actions\Decors\Admin\DecorAdminIndex::class, 'handle'])->name('Decor.index');
     Route::get('/Decor/create/view', \App\Actions\Decors\Admin\DecorCreateViewIndex::class)->name('Decor-create-view');
-    Route::get('/Decor/edit/view/{decor}', \App\Actions\Decors\Admin\DecorEditView::class)->name('Decor-update-view');
+    Route::get('/Decor/edit/view/{decor}', [\App\Actions\Decors\Admin\DecorEditView::class, 'handle'])->name('Decor-update-view');
 
     Route::post('/Decor/create', \App\Actions\Decors\Admin\CreateAction::class)->name('Decor.create');
     Route::post('/Decor/Delete/{Decor}', \App\Actions\Decors\Admin\DeleteDecorAction::class)->name('Decor.delete');
