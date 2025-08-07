@@ -20,7 +20,7 @@
             </style>
 
             <div>
-                <a href="{{route('/homepage')}}" class="nav-link">الرئيسية</a>
+                <a href="{{route('homepage')}}" class="nav-link">الرئيسية</a>
             </div>
 
             <div class="relative group">
