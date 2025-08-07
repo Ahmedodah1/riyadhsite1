@@ -1,6 +1,6 @@
 <nav id="nav" class="fixed left-0 w-full px-5 py-3 bg-transparent text-white transition-colors duration-300">
     <div class="flex justify-between items-center container mx-auto relative">
-        <a href="" class="flex items-center gap-3">
+        <a href="{{route('homepage')}}" class="flex items-center gap-3">
             <span id="logo-text" class="text-lg font-bold lg:text-3xl mt-1"></span>
             <img src="resha.png" alt="Logo" class=" w-30">
         </a>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="relative group">
-                <a href="/whous" class="nav-link flex items-center space-x-1">
+                <a href="{{route('whous')}}" class="nav-link flex items-center space-x-1">
                     <span>من آنا</span>
                 </a>
             </div>
