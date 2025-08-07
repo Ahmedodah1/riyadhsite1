@@ -83,7 +83,7 @@
         </a>
 
 
-        <a href="{{ route('colorphoto-index') }}"
+        <a href="{{ route('Decor.index') }}"
            class="flex flex-row-reverse items-center justify-between px-3 py-2 rounded-lg hover:bg-indigo-600 transition
            {{ request()->routeIs('colorphoto') ? 'bg-indigo-800 shadow-lg' : '' }}">
             <span class="text-right"> صور الديكورات</span>

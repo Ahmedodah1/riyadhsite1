@@ -47,6 +47,7 @@ Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::
 Route::get('/blogs', \App\Actions\Blog\Client\BlogClientViewAction::class)->name('blogs');
 Route::get('/certificate', \App\Actions\Certificates\Client\CertificateClientIndex::class)->name('certificate');
 
+Route::get('/decor', \App\Actions\Decors\Client\DecorClientIndex::class)->name('decor');
 
 
 Route::prefix('auth')->group(function () {
@@ -66,6 +67,15 @@ Route::prefix('auth')->group(function () {
     Route::post('/colorphoto/delete/{colorphoto}', \App\Actions\Colorphoto\Admin\DeleteColorphotoAction::class)->name('colorphoto-delete');
     Route::post('/colorphoto/update/{colorphoto}', \App\Actions\Colorphoto\Admin\EditColorphotoAction::class)->name('colorphoto-update');
 
+
+
+    Route::get('/Decor/index', \App\Actions\Decors\Admin\DecorAdminIndex::class)->name('Decor.index');
+    Route::get('/Decor/create/view', \App\Actions\Decors\Admin\DecorCreateViewIndex::class)->name('Decor-create-view');
+    Route::get('/Decor/edit/view/{decor}', \App\Actions\Decors\Admin\DecorEditView::class)->name('Decor-update-view');
+
+    Route::post('/Decor/create', \App\Actions\Decors\Admin\CreateAction::class)->name('Decor.create');
+    Route::post('/Decor/Delete/{Decor}', \App\Actions\Decors\Admin\DeleteDecorAction::class)->name('Decor.delete');
+    Route::post('/decor/update/{decor}', \App\Actions\Decors\Admin\EditDecorAction::class)->name('decor.update');
 
 
 
