@@ -47,7 +47,7 @@ Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::
 Route::get('/blogs', \App\Actions\Blog\Client\BlogClientViewAction::class)->name('blogs');
 Route::get('/certificate', \App\Actions\Certificates\Client\CertificateClientIndex::class)->name('certificate');
 
-Route::get('/decor', \App\Actions\Decors\Client\DecorClientIndex::class)->name('decor');
+Route::get('/decor', [\App\Actions\Decors\Client\DecorClientIndex::class, 'handle'])->name('decor');
 
 
 Route::prefix('auth')->group(function () {
