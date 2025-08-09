@@ -1,5 +1,5 @@
-<div class="w-full p-6 flex justify-center">
-    <h1 class="text-3xl font-bold mb-6 text-gray-800 tracking-wide text-center">
+<div class="w-full p-6 flex justify-center ttext-center">
+    <h1 class="">
         {{ $certificate->title }}
     </h1>
 </div>
