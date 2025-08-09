@@ -1,7 +1,7 @@
 <div class="bg-[#1e1f26] text-gray-200 font-serif px-4 sm:px-6 py-12 sm:py-16">
     <div class="max-w-7xl mx-auto">
         <!-- Images Row -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12 place-items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12 place-items-center">
             <img src="{{ asset('1.jpg') }}" alt="Ebook 1" class="w-48 sm:w-60 md:w-72 shadow-xl rounded">
             <img src="{{ asset('1.jpg') }}" alt="Ebook 2" class="w-48 sm:w-60 md:w-72 shadow-xl rounded">
             <img src="{{ asset('1.jpg') }}" alt="Ebook 3" class="w-48 sm:w-60 md:w-72 shadow-xl rounded">
