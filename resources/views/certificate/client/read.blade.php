@@ -11,10 +11,4 @@
         </div>
     </div>
 
-    <div class="container mx-auto p-6 max-w-7xl ">
-        <h1 style="text-align: center;" class="text-3xl font-extrabold mb-8 text-gray-900 dark:text-gray-100">
-            {{ $certificate->title }}
-        </h1>
 
-
-    </div>
