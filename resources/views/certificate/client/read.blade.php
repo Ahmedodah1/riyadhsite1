@@ -1,5 +1,5 @@
 <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-6 text-gray-800 tracking-wide text-center !block !text-center">
+    <h1 class="text-3xl font-bold mb-6 text-gray-800 tracking-wide text-right !block !text-center">
         {{ $certificate->title }}
     </h1>
 
