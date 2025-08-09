@@ -93,50 +93,42 @@
      class="fixed top-0 left-0 w-full h-1/2 p-4 bg-black text-white shadow-lg z-30 hidden flex-col gap-9 items-start justify-start pt-10 lg:hidden overflow-y-auto">
 
     <div class="mt-7">
-        <a href="" class="hover:underline">الرئيسية</a>
+        <a href="{{ route('homepage') }}" class="hover:underline">الرئيسية</a>
     </div>
-    <div class="relative group">
-        <a href="#" class="hover:underline flex items-center space-x-1">
-            <span>من آنا</span>
-        </a>
-        <div
-            class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
 
-        </div>
+    <div>
+        <a href="{{ route('whous') }}" class="hover:underline">من آنا</a>
     </div>
-    <div class="relative group">
-        <a href="#" class="hover:underline flex items-center space-x-1">
-            <span>الكتب</span>
-        </a>
-        <div
-            class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
 
-        </div>
+    <div>
+        <a href="{{ route('books.index') }}" class="hover:underline">الكتب</a>
     </div>
+
     <div class="relative group">
         <a href="#" class="hover:underline flex items-center space-x-1">
-            <span> تصويري</span>
+            <span>تصويري</span>
             <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
         </a>
-        <div
-            class="absolute right-0 mt-2 w-60 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <a href="" class="block px-4 py-2 hover:bg-gray-100">صور آسود وآبيض</a>
-            <a href="" class="block px-4 py-2 hover:bg-gray-100">صور ملونة</a>
-
+        <div class="absolute right-0 mt-2 w-60 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="{{ route('ClientBlackAndWhite') }}" class="block px-4 py-2 hover:bg-gray-100">صور آبيض وآسود</a>
+            <a href="{{ route('colorphotos') }}" class="block px-4 py-2 hover:bg-gray-100">صور ملونه</a>
         </div>
     </div>
+
     <div>
-        <a href="" class="hover:underline">صور الديكورات </a>
-    </div>
-    <div>
-        <a href="" class="hover:underline">معرض اللوحات</a>
+        <a href="{{ route('decor') }}" class="hover:underline">صور الديكورات</a>
     </div>
 
     <div>
-        <a href="" class="hover:underline">الشهادات والدورات</a>
+        <a href="{{ route('paintings') }}" class="hover:underline">معرض اللوحات</a>
     </div>
+
     <div>
-        <a href="" class="hover:underline">الإنجازات الهندسية</a>
+        <a href="{{ route('certificate') }}" class="hover:underline">الشهادات والدورات</a>
+    </div>
+
+    <div>
+        <a href="{{ route('blog') }}" class="hover:underline">الإنجازات الهندسية</a>
     </div>
 </div>
 
