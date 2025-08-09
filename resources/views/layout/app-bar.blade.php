@@ -93,7 +93,7 @@
      class="fixed top-0 left-0 w-full h-1/2 p-4 bg-black text-white shadow-lg z-30 hidden flex-col gap-9 items-start justify-start pt-10 lg:hidden overflow-y-auto">
 
     <div class="mt-7">
-        <a href="{{ route('') }}" class="hover:underline">الرئيسية</a>
+        <a href="{{ route('homepage') }}" class="hover:underline">الرئيسية</a>
     </div>
 
     <div>
