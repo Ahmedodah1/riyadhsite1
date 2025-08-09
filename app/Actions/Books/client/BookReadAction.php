@@ -27,6 +27,13 @@ class BookReadAction
 
 
 
+
+
+
+
+
+
+
     public function pdf($id)
     {
         $book = Book::findOrFail($id);
