@@ -90,40 +90,65 @@
 </nav>
 
 <div id="menu"
-     class="fixed top-0 left-0 w-full h-full p-6 bg-black text-white shadow-lg z-30 hidden flex-col gap-6 items-start justify-start pt-20 lg:hidden overflow-y-auto transition-all duration-300 ease-in-out">
+     class="fixed top-0 left-0 w-full h-1/2 p-4 bg-black text-white shadow-lg z-30 hidden flex-col gap-9 items-start justify-start pt-10 lg:hidden overflow-y-auto">
 
-    <a href="{{route('homepage')}}" class="hover:text-gray-300 text-lg">الرئيسية</a>
-    <a href="{{route('whous')}}" class="hover:text-gray-300 text-lg">من آنا</a>
-    <a href="{{route('books.index')}}" class="hover:text-gray-300 text-lg">الكتب</a>
+    <div class="mt-7">
+        <a href="" class="hover:underline">الرئيسية</a>
+    </div>
+    <div class="relative group">
+        <a href="#" class="hover:underline flex items-center space-x-1">
+            <span>من آنا</span>
+        </a>
+        <div
+            class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
 
-    <div>
-        <span class="flex items-center justify-between w-full cursor-pointer group">
-            <span class="text-lg">تصويري</span>
-            <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
-        </span>
-        <div class="mt-2 pl-4 hidden group-hover:block">
-            <a href="{{route('ClientBlackAndWhite')}}" class="block py-1 hover:text-gray-400">صور أبيض وأسود</a>
-            <a href="{{route('colorphotos')}}" class="block py-1 hover:text-gray-400">صور ملونة</a>
         </div>
     </div>
+    <div class="relative group">
+        <a href="#" class="hover:underline flex items-center space-x-1">
+            <span>الكتب</span>
+        </a>
+        <div
+            class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
 
-    <a href="{{route('decor')}}" class="hover:text-gray-300 text-lg">صور الديكورات</a>
-    <a href="{{route('paintings')}}" class="hover:text-gray-300 text-lg">معرض اللوحات</a>
-    <a href="{{route('certificate')}}" class="hover:text-gray-300 text-lg">الشهادات والدورات</a>
-    <a href="{{route('blog')}}" class="hover:text-gray-300 text-lg">الإنجازات الهندسية</a>
+        </div>
+    </div>
+    <div class="relative group">
+        <a href="#" class="hover:underline flex items-center space-x-1">
+            <span> تصويري</span>
+            <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
+        </a>
+        <div
+            class="absolute right-0 mt-2 w-60 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="" class="block px-4 py-2 hover:bg-gray-100">صور آسود وآبيض</a>
+            <a href="" class="block px-4 py-2 hover:bg-gray-100">صور ملونة</a>
+
+        </div>
+    </div>
+    <div>
+        <a href="" class="hover:underline">صور الديكورات </a>
+    </div>
+    <div>
+        <a href="" class="hover:underline">معرض اللوحات</a>
+    </div>
+
+    <div>
+        <a href="" class="hover:underline">الشهادات والدورات</a>
+    </div>
+    <div>
+        <a href="" class="hover:underline">الإنجازات الهندسية</a>
+    </div>
 </div>
-</script>
-
 
 <script>
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
+    const logoText = document.getElementById('logo-text');
+    const navLinksContainer = document.querySelector('nav > div > div.hidden.lg\\:flex');
 
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
-</script>
-
 
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
