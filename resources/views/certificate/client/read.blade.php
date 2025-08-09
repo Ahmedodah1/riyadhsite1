@@ -1,6 +1,6 @@
 
         <h1 class="">
-            {{ $certificate->title }}
+            {{$certificate->Title}}
         </h1>
     </div>
 
