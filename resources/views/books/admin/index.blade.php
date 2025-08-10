@@ -2,62 +2,64 @@
 
 @section('content')
     <div class="p-6">
-        <!-- زر إضافة كتاب جديد -->
+        <!-- زر إضافة كتاب -->
         <div class="mb-6">
             <a href="{{ route('book-create') }}"
-               class="inline-block bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition transform hover:scale-105">
+               class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-medium shadow transition transform hover:scale-105">
                 + إضافة كتاب جديد
             </a>
         </div>
 
-        <!-- الجدول -->
-        <div class="overflow-x-auto">
-            <table class="min-w-full border border-gray-200 rounded-xl shadow-lg overflow-hidden">
-                <thead>
-                <tr class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white">
-                    <th class="px-5 py-3 text-right font-semibold">العمليات</th>
-                    <th class="px-5 py-3 text-right font-semibold">الإنشاء</th>
-                    <th class="px-5 py-3 text-right font-semibold">الصورة</th>
-                    <th class="px-5 py-3 text-right font-semibold">الوصف</th>
-                    <th class="px-5 py-3 text-right font-semibold">العنوان</th>
+        <!-- جدول الكتب -->
+        <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
+            <table class="min-w-full bg-white">
+                <thead class="bg-gray-100 text-gray-700">
+                <tr>
+                    <th class="px-4 py-3 text-right">العمليات</th>
+                    <th class="px-4 py-3 text-right">تاريخ الإنشاء</th>
+                    <th class="px-4 py-3 text-right">الصورة</th>
+                    <th class="px-4 py-3 text-right">الوصف</th>
+                    <th class="px-4 py-3 text-right">العنوان</th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
                 @foreach($books as $book)
                     <tr class="hover:bg-gray-50 transition">
                         <!-- العمليات -->
-                        <td class="px-5 py-3 flex flex-col gap-1 sm:flex-row sm:gap-3 text-sm">
+                        <td class="px-4 py-3 flex gap-2">
                             <form action="{{ route('book.delete', $book->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
                                 @csrf
-                                <button type="submit" class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow transition">
+                                <button type="submit"
+                                        class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
                                     حذف
                                 </button>
                             </form>
                             <form action="{{ route('book.edit', $book->id) }}" method="POST">
                                 @csrf
-                                <button type="submit" class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow transition">
+                                <button type="submit"
+                                        class="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
                                     تعديل
                                 </button>
                             </form>
                         </td>
 
                         <!-- تاريخ الإنشاء -->
-                        <td class="px-5 py-3 text-gray-700">{{ $book->created_at->format('Y-m-d') }}</td>
+                        <td class="px-4 py-3 text-gray-700">{{ $book->created_at->format('Y-m-d') }}</td>
 
                         <!-- الصورة -->
-                        <td class="px-5 py-3">
+                        <td class="px-4 py-3">
                             @if($book->image)
-                                <img src="{{ asset('public/storage/' . $book->image) }}" class="h-16 w-16 object-cover rounded-lg shadow" alt="غلاف">
+                                <img src="{{ asset('public/storage/' . $book->image) }}" class="h-16 w-16 object-cover rounded-lg border border-gray-200" alt="غلاف">
                             @else
                                 <span class="text-gray-400 italic">لا يوجد</span>
                             @endif
                         </td>
 
                         <!-- الوصف -->
-                        <td class="px-5 py-3 text-gray-600">{{ Str::limit($book->description, 50) }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ Str::limit($book->description, 50) }}</td>
 
                         <!-- العنوان -->
-                        <td class="px-5 py-3 font-semibold text-gray-800">{{ $book->title }}</td>
+                        <td class="px-4 py-3 font-semibold text-gray-900">{{ $book->title }}</td>
                     </tr>
                 @endforeach
                 </tbody>
