@@ -10,7 +10,7 @@
                 + إضافة شهادة جديدة
             </a>
         </div>
-    </div>
+
 
         <!-- جدول الشهادات -->
         <div class="overflow-x-auto rounded-lg shadow border border-gray-300">
