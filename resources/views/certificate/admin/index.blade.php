@@ -6,10 +6,11 @@
         <!-- زر إضافة شهادة -->
         <div class="mb-6">
             <a href="{{ route('certificate-create-view') }}"
-               class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-lg font-medium shadow transition transform hover:scale-105 text-sm">
+               class="inline-flex items-center bg-green-200 w-56 justify-center text-green-900 font-bold rounded-xl hover:scale-100 duration-200 ease-in-out px-4 py-3 shadow">
                 + إضافة شهادة جديدة
             </a>
         </div>
+    </div>
 
         <!-- جدول الشهادات -->
         <div class="overflow-x-auto rounded-lg shadow border border-gray-300">
