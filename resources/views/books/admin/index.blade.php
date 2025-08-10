@@ -15,9 +15,9 @@
             <table class="min-w-full bg-white table-fixed">
                 <thead class="bg-gray-100 text-gray-700">
                 <tr>
-                    <th class="w-36 px-4 py-3 text-right">العمليات</th>
-                    <th class="w-32 px-4 py-3 text-right">تاريخ الإنشاء</th>
-                    <th class="w-24 px-4 py-3 text-right">الصورة</th>
+                    <th class="w-36 px-8 py-3 text-right">العمليات</th> <!-- زودت px -->
+                    <th class="w-32 px-8 py-3 text-right">تاريخ الإنشاء</th> <!-- زودت px -->
+                    <th class="w-24 px-8 py-3 text-right">الصورة</th> <!-- زودت px -->
                     <th class="w-2/5 px-4 py-3 text-right">الوصف</th>
                     <th class="w-1/4 px-4 py-3 text-right">العنوان</th>
                 </tr>
@@ -26,32 +26,32 @@
                 @foreach($books as $book)
                     <tr class="hover:bg-gray-50 transition">
                         <!-- العمليات -->
-                        <td class="px-4 py-3 text-right align-middle">
+                        <td class="px-8 py-3 text-right align-middle"> <!-- زودت px -->
                             <div class="flex gap-2 justify-end">
                                 <form action="{{ route('book.delete', $book->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
                                     @csrf
                                     <button type="submit"
                                             class="flex items-center gap-1 px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
-                                         حذف
+                                        حذف
                                     </button>
                                 </form>
                                 <form action="{{ route('book.edit', $book->id) }}" method="POST">
                                     @csrf
                                     <button type="submit"
                                             class="flex items-center gap-1 px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
-                                         تعديل
+                                        تعديل
                                     </button>
                                 </form>
                             </div>
                         </td>
 
                         <!-- تاريخ الإنشاء -->
-                        <td class="px-4 py-3 text-gray-700 text-right align-middle">
+                        <td class="px-8 py-3 text-gray-700 text-right align-middle"> <!-- زودت px -->
                             {{ $book->created_at->format('Y-m-d') }}
                         </td>
 
                         <!-- الصورة -->
-                        <td class="px-4 py-3 text-right align-middle">
+                        <td class="px-8 py-3 text-right align-middle"> <!-- زودت px -->
                             @if($book->image)
                                 <img src="{{ asset('public/storage/' . $book->image) }}"
                                      class="h-16 w-16 object-cover rounded-lg border border-gray-200" alt="غلاف">
