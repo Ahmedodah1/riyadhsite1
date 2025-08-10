@@ -32,14 +32,14 @@
                                     @csrf
                                     <button type="submit"
                                             class="flex items-center gap-1 px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
-                                        🗑 حذف
+                                         حذف
                                     </button>
                                 </form>
                                 <form action="{{ route('book.edit', $book->id) }}" method="POST">
                                     @csrf
                                     <button type="submit"
                                             class="flex items-center gap-1 px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
-                                        ✏ تعديل
+                                         تعديل
                                     </button>
                                 </form>
                             </div>
