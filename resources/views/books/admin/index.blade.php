@@ -15,7 +15,7 @@
             <table class="min-w-full bg-white table-fixed">
                 <thead class="bg-gray-100 text-gray-700">
                 <tr>
-                    <th class="w-36 px-4 py-3 text-right">العمليات</th>
+                    <th class="w-36 px-6 py-3 text-right">العمليات</th>
                     <th class="w-32 px-4 py-3 text-right">تاريخ الإنشاء</th>
                     <th class="w-24 px-4 py-3 text-right">الصورة</th>
                     <th class="w-2/5 px-4 py-3 text-right">الوصف</th>
