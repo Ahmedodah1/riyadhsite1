@@ -7,7 +7,7 @@
         <div class="mb-6">
             <a href="{{ route('certificate-create-view') }}"
                class="inline-flex items-center bg-green-200 w-56 justify-center text-green-900 font-bold rounded-xl hover:scale-100 duration-200 ease-in-out px-4 py-3 shadow">
-                + إضافة شهادة جديدة
+                 إضافة شهادة جديدة
             </a>
         </div>
 
