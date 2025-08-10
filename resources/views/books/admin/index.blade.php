@@ -17,7 +17,8 @@
                 <tr>
                     <th class="w-36 px-4 py-3 text-right">العمليات</th>
                     <th class="w-36 px-4 py-3 text-right">تاريخ الإنشاء</th>
-                    <th class="w-24 px-4 py-3 text-right">الصورة</th>
+                    <th class="w-24 px-8 py-3 text-right">الصورة</th> <!-- زيادة البادينج الأفقي هنا -->
+
                     <th class="w-2/5 px-4 py-3 text-right">الوصف</th>
                     <th class="w-1/4 px-4 py-3 text-right">العنوان</th>
                 </tr>
