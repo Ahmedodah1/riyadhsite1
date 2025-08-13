@@ -88,7 +88,17 @@
         <span class="close" id="close">&times;</span>
         <img src="" alt="" class="lightbox-image" id="lightbox-image">
     </div>
+    <div>
+        <button
+            class="w-64 rounded-lg py-4 px-6 text-center bg-indigo-900 text-white text-lg font-medium cursor-pointer mx-auto block transform transition-transform duration-300 hover:scale-110 hover:bg-indigo-700"
+        >
+            شاهد اكثر
+        </button>
+
     </div>
+    </div>
+
+
 </section>
 <!-- Initialize Swiper -->
 <script>

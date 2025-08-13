@@ -1,9 +1,24 @@
 <nav id="nav" class="fixed left-0 w-full px-5 py-3 bg-transparent text-white transition-colors duration-300">
     <div class="flex justify-between items-center container mx-auto relative">
-        <a href="" class="flex items-center gap-3">
-            <span id="logo-text" class="text-lg font-bold lg:text-3xl mt-1"></span>
-            <img src="resha.png" alt="Logo" class=" w-30">
+        <a href="" class="flex flex-col items-start gap-0">
+            <div class="flex items-center gap-5 -ml-2 sm:-ml-4 md:-ml-6 lg:-ml-8 xl:-ml-10">
+                <span id="logo-text" class="text-lg font-bold lg:text-3xl mt-1"></span>
+                <img src="resha.png" alt="Logo" class="w-30">
+            </div>
+
+            <span class="text-[10px] sm:text-xs md:text-sm lg:text-base text-white font-medium -mt-2 sm:-mt-3 sm:ml-8 md:ml-12 lg:ml-14 leading-tight tracking-wide">
+    أهلاً بكم في موقع رياض<br>
+    <span class="block text-center 400 font-semibold">الرسمي</span>
+</span>
+
         </a>
+
+
+
+
+        </a>
+
+
 
         <div class="lg:hidden">
             <button id="menu-toggle" class="text-white focus:outline-none">
@@ -11,7 +26,7 @@
             </button>
         </div>
 
-        <div class=" {{!request()->is('/') ? 'text-black' : 'text-white'}} hidden lg:flex flex-col md:flex-row items-center justify-center gap-8 md:static absolute w-full md:w-auto p-4 md:p-0 z-20 top-full left-0 md:top-auto md:left-auto"
+        <div class="{{!request()->is('/') ? 'text-black' : 'text-white'}} hidden lg:flex flex-col md:flex-row items-center justify-center gap-8 md:static absolute w-full md:w-auto p-4 md:p-0 z-20 top-full left-0 md:top-auto md:left-auto"
              :class="{'text-white': !scrolled, 'text-black': scrolled}">
             <style>
                 .nav-link {
@@ -46,21 +61,34 @@
                 </div>
             </div>
 
-
-
-
             <div class="relative group">
                 <a href="{{route('decor')}}" class="nav-link flex items-center">
                     <span> صور الديكورات </span>
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
                 </a>
                 <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                    <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور آبيض وآسود</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور ملونه</a>
+                    <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مطابخ  </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مسابح </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مكتب منزلي </a>
+
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">حمامات </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف طعام </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف غسيل </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف جلوس </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">خزائن </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">جلسات خارجية </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">لاند سكيب </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف نوم آولاد وبنات </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">تصميم درج </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف نوم </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">جيم منزلي </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">برندة </a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">منازل ريفية </a>
+
+
+
                 </div>
             </div>
-
-
 
             <div class="relative group">
                 <a href="{{route('paintings')}}" class="nav-link flex items-center">
@@ -76,7 +104,12 @@
 
             <div class="relative group">
                 <a href="{{route('blog')}}" class="nav-link flex items-center">
-                    <span>الإنجازات الهندسية</span>
+                    <span> المدونة</span>
+                </a>
+            </div>
+            <div class="relative group">
+                <a href="{{route('blog')}}" class="nav-link flex items-center">
+                    <span>العملات العالمية </span>
                 </a>
             </div>
 
@@ -88,20 +121,14 @@
                     </form>
                 @endif
             </div>
-
         </div>
 
-        <div class="group hidden lg:block">
-
-
-
-        </div>
+        <div class="group hidden lg:block"></div>
     </div>
 </nav>
 
 <div id="menu"
      class="fixed top-0 left-0 w-full h-1/2 p-4 bg-black text-white shadow-lg z-30 hidden flex-col gap-9 items-start justify-start pt-10 lg:hidden overflow-y-auto">
-
     <div class="mt-7">
         <a href="" class="hover:underline">الرئيسية</a>
     </div>
@@ -109,30 +136,20 @@
         <a href="#" class="hover:underline flex items-center space-x-1">
             <span>من آنا</span>
         </a>
-        <div
-            class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-
-        </div>
     </div>
     <div class="relative group">
         <a href="#" class="hover:underline flex items-center space-x-1">
             <span>الكتب</span>
         </a>
-        <div
-            class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-
-        </div>
     </div>
     <div class="relative group">
         <a href="#" class="hover:underline flex items-center space-x-1">
             <span> تصويري</span>
             <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
         </a>
-        <div
-            class="absolute right-0 mt-2 w-60 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div class="absolute right-0 mt-2 w-60 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
             <a href="" class="block px-4 py-2 hover:bg-gray-100">صور آسود وآبيض</a>
             <a href="" class="block px-4 py-2 hover:bg-gray-100">صور ملونة</a>
-
         </div>
     </div>
     <div>
@@ -141,7 +158,6 @@
     <div>
         <a href="" class="hover:underline">معرض اللوحات</a>
     </div>
-
     <div>
         <a href="" class="hover:underline">الشهادات والدورات</a>
     </div>
@@ -154,7 +170,6 @@
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
     const logoText = document.getElementById('logo-text');
-    const navLinksContainer = document.querySelector('nav > div > div.hidden.lg\\:flex');
 
     menuToggle.addEventListener('click', () => {
         menu.classList.toggle('hidden');
