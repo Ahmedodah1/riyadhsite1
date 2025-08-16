@@ -42,6 +42,7 @@ Route::get('/blog', \App\Actions\Blog::class)->name('blog');
 Route::get('/paintings', \App\Actions\Pintings::class)->name('paintings');
 Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::class)->name('colorphotos');
 
+Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->name('kitchen');
 
 
 Route::get('/blogs', \App\Actions\Blog\Client\BlogClientViewAction::class)->name('blogs');
@@ -76,6 +77,29 @@ Route::prefix('auth')->group(function () {
     Route::post('/Decor/create', [\App\Actions\Decors\Admin\CreateAction::class, 'handle'])->name('Decor.create');
     Route::post('/Decor/Delete/{Decor}', [\App\Actions\Decors\Admin\DeleteDecorAction::class, 'handle'])->name('Decor.delete');
     Route::post('/decor/update/{decor}', [\App\Actions\Decors\Admin\EditDecorAction::class,'handle'])->name('decor.update');
+
+
+
+
+
+
+
+
+    Route::get('/kitchen/index', \App\Actions\Kitchens\Admin\KitchenAdminIndex::class)->name('kitchen-index');
+
+    Route::get('/kitchen/create/view', \App\Actions\Kitchens\Admin\KitchenCreateViewIndex::class)->name('kitchen-create-view');
+
+    Route::get('/kitchen/edit/view/{kitchen}', \App\Actions\Kitchens\Admin\KitchenEditViewIndex::class)->name('kitchen-edit-view');
+
+
+    Route::post('/kitchen/create', \App\Actions\Kitchens\Admin\CreateAction::class)->name('kitchen-create');
+
+    Route::post('/kitchen/delete/{kitchen}', \App\Actions\Kitchens\Admin\DeleteKitchenAction::class)->name('kitchen-delete');
+
+    Route::post('/kitchen/update/{kitchen}', \App\Actions\Kitchens\Admin\EditKitchenAction::class)->name('kitchen-edit');
+
+
+
 
 
 

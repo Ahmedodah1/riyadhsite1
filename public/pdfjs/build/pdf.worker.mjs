@@ -57308,7 +57308,7 @@ async function getXRefStreamTable(xrefInfo, baseOffset, newRefs, newXref, buffer
     }
     maxGen = Math.max(maxGen, gen);
   }
-  newXref.set("Index", getIndexes(newRefs));
+  newXref.set("KitchenAdminIndex", getIndexes(newRefs));
   const offsetSize = getSizeInBytes(maxOffset);
   const maxGenSize = getSizeInBytes(maxGen);
   const sizes = [1, offsetSize, maxGenSize];
