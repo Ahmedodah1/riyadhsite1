@@ -12,7 +12,7 @@ class KitchenClientIndex
 
     public function handle()
     {
-        $kitchens = Kitchen::query()->get();
-        return view('kitchen.client.kitchen', compact('kitchens'));
+        $kitchen = Kitchen::query()->get();
+        return view('kitchen.client.kitchen', compact('kitchen'));
     }
 }
