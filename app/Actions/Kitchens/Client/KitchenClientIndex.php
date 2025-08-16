@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Actions\Kitchens\Client;
-use App\Models\kitchen;
+use App\Models\Kitchen; // ✅ استدعاء الموديل الصحيح
+
 
 use Lorisleiva\Actions\Concerns\AsAction;
 
