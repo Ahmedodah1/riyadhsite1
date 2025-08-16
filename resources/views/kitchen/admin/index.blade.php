@@ -4,7 +4,7 @@
     <div class="p-6">
         <div class="bg-green-200 w-56 flex justify-center items-center mb-4 rounded-xl hover:scale-100 duration-200 ease-in-out">
             <a href="{{ route('kitchen-create-view') }}">
-                <h1 class="text-lg font-bold p-3">اضافة tt جديدة</h1>
+                <h1 class="text-lg font-bold p-3">اضافة صورة جديدة</h1>
             </a>
         </div>
 
