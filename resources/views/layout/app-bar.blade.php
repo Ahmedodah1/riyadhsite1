@@ -113,6 +113,12 @@
                 </a>
             </div>
 
+            <div class="relative group">
+                <a href="{{route('blog')}}" class="nav-link flex items-center">
+                    <span>قنواتي  </span>
+                </a>
+            </div>
+
             <div>
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <form action="{{route('logout')}}" method="POST">
