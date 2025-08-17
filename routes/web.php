@@ -83,8 +83,22 @@ Route::prefix('auth')->group(function () {
 
 
 
-    Route::get('/pool/index', \App\Actions\Pools\Admin\PoolAdminIndex::class)->name('pool-index');
 
+    Route::get('/office/index', \App\Actions\Office\Admin\OfficeAdminIndex::class)->name('office-index');
+
+    Route::post('/office/create', \App\Actions\Office\Admin\CreateAction::class)->name('office-create');
+
+    Route::get('/office/create/view', \App\Actions\Office\Admin\OfficeCreateViewIndex::class)->name('office-create-view');
+
+    Route::post('/office/delete/{office}', \App\Actions\Office\Admin\DeleteOfficeAction::class)->name('office-delete');
+
+    Route::post('/office/update/{office}', \App\Actions\Office\Admin\EditOfficeAction::class)->name('office-update');
+
+    Route::get('/office/edit/view/{office}', \App\Actions\Office\Admin\OfficeEditView::class)->name('office-edit-view');
+
+
+
+    Route::get('/pool/index', \App\Actions\Pools\Admin\PoolAdminIndex::class)->name('pool-index');
 
     Route::post('/pool/create', \App\Actions\Pools\Admin\CreateAction::class)->name('pool-create');
 

@@ -2,6 +2,7 @@
 
 namespace App\Actions\Colorphoto\Admin;
 
+use App\Models\Book;
 use App\Models\Colorphoto;
 use Illuminate\Http\Request; // ✅ الصحيح
 use Illuminate\Support\Facades\Log;
@@ -11,7 +12,7 @@ class EditColorphotoAction
 {
     use AsAction;
 
-    public function handle(Request $request, Colorphoto $colorphoto)
+    public function handle(Request $request, Office $office)
     {
         $data = [
             'title' => $request->get('title'),
@@ -22,10 +23,13 @@ class EditColorphotoAction
             $data['image'] = $request->file('image')->store('images', 'public');
         }
 
+        if ($request->hasFile('cover_url')) {
+            $data['cover_url'] = $request->file('cover_url')->store('pdfs', 'public');
+        }
 
-
-        $colorphoto->update($data);
+        $office->update($data);
 
         return redirect()->route('dashboard')->with('success', 'تم تحديث الكتاب بنجاح');
     }
+
 }
