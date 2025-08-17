@@ -45,6 +45,9 @@ Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::
 Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->name('kitchen');
 
 
+Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
+
+
 Route::get('/blogs', \App\Actions\Blog\Client\BlogClientViewAction::class)->name('blogs');
 Route::get('/certificate', \App\Actions\Certificates\Client\CertificateClientIndex::class)->name('certificate');
 
