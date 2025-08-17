@@ -23,7 +23,7 @@
                 @foreach($kitchens as $kitchen)
                     <tr class="text-gray-800 text-right">
                         <td class="px-4 py-2 border-b">
-                            <form action="{{ route('kitchen-delete', $kitchen->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
+                            <form action="{{ route('pool-delete', $kitchen->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
                                 @csrf
                                 <button type="submit" class="text-red-500 hover:underline">حذف</button>
                             </form>

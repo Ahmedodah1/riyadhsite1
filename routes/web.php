@@ -80,7 +80,18 @@ Route::prefix('auth')->group(function () {
 
 
 
+    Route::get('/pool/index', \App\Actions\Pools\Admin\PoolAdminIndex::class)->name('pool-index');
 
+
+    Route::post('/pool/create', \App\Actions\Pools\Admin\CreateAction::class)->name('pool-create');
+
+    Route::get('/pool/create/view', \App\Actions\Pools\Admin\PoolCreateViewIndex::class)->name('pool-create-view');
+
+    Route::post('/pool/delete/{pool}', \App\Actions\Pools\Admin\DeletePoolAction::class)->name('pool-delete');
+
+    Route::post('/pool/update/{pool}', \App\Actions\Pools\Admin\EditPoolAction::class)->name('pool-update');
+
+    Route::get('/pool/edit/view/{pool}', \App\Actions\Pools\Admin\PoolEditView::class)->name('pool-edit-view');
 
 
 
@@ -142,6 +153,7 @@ Route::prefix('auth')->group(function () {
     Route::post('/delete-blackandwhite/{blackAndWhite}', \App\Actions\BlackAndWhite\AdminBlackAndWhiteDeleteAction::class)->name('delete.Photo');
     Route::post('/update-blackandwhite/{blackAndWhite}', \App\Actions\BlackAndWhite\UpdatePhotosAction::class)->name('update.Photo');
     Route::get('/update-view/{blackAndWhite}' , \App\Actions\BlackAndWhite\UpdateViewPhotosAction::class)->name('Update.ViewPhotos');
+
 
 
 
