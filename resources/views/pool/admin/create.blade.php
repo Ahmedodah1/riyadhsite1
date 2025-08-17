@@ -65,7 +65,7 @@
             </div>
         @endif
 
-        <h2 class="text-2xl font-bold mb-6">إضافة لون جديدة</h2>
+        <h2 class="text-2xl font-bold mb-6">إضافة صورة جديدة</h2>
 
         <form action="{{ route('pool-create') }}" method="POST" enctype="multipart/form-data">
             @csrf
