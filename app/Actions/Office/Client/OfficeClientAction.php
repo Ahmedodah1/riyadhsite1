@@ -2,7 +2,7 @@
 
 namespace App\Actions\Office\Client;
 
-use App\Models\Pool;
+use App\Models\Office;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class OfficeClientAction
