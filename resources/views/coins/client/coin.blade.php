@@ -13,7 +13,7 @@
                         class="bg-white rounded-2xl border border-gray-200 shadow hover:shadow-md transition duration-300 overflow-hidden"
                     >
                         <button @click="open = true; image = @js(asset('storage/' . $coin->image))" class="block w-full">
-                            <img src="{{ asset('storage/' . $coin->image) }}"
+                            <img src="{{ asset('public/storage/' . $coin->image) }}"
                                  alt="{{ $coin->title }}"
                                  class="w-full h-64 object-cover hover:scale-105 transition duration-300" />
                         </button>
