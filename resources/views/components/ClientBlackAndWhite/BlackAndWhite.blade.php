@@ -33,20 +33,24 @@
     </div>
 
     <!-- ✅ نافذة التكبير -->
+    <!-- ✅ نافذة التكبير -->
     <div x-show="open"
-         x-transition
-         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+         x-transition.opacity.scale.80
+         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 backdrop-blur-sm"
          @click.self="open = false">
 
-        <div class="relative max-w-4xl w-full p-4">
+        <div class="relative max-w-5xl w-full p-6">
             <!-- زر الإغلاق -->
             <button @click="open = false"
-                    class="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-700 p-1 rounded-full text-lg">
+                    class="absolute top-4 right-4 text-white bg-red-600 hover:bg-red-700 p-2 rounded-full text-2xl shadow-lg transition">
                 &times;
             </button>
 
             <!-- الصورة المكبرة -->
-            <img :src="image" alt="عرض الصورة" class="w-full max-h-[85vh] object-contain rounded-lg shadow-lg">
+            <img :src="image"
+                 alt="عرض الصورة"
+                 class="w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl border-4 border-white transform transition duration-500 scale-105 hover:scale-110">
         </div>
     </div>
+
 </div>
