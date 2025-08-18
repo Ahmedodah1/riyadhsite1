@@ -12,6 +12,6 @@ class OfficeClientAction
     public function handle()
     {
         $offices = Office::query()->get();
-        return view('office.client.office', compact('office'));
+        return view('office.client.office', compact('offices'));
     }
 }
