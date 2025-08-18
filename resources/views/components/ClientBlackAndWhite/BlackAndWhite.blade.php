@@ -49,7 +49,7 @@
             <!-- الصورة المكبرة -->
             <img :src="image"
                  alt="عرض الصورة"
-                 class="w-full max-h-[90vh] object-contain rounded-lg shadow-lg">
+                 class="">
         </div>
     </div>
 </div>
