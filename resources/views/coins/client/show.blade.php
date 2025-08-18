@@ -18,9 +18,7 @@
             </p>
 
             <!-- السعر -->
-            <div class="text-lg md:text-xl font-semibold text-blue-600 mb-6 text-center">
-                السعر: {{ $coin->price ?? 'غير متوفر' }} ريال
-            </div>
+
 
             <!-- زر الرجوع -->
             <div class="text-center">
