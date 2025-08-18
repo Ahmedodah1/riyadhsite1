@@ -115,7 +115,7 @@
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
                 </a>
                 <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                    <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">قناة اليوتيوب</a>
+                    <a href="{{route('channel')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">قناة اليوتيوب</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور التيك توك</a>
                 </div>
             </div>
