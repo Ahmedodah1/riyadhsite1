@@ -51,7 +51,7 @@ Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coi
 Route::get('/channel', \App\Actions\Chanels\ChannelClientIndex::class)->name('channel');
 Route::get('/channell', \App\Actions\Chanels\ChannelTikIndex::class)->name('channeltik');
 
-Route::get('/coins', \App\Actions\Coins\Client\ShowCoinIndex::class)->name('coins.show');
+Route::get('/coins/{id}', \App\Actions\Coins\Client\ShowCoinIndex::class)->name('coins.show');
 
 
 Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
