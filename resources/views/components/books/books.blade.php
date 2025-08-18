@@ -23,7 +23,7 @@
                         {{ $book->description }}
                     </p>
                     <a href="{{ route('book.read', $book->id) }}"
-                       class="mt-auto bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium py-2 rounded-md text-center transition-colors duration-300">
+                       class="mt-auto bg-indigo-500 hover:bg-indigo-900 text-white text-sm font-medium py-2 rounded-md text-center transition-colors duration-300">
                         عرض الكتاب
                     </a>
                 </div>
