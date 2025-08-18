@@ -41,10 +41,11 @@
 
         <div class="relative max-w-4xl w-full p-4">
             <!-- زر الإغلاق -->
-            <button @click="open = false"
+            <button type="button" @click="open = false"
                     class="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-700 p-1 rounded-full text-lg">
                 &times;
             </button>
+
 
             <!-- الصورة المكبرة -->
             <img src="{{ asset('public/storage/' . $client->image) }}" alt="عرض الصورة" class="w-full max-h-[85vh] object-contain rounded-lg shadow-lg">
