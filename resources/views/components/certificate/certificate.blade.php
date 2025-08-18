@@ -23,7 +23,7 @@
                         {{ $certificate->description }}
                     </p>
                     <a href="{{ route('certificate.read', $certificate->id) }}"
-                       class="mt-auto inline-900 text-center bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 rounded-lg transition">
+                       class="mt-auto inline-block text-center bg-indigo-900 hover:bg-indigo-700 text-white text-sm font-semibold py-2.5 rounded-lg transition">
                         عرض الشهادة
                     </a>
                 </div>
