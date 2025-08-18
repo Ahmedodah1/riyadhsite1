@@ -11,7 +11,7 @@
                     class="bg-white rounded-2xl border border-gray-200 shadow hover:shadow-md transition duration-300 overflow-hidden">
 
                     <button @click="open = true; image = @js(asset('storage/' . $client->image))" class="block w-full">
-                        <img src="{{ asset('storage/' . $client->image) }}"
+                        <img src="{{ asset('public/storage/' . $client->image) }}"
                              alt="{{ $client->Title }}"
                              class="w-full h-64 object-cover hover:scale-105 transition duration-300" />
                     </button>
@@ -47,7 +47,7 @@
             </button>
 
             <!-- الصورة المكبرة -->
-            <img :src="image" alt="عرض الصورة" class="w-full max-h-[85vh] object-contain rounded-lg shadow-lg">
+            <img src="{{ asset('public/storage/' . $client->image) }}" alt="عرض الصورة" class="w-full max-h-[85vh] object-contain rounded-lg shadow-lg">
         </div>
     </div>
 </div>
