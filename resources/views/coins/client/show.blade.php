@@ -3,7 +3,7 @@
     <div class="bg-gray-50 min-h-screen py-16 px-4 sm:px-10 lg:px-20">
         <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6">
             <!-- صورة المنتج -->
-            <img src="{{ asset('storage/' . $coin->image) }}"
+            <img src="{{ asset('public/storage/' . $coin->image) }}"
                  alt="{{ $coin->title }}"
                  class="w-full h-96 object-cover rounded-lg mb-6">
 
