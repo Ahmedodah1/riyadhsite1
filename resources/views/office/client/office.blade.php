@@ -7,7 +7,7 @@
 
             <!-- شبكة الصور -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-11">
-                @foreach($offixes as $office)
+                @foreach($offices as $office)
                     <div class="bg-white rounded-2xl border border-gray-200 shadow hover:shadow-md transition duration-300 overflow-hidden">
                         <button @click="open = true; image = @js(asset('public/storage/' . $office->image))" class="block w-full">
                             <img src="{{ asset('public/storage/' . $office->image) }}"
