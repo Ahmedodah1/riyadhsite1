@@ -46,6 +46,9 @@ Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->
 
 Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->name('office');
 
+Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coin');
+
+
 
 Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
 
@@ -84,6 +87,19 @@ Route::prefix('auth')->group(function () {
     Route::post('/decor/update/{decor}', [\App\Actions\Decors\Admin\EditDecorAction::class,'handle'])->name('decor.update');
 
 
+
+
+    Route::get('/coin/index', \App\Actions\Coins\Admin\CoinAdminIndex::class)->name('coin-index');
+
+    Route::post('/coin/create', \App\Actions\Coins\Admin\CreateAction::class)->name('coin-create');
+
+    Route::get('/coin/create/view', \App\Actions\Coins\Admin\CoinCreateViewIndex::class)->name('coin-create-view');
+
+    Route::post('/coin/delete/{coin}', \App\Actions\Coins\Admin\DeleteCoinAction::class)->name('coin-delete');
+
+    Route::post('/coin/update/{coin}', \App\Actions\Coins\Admin\EditCoinAction::class)->name('coin-update');
+
+    Route::get('/coin/edit/view/{coin}', \App\Actions\Coins\Admin\CoinEditView::class)->name('coin-edit-view');
 
 
     Route::get('/office/index', \App\Actions\Office\Admin\OfficeAdminIndex::class)->name('office-index');

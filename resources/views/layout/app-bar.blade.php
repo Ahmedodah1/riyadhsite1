@@ -104,7 +104,7 @@
                 </a>
             </div>
             <div class="relative group">
-                <a href="{{route('blog')}}" class="nav-link flex items-center">
+                <a href="{{route('coin')}}" class="nav-link flex items-center">
                     <span>العملات العالمية </span>
                 </a>
             </div>
