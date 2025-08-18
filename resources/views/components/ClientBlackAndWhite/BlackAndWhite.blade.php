@@ -25,7 +25,7 @@
         </div>
 
         <!-- زر عرض المزيد -->
-        <div class="text-center mt-8" x-show="visible < {{ count($client) }}">
+        <div class="text-center mt-8" x-show="visible < {{ count($clients) }}">
             <button @click="visible += 8"
                     class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">
                 عرض المزيد
