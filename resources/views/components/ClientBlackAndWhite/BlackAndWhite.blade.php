@@ -11,7 +11,7 @@
                     class="bg-white rounded-2xl border border-gray-200 shadow hover:shadow-md transition duration-300 overflow-hidden">
 
                     <button @click="open = true; image = @js(asset('storage/' . $client->image))" class="block w-full">
-                        <img src="{{ asset('public/storage/' . $client->image) }}"
+                        <img src="{{ asset('storage/' . $client->image) }}"
                              alt="{{ $client->Title }}"
                              class="w-full h-64 object-cover hover:scale-105 transition duration-300" />
                     </button>
@@ -25,7 +25,7 @@
         </div>
 
         <!-- زر عرض المزيد -->
-        <div class="text-center mt-8" x-show="visible < {{ count($clients) }}">
+        <div class="text-center mt-8" x-show="visible < {{ count($client) }}">
             <button @click="visible += 8"
                     class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">
                 عرض المزيد
@@ -36,20 +36,18 @@
     <!-- ✅ نافذة التكبير -->
     <div x-show="open"
          x-transition
-         class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
+         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
          @click.self="open = false">
 
-        <div class="relative w-full max-w-4xl">
+        <div class="relative max-w-4xl w-full p-4">
             <!-- زر الإغلاق -->
             <button @click="open = false"
-                    class="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-700 p-2 rounded-full text-lg z-50">
+                    class="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-700 p-1 rounded-full text-lg">
                 &times;
             </button>
 
             <!-- الصورة المكبرة -->
-            <img :src="image"
-                 alt="عرض الصورة"
-                 class="">
+            <img :src="image" alt="عرض الصورة" class="w-full max-h-[85vh] object-contain rounded-lg shadow-lg">
         </div>
     </div>
 </div>
