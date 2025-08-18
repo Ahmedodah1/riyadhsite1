@@ -41,9 +41,10 @@
 
         <div class="relative max-w-4xl w-full p-4">
             <!-- زر الإغلاق -->
-            <button type="button" @click="open = false"
-                    class="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-700 p-1 rounded-full text-lg">
-                &times;
+            <button @click="open = true; image = @js(asset('storage/' . $client->image))" class="block w-full">
+                <img src="{{ asset('public/storage/' . $client->image) }}"
+                     alt="{{ $client->Title }}"
+                     class="w-full h-64 object-cover hover:scale-105 transition duration-300" />
             </button>
 
 
