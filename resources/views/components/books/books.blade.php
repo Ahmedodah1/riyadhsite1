@@ -11,7 +11,7 @@
                         class="w-full h-120 object-cover object-center transition-transform duration-500 hover:scale-105"
                     />
 
-                    <div class="absolute top-3 right-3 bg-indigo-600 text-white text-xs uppercase font-semibold px-3 py-1 rounded-lg shadow-md">
+                    <div class="absolute top-3 right-3 bg-green-700-600 text-white text-xs uppercase font-semibold px-3 py-1 rounded-lg shadow-md">
                         جديد
                     </div>
                 </div>
