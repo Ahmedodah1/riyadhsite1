@@ -44,6 +44,8 @@ Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::
 
 Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->name('kitchen');
 
+Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->name('office');
+
 
 Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
 
