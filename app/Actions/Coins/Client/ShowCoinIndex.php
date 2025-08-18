@@ -9,8 +9,14 @@ class ShowCoinIndex
 {
     use AsAction;
 
-    public function handle()
+    public function handle($id)
     {
-        return view('coins.client.show');
+        return Coin::findOrFail($id);
+    }
+
+    public function asController($id)
+    {
+        $coin = $this->handle($id);
+        return view('coins.client.show', compact('coin'));
     }
 }
