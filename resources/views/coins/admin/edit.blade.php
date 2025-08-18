@@ -13,14 +13,12 @@
                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
             </div>
 
-            <div class="mb-4">
-                <label for="description" class="block mb-1 font-medium">وصف الصورة</label>
-                <textarea dir="rtl" id="description" name="description" rows="4"
-                          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                          required>{{ $coin->description }}</textarea>
-            </div>
+            <textarea dir="rtl" id="description" name="description" rows="4"
+                      class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 whitespace-pre-wrap"
+                      required>{{ $coin->description }}</textarea>
 
-            @if($coin->cover_url)
+
+        @if($coin->cover_url)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الملف الحالي:</label>
                     <a href="{{ asset('storage/' . $coin->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
