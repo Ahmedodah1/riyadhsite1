@@ -2,7 +2,6 @@
 
 namespace App\Actions\Chanels;
 
-use App\Models\Coin;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class ChannelClientIndex
@@ -11,7 +10,6 @@ class ChannelClientIndex
 
     public function handle()
     {
-        $channel = Coin::query()->get();
-        return view('channel.channel', compact('channel'));
+        return view('channel.channel');
     }
 }

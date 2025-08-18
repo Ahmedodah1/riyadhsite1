@@ -2,7 +2,6 @@
 
 namespace App\Actions\Chanels;
 
-use App\Models\Coin;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class ChannelTikIndex
@@ -11,7 +10,6 @@ class ChannelTikIndex
 
     public function handle()
     {
-        $channeltik = Coin::query()->get();
-        return view('channel.channelTik', compact('channeltik'));
+        return view('channel.channelTik');
     }
 }
