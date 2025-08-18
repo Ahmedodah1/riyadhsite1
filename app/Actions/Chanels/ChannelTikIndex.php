@@ -11,7 +11,7 @@ class ChannelTikIndex
 
     public function handle()
     {
-        $channel = Coin::query()->get();
-        return view('channel.channelTik', compact('channel'));
+        $channeltik = Coin::query()->get();
+        return view('channel.channelTik', compact('channeltik'));
     }
 }

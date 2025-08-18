@@ -49,7 +49,7 @@ Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->nam
 Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coin');
 
 Route::get('/channel', \App\Actions\Chanels\ChannelClientIndex::class)->name('channel');
-Route::get('/channel', \App\Actions\Chanels\ChannelTikIndex::class)->name('channel');
+Route::get('/channel', \App\Actions\Chanels\ChannelTikIndex::class)->name('channeltik');
 
 
 
