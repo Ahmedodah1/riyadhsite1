@@ -43,7 +43,7 @@
 
                 <li>
                     <a href="https://www.tiktok.com/@topworksc" target="_blank" rel="noopener noreferrer" title="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 h-8" fill="currentColor">
                             <path d="M9.75 2v11.43a3.75 3.75 0 1 1-3.75-3.75v-2.68a7.5 7.5 0 1 0 7.5 7.5V5.83h2.5V2h-6z"/>
                         </svg>
                     </a>
