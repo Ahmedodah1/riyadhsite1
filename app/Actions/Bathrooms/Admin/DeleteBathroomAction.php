@@ -2,7 +2,7 @@
 
 namespace App\Actions\Bathrooms\Admin;
 
-use App\Models\Bathroom;
+use App\Models\bathroom;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class DeleteBathroomAction
