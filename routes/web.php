@@ -59,6 +59,9 @@ Route::get('/coins/{id}/', \App\Actions\Coins\Client\ShowCoinIndex::class)->name
 
 Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
 
+Route::get('/diningroom', \App\Actions\Diningroom\Client\DiningroomClientIndex::class)->name('diningroom');
+
+
 
 Route::get('/blogs', \App\Actions\Blog\Client\BlogClientViewAction::class)->name('blogs');
 Route::get('/certificate', \App\Actions\Certificates\Client\CertificateClientIndex::class)->name('certificate');
@@ -134,6 +137,21 @@ Route::prefix('auth')->group(function () {
     Route::post('/bathroom/update/{bathroom}', \App\Actions\Bathrooms\Admin\EditBathroomAction::class)->name('bathroom-update');
 
     Route::get('/bathroom/edit/view/{bathroom}', \App\Actions\Bathrooms\Admin\BathroomEditView::class)->name('bathroom-edit-view');
+
+
+
+    Route::get('/diningroom/index', \App\Actions\Diningroom\Admin\DiningroomAdminIndex::class)->name('diningroom-index');
+    Route::post('/diningroom/create', \App\Actions\Diningroom\Admin\CreateAction::class)->name('diningroom-create');
+    Route::get('/diningroom/create/view', \App\Actions\Diningroom\Admin\DiningroomCreateViewIndex::class)->name('diningroom-create-view');
+
+    Route::post('/diningroom/delete/{diningroom}',\App\Actions\Diningroom\Admin\DeleteDiningroomAction::class)->name('diningroom-delete');
+    Route::post('/diningroom/update/{diningroom}',\App\Actions\Diningroom\Admin\EditDiningroomAction::class)->name('diningroom-update');
+    Route::get('/diningroom/edit/view/{diningroom}', \App\Actions\Diningroom\Admin\DiningroomEditView::class)->name('diningroom-edit-view');
+
+
+
+
+
 
 
 
