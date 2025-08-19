@@ -120,6 +120,20 @@ Route::prefix('auth')->group(function () {
 
 
 
+
+    Route::get('/bathroom/index', \App\Actions\Bathrooms\Admin\BathroomAdminIndex::class)->name('bathroom-index');
+
+    Route::post('/bathroom/create', \App\Actions\Bathrooms\Admin\CreateAction::class)->name('bathroom-create');
+
+    Route::get('/bathroom/create/view', \App\Actions\Bathrooms\Admin\BathroomCreateViewIndex::class)->name('bathroom-create-view');
+    Route::post('/bathroom/delete/{bathroom}', \App\Actions\Bathrooms\Admin\DeleteBathroomAction::class)->name('bathroom-delete');
+
+    Route::post('/bathroom/update/{bathroom}', \App\Actions\Bathrooms\Admin\EditBathroomAction::class)->name('bathroom-update');
+
+    Route::get('/bathroom/edit/view/{bathroom}', \App\Actions\Bathrooms\Admin\BathroomEditView::class)->name('bathroom-edit-view');
+
+
+
     Route::get('/pool/index', \App\Actions\Pools\Admin\PoolAdminIndex::class)->name('pool-index');
 
     Route::post('/pool/create', \App\Actions\Pools\Admin\CreateAction::class)->name('pool-create');
