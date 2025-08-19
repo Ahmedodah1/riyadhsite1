@@ -46,6 +46,9 @@ Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->
 
 Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->name('office');
 
+Route::get('/bathroom', \App\Actions\Bathrooms\Client\BathroomClientIndex::class)->name('bathroom');
+
+
 Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coin');
 
 Route::get('/channel', \App\Actions\Chanels\ChannelClientIndex::class)->name('channel');
