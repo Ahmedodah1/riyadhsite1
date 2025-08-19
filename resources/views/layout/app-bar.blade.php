@@ -68,7 +68,7 @@
                     <a href="{{route('office')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مكتب منزلي </a>
 
                     <a href="{{route('bathroom')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">حمامات </a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف طعام </a>
+                    <a href="{{route('diningroom')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف طعام </a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف غسيل </a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف جلوس </a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">خزائن </a>
