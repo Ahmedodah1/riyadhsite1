@@ -28,7 +28,7 @@
                 </div>
             @endif
 
-            @if($coin->image)
+            @if($diningroom->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
                     <img src="{{ asset('public/storage/' . $diningroom->image) }}" class="h-24 rounded">
