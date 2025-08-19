@@ -12,6 +12,6 @@ class BathroomClientIndex
     public function handle()
     {
         $bathrooms = Bathroom::query()->get();
-        return view('bathroom.client.coin', compact('bathrooms'));
+        return view('bathroom.client.bathroom', compact('bathrooms'));
     }
 }
