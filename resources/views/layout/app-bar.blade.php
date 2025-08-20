@@ -110,6 +110,12 @@
             </div>
 
             <div class="relative group">
+                <a href="{{route('coin')}}" class="nav-link flex items-center">
+                    <span>ملخصات كتب </span>
+                </a>
+            </div>
+
+            <div class="relative group">
                 <a href="#" class="nav-link flex items-center">
                     <span>قنواتي </span>
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
