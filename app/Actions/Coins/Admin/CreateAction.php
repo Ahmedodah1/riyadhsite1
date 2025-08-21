@@ -3,6 +3,7 @@
 namespace App\Actions\Coins\Admin;
 
 use App\Models\Coin;
+use App\Models\RelatedCoin;
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Illuminate\Support\Facades\Log;
@@ -14,7 +15,6 @@ class CreateAction
     public function handle(Request $request)
     {
         try {
-            // التحقق من صحة البيانات
             $request->validate([
                 'title' => 'required|string|max:255',
                 'description' => 'nullable|string',
@@ -35,18 +35,17 @@ class CreateAction
                 'country' => $request->country,
             ]);
 
-            // حفظ العملات المشابهة (إذا وجدت)
+            // حفظ العملات المشابهة
             if ($request->has('related_title')) {
                 foreach ($request->related_title as $index => $relatedTitle) {
-                    $relatedTitle = trim($relatedTitle);
-                    if ($relatedTitle) {
-                        $relatedImagePath = isset($request->related_image[$index]) && $request->related_image[$index]
+                    if (!empty($relatedTitle)) {
+                        $relatedImage = isset($request->related_image[$index]) && $request->related_image[$index]
                             ? $request->related_image[$index]->store('coins/related', 'public')
                             : null;
 
                         $coin->relatedCoins()->create([
                             'title' => $relatedTitle,
-                            'image' => $relatedImagePath,
+                            'image' => $relatedImage,
                         ]);
                     }
                 }
