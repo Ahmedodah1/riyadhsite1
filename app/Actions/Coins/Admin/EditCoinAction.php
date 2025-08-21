@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Actions\Coins\Admin;
 
 use App\Models\Coin;
@@ -17,13 +16,16 @@ class EditCoinAction
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'image' => 'nullable|image',
-            'country' => 'required|string|max:255', // ✨ إضافة الدولة
+            'country' => 'required|string|max:255',
+            'related' => 'nullable|array',
+            'related.*' => 'integer|exists:coins,id',
         ]);
 
         $data = [
-            'title' => $request->get('title'),
-            'description' => $request->get('description'),
-            'country' => $request->get('country'), // ✨ تحديث الدولة
+            'title' => $request->title,
+            'description' => $request->description,
+            'country' => $request->country,
+            'related' => $request->related ?? [], // حفظ العملات المشابهة
         ];
 
         if ($request->hasFile('image')) {

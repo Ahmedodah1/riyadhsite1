@@ -12,4 +12,10 @@ class Coin extends Model
         'image',
         'country', // ✨ أضفنا الدولة هنا
     ];
+
+    // علاقة العملات المشابهة
+    public function relatedCoins()
+    {
+        return $this->hasMany(RelatedCoin::class);
+    }
 }
