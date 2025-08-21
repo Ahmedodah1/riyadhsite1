@@ -3,19 +3,17 @@
 namespace App\Actions\Coins\Admin;
 
 use App\Models\Coin;
+use App\Models\Colorphoto;
 use Lorisleiva\Actions\Concerns\AsAction;
 
 class CoinEditView
 {
     use AsAction;
 
-    public function handle($id)
+    public function handle($id)  // 👈 استقبل الـ id
     {
-        $coin = Coin::findOrFail($id);
-
-        // جلب كل العملات الأخرى للاختيار منها كـ related
-        $allCoins = Coin::where('id', '!=', $coin->id)->get();
-
-        return view('coins.admin.edit', compact('coin', 'allCoins'));
+        $coin = Coin::findOrFail($id); // 👈 عنصر واحد فقط
+        return view('coins.admin.edit' , compact('coin'));
     }
+
 }
