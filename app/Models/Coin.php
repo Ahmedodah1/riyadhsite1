@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\RelatedCoin;
 
 use Illuminate\Database\Eloquent\Model;
 
