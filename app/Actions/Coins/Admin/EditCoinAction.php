@@ -25,7 +25,7 @@ class EditCoinAction
             'title' => $request->title,
             'description' => $request->description,
             'country' => $request->country,
-            'related' => $request->related ?? [], // حفظ العملات المشابهة
+            'related' => json_encode($request->related ?? []), // تحويل array إلى JSON
         ];
 
         if ($request->hasFile('image')) {
