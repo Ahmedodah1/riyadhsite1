@@ -9,6 +9,7 @@ class Coin extends Model
     protected $fillable = [
         'title',
         'description',
-        'image'
+        'image',
+        'country', // ✨ أضفنا الدولة هنا
     ];
 }

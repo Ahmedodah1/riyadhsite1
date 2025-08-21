@@ -11,12 +11,21 @@ class ShowCoinIndex
 
     public function handle($id)
     {
-        return Coin::findOrFail($id);
+        $coin = Coin::findOrFail($id);
+
+        // جلب العملات المشابهة (من نفس الدولة)
+        $relatedCoins = Coin::where('id', '!=', $coin->id)
+            ->where('country', $coin->country)
+            ->take(4) // عدد العملات المشابهة
+            ->get();
+
+        return compact('coin', 'relatedCoins');
     }
 
     public function asController($id)
     {
-        $coin = $this->handle($id);
-        return view('coins.client.show', compact('coin'));
+        $data = $this->handle($id);
+
+        return view('coins.client.show', $data);
     }
 }
