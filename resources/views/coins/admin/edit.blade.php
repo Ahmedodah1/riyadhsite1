@@ -47,7 +47,7 @@
             {{-- العملات المشابهة --}}
             <div class="mb-6">
                 <label class="block mb-1 font-medium">العملات المشابهة</label>
-                <select name="related[]" multiple class="w-full border border-gray-300 rounded px-3 py-2" dir="rtl">
+                <select name="related[]" multiple class="w-full border rounded px-3 py-2" dir="rtl">
                     @foreach($allCoins as $c)
                         <option value="{{ $c->id }}"
                             {{ in_array($c->id, json_decode($coin->related ?? '[]')) ? 'selected' : '' }}>
