@@ -29,7 +29,7 @@
     </div>
 
     <!-- العملات المشابهة -->
-    @if($RelatedCoins->count() > 0)
+    @if($relatedCoins->count() > 0)
         <div class="max-w-6xl mx-auto mt-12 px-4 sm:px-6 lg:px-20">
             <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
                 عملات أخرى من {{ $coin->country }}
