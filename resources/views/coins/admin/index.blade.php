@@ -17,6 +17,7 @@
                     <th class="px-4 py-2 text-right border-b">الصورة</th>
                     <th class="px-4 py-2 text-right border-b">الوصف</th>
                     <th class="px-4 py-2 text-right border-b">العنوان</th>
+                    <th class="px-4 py-2 text-right border-b">الدولة</th> {{-- العمود الجديد --}}
                 </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,7 @@
                         </td>
                         <td class="px-4 py-2 border-b">{{ Str::limit($coin->description, 50) }}</td>
                         <td class="px-4 py-2 border-b">{{ $coin->title }}</td>
+                        <td class="px-4 py-2 border-b">{{ $coin->country }}</td> {{-- عرض الدولة --}}
                     </tr>
                 @endforeach
                 </tbody>
