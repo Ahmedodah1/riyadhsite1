@@ -11,11 +11,13 @@ class CoinEditView
 
     public function handle($id)
     {
+        // جلب العملة الحالية
         $coin = Coin::findOrFail($id);
 
-        // جلب كل العملات الأخرى للاختيار منها كـ related
+        // جلب كل العملات الأخرى لاستخدامها كـ related
         $allCoins = Coin::where('id', '!=', $coin->id)->get();
 
+        // تمرير العملة و كل العملات الأخرى للـ Blade
         return view('coins.admin.edit', compact('coin', 'allCoins'));
     }
 }
