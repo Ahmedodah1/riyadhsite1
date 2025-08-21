@@ -16,22 +16,6 @@
                 </svg>
                 <span class="font-semibold">تم حفظ الصورة بنجاح!</span>
             </div>
-
-            <style>
-                @keyframes slide-in { 0% {opacity: 0; transform: translateX(100%);} 100% {opacity: 1; transform: translateX(0);} }
-                @keyframes slide-out { 0% {opacity: 1; transform: translateX(0);} 100% {opacity: 0; transform: translateX(100%);} }
-                .animate-slide-in { animation: slide-in 0.5s ease forwards; }
-                .animate-slide-out { animation: slide-out 0.5s ease forwards; }
-            </style>
-
-            <script>
-                setTimeout(() => {
-                    const alert = document.getElementById('successAlert');
-                    alert.classList.remove('animate-slide-in');
-                    alert.classList.add('animate-slide-out');
-                    alert.addEventListener('animationend', () => alert.remove());
-                }, 3000);
-            </script>
         @endif
 
         {{-- إشعار الخطأ --}}
@@ -46,39 +30,56 @@
         <form action="{{ route('coin-create') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
+            {{-- بيانات العملة الرئيسية --}}
             <div class="mb-4">
                 <label for="title" class="block mb-1 font-medium">عنوان العملة</label>
-                <input dir="rtl" type="text" id="title" name="title"
-                       class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                       required>
+                <input dir="rtl" type="text" id="title" name="title" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
             </div>
 
             <div class="mb-4">
                 <label for="description" class="block mb-1 font-medium">وصف العملة</label>
-                <textarea dir="rtl" id="description" name="description" rows="4"
-                          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                          required></textarea>
+                <textarea dir="rtl" id="description" name="description" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
             </div>
 
             <div class="mb-4">
                 <label for="country" class="block mb-1 font-medium">الدولة</label>
-                <input dir="rtl" type="text" id="country" name="country"
-                       class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                       placeholder="مثال: السعودية" required>
+                <input dir="rtl" type="text" id="country" name="country" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="مثال: السعودية" required>
             </div>
 
             <div class="mb-6">
                 <label for="image" class="block mb-1 font-medium">صورة العملة</label>
-                <input dir="rtl" type="file" id="image" name="image" accept="image/*"
-                       class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <input dir="rtl" type="file" id="image" name="image" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" required>
             </div>
 
+            {{-- العملات المشابهة --}}
+            <h3 class="text-lg font-semibold mb-2">العملات المشابهة (اختياري)</h3>
+            <div id="related-coins-wrapper">
+                <div class="related-coin mb-4 border p-3 rounded">
+                    <input type="text" name="related_title[]" placeholder="عنوان العملة المشابهة" class="w-full mb-2 border border-gray-300 rounded px-2 py-1">
+                    <input type="file" name="related_image[]" accept="image/*" class="w-full">
+                </div>
+            </div>
+            <button type="button" id="add-related-coin" class="mb-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">+ إضافة عملة مشابهة</button>
+
             <div class="text-right">
-                <button type="submit"
-                        class="bg-green-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full">
+                <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full">
                     حفظ العملة
                 </button>
             </div>
         </form>
     </div>
+
+    {{-- جافاسكريبت لإضافة حقول جديدة --}}
+    <script>
+        document.getElementById('add-related-coin').addEventListener('click', function() {
+            const wrapper = document.getElementById('related-coins-wrapper');
+            const newField = document.createElement('div');
+            newField.classList.add('related-coin', 'mb-4', 'border', 'p-3', 'rounded');
+            newField.innerHTML = `
+                <input type="text" name="related_title[]" placeholder="عنوان العملة المشابهة" class="w-full mb-2 border border-gray-300 rounded px-2 py-1">
+                <input type="file" name="related_image[]" accept="image/*" class="w-full">
+            `;
+            wrapper.appendChild(newField);
+        });
+    </script>
 @endsection
