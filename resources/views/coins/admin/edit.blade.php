@@ -6,7 +6,6 @@
 
         <form action="{{ route('coin-update', $coin->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @method('PUT')
 
             {{-- العنوان --}}
             <div class="mb-4">
