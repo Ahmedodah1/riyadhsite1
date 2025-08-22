@@ -10,7 +10,6 @@ class RelatedCoin extends Model
         'coin_id',
         'title',
         'description',
-
         'image',
     ];
 
