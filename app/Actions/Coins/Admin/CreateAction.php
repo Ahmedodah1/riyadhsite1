@@ -55,8 +55,9 @@ class CreateAction
                 }
             }
 
+
         } catch (\Exception $e) {
-            // تسجيل أي خطأ فقط
+            // فقط تسجيل الخطأ، دون إعادة المستخدم أو عرض رسالة خطأ
             Log::error('خطأ في إضافة العملة: ' . $e->getMessage());
         }
 
