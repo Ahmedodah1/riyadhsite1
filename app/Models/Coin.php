@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Models;
-use App\Models\RelatedCoin;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,15 +9,12 @@ class Coin extends Model
         'title',
         'description',
         'image',
-        'country', // ✨ أضفنا الدولة هنا
+        'country',
     ];
 
-    // علاقة العملات المشابهة
-    // Coin.php
+    // علاقة لجلب العملات المرتبطة
     public function relatedCoins()
     {
         return $this->hasMany(RelatedCoin::class);
     }
-
-
 }

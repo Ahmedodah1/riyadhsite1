@@ -3,7 +3,7 @@
 namespace App\Actions\Coins\Admin;
 
 use App\Models\Coin;
-use App\Models\RelatedCoin;
+
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Illuminate\Support\Facades\Log;
@@ -20,14 +20,18 @@ class CreateAction
                 'description' => 'nullable|string',
                 'image' => 'nullable|image',
                 'country' => 'required|string|max:255',
+                'related_title' => 'nullable|array',
                 'related_title.*' => 'nullable|string|max:255',
+                'related_image' => 'nullable|array',
                 'related_image.*' => 'nullable|image',
             ]);
 
-            // حفظ صورة العملة الرئيسية
-            $imagePath = $request->hasFile('image') ? $request->file('image')->store('coins', 'public') : null;
+            // صورة العملة الأساسية
+            $imagePath = $request->file('image')
+                ? $request->file('image')->store('coins', 'public')
+                : null;
 
-            // إنشاء العملة الرئيسية
+            // إنشاء العملة
             $coin = Coin::create([
                 'title' => $request->title,
                 'description' => $request->description,
@@ -35,7 +39,7 @@ class CreateAction
                 'country' => $request->country,
             ]);
 
-            // حفظ العملات المشابهة
+            // العملات المشابهة
             if ($request->has('related_title')) {
                 foreach ($request->related_title as $index => $relatedTitle) {
                     if (!empty($relatedTitle)) {
@@ -51,7 +55,8 @@ class CreateAction
                 }
             }
 
-            return back()->with('success', 'تم إضافة العملة بنجاح');
+            return redirect()->route('coins.admin.index')
+                ->with('success', 'تم إضافة العملة بنجاح');
 
         } catch (\Exception $e) {
             Log::error('خطأ في إضافة العملة: ' . $e->getMessage());
