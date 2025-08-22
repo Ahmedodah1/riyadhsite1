@@ -5,7 +5,7 @@
         <div class="max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 transform -translate-y-8">
             <!-- صورة العملة -->
             @if($coin->image)
-                <img src="{{ asset('storage/' . $coin->image) }}"
+                <img src="{{ asset('public/storage/' . $coin->image) }}"
                      alt="{{ $coin->title }}"
                      class="w-full h-80 md:h-96 object-cover rounded-2xl mb-6 shadow-md">
             @endif
@@ -44,7 +44,7 @@
                     <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
                         <a href="{{ route('coins.show', $related->id) }}">
                             @if($related->image)
-                                <img src="{{ asset('storage/' . $related->image) }}"
+                                <img src="{{ asset('public/storage/' . $related->image) }}"
                                      alt="{{ $related->title }}"
                                      class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                             @endif
