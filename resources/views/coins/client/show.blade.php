@@ -44,7 +44,7 @@
                     <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
                         <a href="{{ route('coins.show', $related->id ?? $coin->id) }}">
                             @if($related->image)
-                                <img src="{{ asset('storage/' . $related->image) }}"
+                                <img src="{{ asset('public/storage/' . $related->image) }}"
                                      alt="{{ $related->title }}"
                                      class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                             @endif
