@@ -15,8 +15,10 @@ class Coin extends Model
     ];
 
     // علاقة العملات المشابهة
-    public function ٍelatedCoins()
+    // Coin.php
+    public function relatedCoins()
     {
         return $this->hasMany(RelatedCoin::class);
     }
+
 }
