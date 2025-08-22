@@ -5,7 +5,7 @@
         <div class="max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 transform -translate-y-8">
             <!-- صورة العملة -->
             @if($coin->image)
-                <img src="{{ asset('storage/' . $coin->image) }}"
+                <img src="{{ asset('public/torage/' . $coin->image) }}"
                      alt="{{ $coin->title }}"
                      class="w-full h-80 md:h-96 object-cover rounded-2xl mb-6 shadow-md">
             @endif
