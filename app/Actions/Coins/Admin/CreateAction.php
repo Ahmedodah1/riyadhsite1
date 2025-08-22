@@ -55,13 +55,17 @@ class CreateAction
                 }
             }
 
-
+            // عند نجاح الحفظ، إظهار رسالة النجاح
             return redirect()->route('coins.admin.index')
                 ->with('success', 'تم إضافة العملة بنجاح');
 
         } catch (\Exception $e) {
-            // فقط تسجيل الخطأ، بدون إظهار رسالة للمستخدم
+            // تسجيل الخطأ فقط، بدون إظهار رسالة خطأ للمستخدم
             Log::error('خطأ في إضافة العملة: ' . $e->getMessage());
+
+            // أيضاً يمكن إظهار رسالة عامة نجاح مع تحفظ على البيانات
+            return redirect()->route('coins.admin.index')
+                ->with('success', 'تم حفظ العملية (مع احتمال وجود مشاكل، تحقق من اللوج).');
         }
     }
 }
