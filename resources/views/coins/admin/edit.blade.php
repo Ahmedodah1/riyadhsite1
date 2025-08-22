@@ -45,22 +45,28 @@
             </div>
 
             {{-- العملات المشابهة --}}
-            <div class="mb-6">
-                <label class="block mb-1 font-medium">العملات المشابهة</label>
-                <select name="related[]" multiple class="w-full border rounded px-3 py-2" dir="rtl">
-                    @foreach($allCoins as $c)
-                        <label class="block border rounded p-2 text-center cursor-pointer">
-                            <input type="checkbox" name="related[]" value="{{ $c->id }}"
-                                {{ in_array($c->id, json_decode($coin->related ?? '[]')) ? 'checked' : '' }}>
-                            <img src="{{ asset('public/storage/' . $c->image) }}" class="h-20 mx-auto mb-1">
-                            <span>{{ $c->title }}</span>
-                        </label>
+            @if($coin->relatedCoins->count() > 0)
+                <div class="mb-6">
+                    <label class="block mb-2 font-medium">العملات المشابهة</label>
+                    @foreach($coin->relatedCoins as $related)
+                        <div class="mb-4 border p-3 rounded">
+                            <input type="hidden" name="related_id[]" value="{{ $related->id }}">
+
+                            <label class="block mb-1">عنوان العملة</label>
+                            <input type="text" name="related_title[{{ $related->id }}]" value="{{ $related->title }}"
+                                   class="w-full mb-2 border rounded px-2 py-1">
+
+                            @if($related->image)
+                                <label class="block mb-1">الصورة الحالية</label>
+                                <img src="{{ asset('public/storage/' . $related->image) }}" class="h-24 rounded mb-2">
+                            @endif
+
+                            <label class="block mb-1">رفع صورة جديدة (اختياري)</label>
+                            <input type="file" name="related_image[{{ $related->id }}]" accept="image/*" class="w-full">
+                        </div>
                     @endforeach
-                </select>
-
-
-                <small class="text-gray-500">اضغط Ctrl أو Cmd لتحديد أكثر من عملة</small>
-            </div>
+                </div>
+            @endif
 
             {{-- زر الحفظ --}}
             <div class="text-right">
