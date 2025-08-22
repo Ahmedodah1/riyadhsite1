@@ -34,7 +34,7 @@
             @if($coin->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
-                    <img src="{{ asset('storage/' . $coin->image) }}" class="h-24 rounded">
+                    <img src="{{ asset('public/storage/' . $coin->image) }}" class="h-24 rounded">
                 </div>
             @endif
 
@@ -57,7 +57,7 @@
 
                             @if($related->image)
                                 <label class="block mb-1">الصورة الحالية</label>
-                                <img src="{{ asset('storage/' . $related->image) }}" class="h-24 rounded mb-2">
+                                <img src="{{ asset('public/storage/' . $related->image) }}" class="h-24 rounded mb-2">
                             @endif
 
                             <label class="block mb-1">رفع صورة جديدة (اختياري)</label>
