@@ -13,11 +13,10 @@ class ShowCoinIndex
     {
         $coin = Coin::findOrFail($id);
 
-        // جلب العملات المشابهة (من نفس الدولة) بشكل عشوائي
+        // جلب العملات المشابهة (من نفس الدولة)
         $relatedCoins = Coin::where('id', '!=', $coin->id)
             ->where('country', $coin->country)
-            ->inRandomOrder()
-            ->limit(4) // عدد العملات المشابهة
+            ->take(4) // عدد العملات المشابهة
             ->get();
 
         return compact('coin', 'relatedCoins');
