@@ -18,6 +18,7 @@
             </div>
 
             <script>
+                // اختفاء الإشعار بعد 4 ثواني
                 setTimeout(() => {
                     const alert = document.getElementById('successAlert');
                     if(alert) alert.remove();
@@ -26,56 +27,51 @@
         @endif
 
         {{-- زر إضافة صورة جديدة --}}
-        <div class="bg-green-200 w-56 flex justify-center items-center mb-6 rounded-xl hover:scale-105 duration-200 ease-in-out shadow-md">
+        <div class="bg-green-200 w-56 flex justify-center items-center mb-4 rounded-xl hover:scale-100 duration-200 ease-in-out">
             <a href="{{ route('coin-create-view') }}">
-                <h1 class="text-lg font-bold p-3">إضافة صورة جديدة</h1>
+                <h1 class="text-lg font-bold p-3">اضافة صورة جديدة</h1>
             </a>
         </div>
 
         {{-- جدول العملات --}}
         <div class="overflow-x-auto">
-            <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-                <thead class="bg-gray-100 text-gray-700 rounded-t-lg">
+            <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow rounded-t-xl">
+                <thead class="bg-gray-100 text-gray-700 rounded-t-xl">
                 <tr>
-                    <th class="px-4 py-3 text-right border-b">العمليات</th>
-                    <th class="px-4 py-3 text-right border-b">الإنشاء</th>
-                    <th class="px-4 py-3 text-right border-b">الصورة</th>
-                    <th class="px-4 py-3 text-right border-b">الوصف</th>
-                    <th class="px-4 py-3 text-right border-b">العنوان</th>
-                    <th class="px-4 py-3 text-right border-b">الدولة</th>
+                    <th class="px-4 py-2 text-right border-b">العمليات</th>
+                    <th class="px-4 py-2 text-right border-b">الانشاء</th>
+                    <th class="px-4 py-2 text-right border-b">الصورة</th>
+                    <th class="px-4 py-2 text-right border-b">الوصف</th>
+                    <th class="px-4 py-2 text-right border-b">العنوان</th>
+                    <th class="px-4 py-2 text-right border-b">الدولة</th> {{-- العمود الجديد --}}
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($coins as $coin)
-                    <tr class="text-gray-800 text-right hover:bg-gray-50 transition">
-                        <td class="px-4 py-3 border-b flex space-x-2 justify-end">
-                            {{-- لا تعديل على خانة الحذف والتعديل --}}
-                            <form action="{{ route('coin-edit-view', $coin->id) }}" method="GET">
-                                @csrf
-                                <button type="submit" class="text-blue-500 hover:underline">تعديل</button>
-                            </form>
+                @foreach($coins as $coin)
+                    <tr class="text-gray-800 text-right">
+                        <td class="px-4 py-2 border-b">
                             <form action="{{ route('coin-delete', $coin->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
                                 @csrf
                                 <button type="submit" class="text-red-500 hover:underline">حذف</button>
                             </form>
+                            <form action="{{ route('coin-edit-view', $coin->id) }}">
+                                @csrf
+                                <button type="submit" class="text-blue-500 hover:underline">تعديل</button>
+                            </form>
                         </td>
-                        <td class="px-4 py-3 border-b">{{ $coin->created_at->format('Y-m-d') }}</td>
-                        <td class="px-4 py-3 border-b">
+                        <td class="px-4 py-2 border-b">{{ $coin->created_at->format('Y-m-d') }}</td>
+                        <td class="px-4 py-2 border-b">
                             @if($coin->image)
-                                <img src="{{ asset('public/storage/' . $coin->image) }}" class="h-16 w-16 object-cover rounded-lg shadow" alt="غلاف">
+                                <img src="{{ asset('public/storage/' . $coin->image) }}" class="h-16 w-16 object-cover rounded" alt="غلاف">
                             @else
-                                <span class="text-gray-400">لا يوجد</span>
+                                لا يوجد
                             @endif
                         </td>
-                        <td class="px-4 py-3 border-b">{{ Str::limit($coin->description, 50) }}</td>
-                        <td class="px-4 py-3 border-b font-medium">{{ $coin->title }}</td>
-                        <td class="px-4 py-3 border-b text-gray-600">{{ $coin->country }}</td>
+                        <td class="px-4 py-2 border-b">{{ Str::limit($coin->description, 50) }}</td>
+                        <td class="px-4 py-2 border-b">{{ $coin->title }}</td>
+                        <td class="px-4 py-2 border-b">{{ $coin->country }}</td> {{-- عرض الدولة --}}
                     </tr>
-                @empty
-                    <tr>
-                        <td colspan="6" class="text-center py-6 text-gray-500">لا توجد عملات مضافة بعد.</td>
-                    </tr>
-                @endforelse
+                @endforeach
                 </tbody>
             </table>
         </div>
