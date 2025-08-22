@@ -21,4 +21,5 @@ class Coin extends Model
         return $this->hasMany(RelatedCoin::class);
     }
 
+
 }
