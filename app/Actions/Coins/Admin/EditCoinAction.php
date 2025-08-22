@@ -1,8 +1,8 @@
 <?php
+
 namespace App\Actions\Coins\Admin;
 
 use App\Models\Coin;
-
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Illuminate\Support\Facades\Log;
@@ -17,16 +17,13 @@ class EditCoinAction
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'image' => 'nullable|image',
-            'country' => 'required|string|max:255',
-            'related' => 'nullable|array',
-            'related.*' => 'integer|exists:coins,id',
+            'country' => 'required|string|max:255', // ✨ إضافة الدولة
         ]);
 
         $data = [
-            'title' => $request->title,
-            'description' => $request->description,
-            'country' => $request->country,
-            'related' => $request->related ?? [], // حفظ العملات المشابهة
+            'title' => $request->get('title'),
+            'description' => $request->get('description'),
+            'country' => $request->get('country'), // ✨ تحديث الدولة
         ];
 
         if ($request->hasFile('image')) {
