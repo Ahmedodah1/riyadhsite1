@@ -62,7 +62,7 @@ class CreateAction
         }
 
         // إعادة التوجيه دائمًا إلى صفحة index مع رسالة نجاح
-        return redirect()->route('coins.admin.index')
+        return redirect()->route('coins-index')
             ->with('success', 'تم إضافة العملة بنجاح');
     }
 }
