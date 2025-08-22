@@ -10,10 +10,12 @@ class CoinEditView
 {
     use AsAction;
 
-    public function handle($id)  // 👈 استقبل الـ id
+    public function handle($id)
     {
-        $coin = Coin::findOrFail($id); // 👈 عنصر واحد فقط
-        return view('coins.admin.edit' , compact('coin'));
+        $coin = Coin::findOrFail($id);       // جلب العملة التي سيتم تعديلها
+        $allCoins = Coin::all();              // جلب كل العملات لعرضها في قائمة "العملات المشابهة"
+
+        return view('coins.admin.edit', compact('coin', 'allCoins'));
     }
 
 }
