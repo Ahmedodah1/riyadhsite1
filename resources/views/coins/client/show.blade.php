@@ -5,7 +5,7 @@
         <div class="max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 transform -translate-y-8">
             <!-- صورة العملة -->
             @if($coin->image)
-                <img src="{{ asset('public/storage/' . $coin->image) }}"
+                <img src="{{ asset('storage/' . $coin->image) }}"
                      alt="{{ $coin->title }}"
                      class="w-full h-80 md:h-96 object-cover rounded-2xl mb-6 shadow-md">
             @endif
@@ -42,9 +42,9 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach($coin->relatedCoins as $related)
                     <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
-                        <a href="{{ route('coins.show', $related->id ?? $coin->id) }}">
+                        <a href="{{ route('coins.show', $related->id) }}">
                             @if($related->image)
-                                <img src="{{ asset('public/storage/' . $related->image) }}"
+                                <img src="{{ asset('storage/' . $related->image) }}"
                                      alt="{{ $related->title }}"
                                      class="w-full h-48 object-cover hover:scale-105 transition duration-300">
                             @endif
@@ -53,7 +53,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 truncate">
                                 {{ $related->title }}
                             </h3>
-                            @if(isset($related->description))
+                            @if(!empty($related->description))
                                 <p class="text-sm text-gray-600 mt-1 truncate">
                                     {{ $related->description }}
                                 </p>

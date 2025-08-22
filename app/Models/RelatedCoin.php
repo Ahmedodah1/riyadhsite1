@@ -9,6 +9,8 @@ class RelatedCoin extends Model
     protected $fillable = [
         'coin_id',
         'title',
+        'description',
+
         'image',
     ];
 
