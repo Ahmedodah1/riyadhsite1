@@ -49,12 +49,16 @@
                 <label class="block mb-1 font-medium">العملات المشابهة</label>
                 <select name="related[]" multiple class="w-full border rounded px-3 py-2" dir="rtl">
                     @foreach($allCoins as $c)
-                        <option value="{{ $c->id }}"
-                            {{ in_array($c->id, json_decode($coin->related ?? '[]')) ? 'selected' : '' }}>
-                            {{ $c->title }} ({{ $c->country }})
-                        </option>
+                        <label class="block border rounded p-2 text-center cursor-pointer">
+                            <input type="checkbox" name="related[]" value="{{ $c->id }}"
+                                {{ in_array($c->id, json_decode($coin->related ?? '[]')) ? 'checked' : '' }}>
+                            <img src="{{ asset('public/storage/' . $c->image) }}" class="h-20 mx-auto mb-1">
+                            <span>{{ $c->title }}</span>
+                        </label>
                     @endforeach
                 </select>
+
+
                 <small class="text-gray-500">اضغط Ctrl أو Cmd لتحديد أكثر من عملة</small>
             </div>
 
