@@ -317,6 +317,16 @@
 
         /* إذا أحببت، يمكنك اختيار font-black ليكون أسمك */
 
+            /* جعل النص Bold */
+
+        /* عند مرور الماوس */
+        .nav-link:hover {
+            color: #1e3a8a; /* كحلي غامق */
+            transform: scale(1.2); /* تكبير أوضح */
+            text-decoration: none;
+        }
+
+        /* عند الضغط بالماوس */
 
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
