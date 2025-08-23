@@ -306,7 +306,7 @@
     /* للتمرير على الشاشات الكبيرة */
     @media (min-width: 1024px) {
         nav.navbar-scrolled {
-            background-color: cornflowerblue;
+            background-color: #1c1b22;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
