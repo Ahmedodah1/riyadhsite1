@@ -10,6 +10,6 @@ class SumBookCreateViewIndex
 
     public function handle()
     {
-        return view('Sumbooks.admin.create');
+        return view('Sumbook.admin.create');
     }
 }
