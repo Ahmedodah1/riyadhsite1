@@ -299,7 +299,7 @@
         z-index: 500;
         padding: 1rem;
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-        background-color: black;
+        background-color: transparent;
         color: white;
     }
 
@@ -336,7 +336,6 @@
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
-        color: black !important;
     }
 
 
