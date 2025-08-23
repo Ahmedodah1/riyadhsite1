@@ -79,16 +79,22 @@
         </span>
                 </a>
 
-                <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg
-                opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100
-                group-hover:visible transition-all duration-200 z-10">
-                    <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 ">صور آبيض وآسود</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">صور ملونه</a>
+                <div class="absolute left-0 mt-2 w-48 bg-gradient-to-br from-white via-gray-100 to-white text-black rounded-xl shadow-2xl
+            opacity-0 scale-90 invisible group-hover:opacity-100 group-hover:scale-100
+            group-hover:visible transition-all duration-300 z-10 backdrop-blur-sm border border-gray-200">
+                    <a href="{{route('ClientBlackAndWhite')}}"
+                       class="block px-5 py-3 hover:bg-gray-200 hover:text-blue-600 rounded-lg font-medium transition-all duration-200">
+                        صور آبيض وآسود
+                    </a>
+                    <a href="{{route('colorphotos')}}"
+                       class="block px-5 py-3 hover:bg-gray-200 hover:text-blue-600 rounded-lg font-medium transition-all duration-200">
+                        صور ملونه
+                    </a>
                 </div>
-            </div>
 
 
-            <div class="relative group">
+
+                <div class="relative group">
                 <a href="{{route('decor')}}" class="nav-link flex items-center">
                     <span>صور الديكورات</span>
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">
