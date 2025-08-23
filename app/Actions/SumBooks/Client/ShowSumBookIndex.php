@@ -9,14 +9,14 @@ class ShowSumBookIndex
 {
     use AsAction;
 
-    // هذه الدالة تستدعي بيانات الملخص
-    public function handle($sumbook)
+    // Route Model Binding يحول $sumbook تلقائيًا إلى موديل SumBook
+    public function handle(SumBook $sumbook)
     {
-        return $sumbook; // هنا $sumbook سيكون موديل تلقائيًا إذا استخدمت Route Model Binding
+        return $sumbook;
     }
 
-    // هذه الدالة ترجع الـ Blade
-    public function htmlResponse($sumbook)
+    // إرجاع الـ Blade مع البيانات
+    public function htmlResponse(SumBook $sumbook)
     {
         return view('sumbook.show', compact('sumbook'));
     }
