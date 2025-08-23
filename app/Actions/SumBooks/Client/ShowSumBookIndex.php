@@ -18,6 +18,6 @@ class ShowSumBookIndex
     // إرجاع الـ Blade مع البيانات
     public function htmlResponse(SumBook $sumbook)
     {
-        return view('sumbook.show', compact('sumbook'));
+        return view('sumbook.client.show', compact('sumbook'));
     }
 }
