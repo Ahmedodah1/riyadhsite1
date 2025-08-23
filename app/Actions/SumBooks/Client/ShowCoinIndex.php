@@ -9,16 +9,13 @@ class SumBookShowAction
 {
     use AsAction;
 
-    // إذا تريد تمرير الـ id من الرابط
     public function handle($id)
     {
-        $sumbook = SumBook::findOrFail($id);
-        return view('sumbook.show', compact('sumbook')); // صفحة A4
+        return SumBook::findOrFail($id);
     }
 
-    // تفعيل كـ route مباشرة
-    public function asController($id)
+    public function htmlResponse($sumbook)
     {
-        return $this->handle($id);
+        return view('sumbook.show', compact('sumbook'));
     }
 }
