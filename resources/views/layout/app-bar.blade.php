@@ -321,14 +321,13 @@
         }
 
         /* عند مرور الماوس */
-        .nav-link:hover {
-            color: #1e3a8a; /* كحلي غامق */
-            transform: scale(1.2); /* تكبير أوضح */
-            text-decoration: none;
-        }
+
 
         /* عند الضغط بالماوس */
-
+        .nav-link:active {
+            transform: scale(1.3); /* تكبير أكبر عند الضغط */
+            color: #ffffff; /* كحلي أغمق قليلاً */
+        }
     }
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
