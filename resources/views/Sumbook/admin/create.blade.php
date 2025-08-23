@@ -67,7 +67,7 @@
 
         <h2 class="text-2xl font-bold mb-6">إضافة صورة جديدة</h2>
 
-        <form action="{{ route('sumbook-create) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('sumbook-create') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-4">
