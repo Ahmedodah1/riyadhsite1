@@ -68,24 +68,17 @@
 
 
 
-            <div x-data="{ open: false }" class="relative">
-                <a href="#"
-                   @click.prevent="open = !open"
-                   class="nav-link flex items-center cursor-pointer">
-                    <span>تصويري</span>
-                    <span class="material-icons transform transition-transform"
-                          :class="open ? 'rotate-180' : ''">expand_more</span>
-                </a>
 
-                <div x-show="open"
-                     @click.away="open = false"
-                     class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10"
-                     x-transition>
+            <div class="relative group">
+                <a href="#" class="nav-link flex items-center">
+                    <span>تصويري </span>
+                    <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
+                </a>
+                <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
                     <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور آبيض وآسود</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور ملونه</a>
                 </div>
             </div>
-
 
             <div class="relative group">
                 <a href="{{route('decor')}}" class="nav-link flex items-center">
