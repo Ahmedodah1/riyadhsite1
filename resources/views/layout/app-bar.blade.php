@@ -317,15 +317,7 @@
 
         /* إذا أحببت، يمكنك اختيار font-black ليكون أسمك */
 
-            /* جعل النص Bold */
-        }
 
-        /* عند مرور الماوس */
-
-
-        /* عند الضغط بالماوس */
-
-    }
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
