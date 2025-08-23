@@ -300,13 +300,13 @@
         padding: 1rem;
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         background-color: transparent;
-        color: white;
+        color: black;
     }
 
     /* اللون الأبيض مع التمرير يشتغل فقط من الشاشات الكبيرة */
     @media (min-width: 1024px) {
         nav.navbar-scrolled {
-            background-color: white;
+            background-color: black;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: white !important;
         }
