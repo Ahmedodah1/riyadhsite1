@@ -308,7 +308,7 @@
         nav.navbar-scrolled {
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: black !important;
+            color: black; /* اجعل النص أسود */
         }
 
         .nav-link {
@@ -330,7 +330,7 @@
         /* عند الضغط بالماوس */
         .nav-link:active {
             transform: scale(1.3); /* تكبير أكبر عند الضغط */
-            color: #2ac3a2; /* كحلي أغمق قليلاً */
+            color: #ffffff; /* كحلي أغمق قليلاً */
         }
     }
         nav.navbar-scrolled a,
