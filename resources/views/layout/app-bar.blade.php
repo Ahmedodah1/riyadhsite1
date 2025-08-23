@@ -308,7 +308,7 @@
         nav.navbar-scrolled {
             background-color: black;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: black !important;
+            color: white !important;
         }
 
         .nav-link {
