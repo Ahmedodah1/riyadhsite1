@@ -346,3 +346,15 @@
 </style>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<script>
+    // مراقبة التمرير لإضافة/إزالة الكلاس navbar-scrolled
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) { // يمكنك تغيير القيمة حسب الحاجة
+            nav.classList.add('navbar-scrolled');
+        } else {
+            nav.classList.remove('navbar-scrolled');
+        }
+    });
+</script>
