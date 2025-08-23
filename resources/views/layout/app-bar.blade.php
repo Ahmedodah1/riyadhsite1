@@ -303,39 +303,38 @@
         color: white;
     }
 
-    /* اللون الأبيض مع التمرير يشتغل فقط من الشاشات الكبيرة */
+    /* للتمرير على الشاشات الكبيرة */
     @media (min-width: 1024px) {
         nav.navbar-scrolled {
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: black !important;
         }
 
-        .nav-link {
-            @apply transition-all duration-300 ease-in-out font-extrabold; /* نص أكثر سمكًا */
+        /* جميع الروابط داخل الـ navbar عند التمرير */
+        nav.navbar-scrolled .nav-link {
+            @apply transition-all duration-300 ease-in-out font-extrabold;
+            color: black !important; /* النص أسود عند التمرير */
         }
 
-        /* إذا أحببت، يمكنك اختيار font-black ليكون أسمك */
-
-            /* جعل النص Bold */
-        }
-
-        /* عند مرور الماوس */
-        .nav-link:hover {
-            color: #1e3a8a; /* كحلي غامق */
-            transform: scale(1.2); /* تكبير أوضح */
+        /* عند مرور الماوس داخل navbar عند التمرير */
+        nav.navbar-scrolled .nav-link:hover {
+            color: #1e3a8a !important; /* كحلي غامق */
+            transform: scale(1.2);
             text-decoration: none;
         }
 
-        /* عند الضغط بالماوس */
-        .nav-link:active {
-            transform: scale(1.3); /* تكبير أكبر عند الضغط */
-            color: #ffffff; /* كحلي أغمق قليلاً */
+        /* عند الضغط بالماوس داخل navbar عند التمرير */
+        nav.navbar-scrolled .nav-link:active {
+            transform: scale(1.3);
+            color: #1e40af !important; /* كحلي أغمق قليلاً */
         }
-    }
+
+        /* أي عناصر أخرى مثل span أو button داخل navbar عند التمرير */
         nav.navbar-scrolled a,
-    nav.navbar-scrolled span,
-    nav.navbar-scrolled button {
+        nav.navbar-scrolled span,
+        nav.navbar-scrolled button {
+            color: black !important;
+        }
     }
 
 
