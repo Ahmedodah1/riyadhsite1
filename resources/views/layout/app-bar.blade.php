@@ -82,8 +82,8 @@
                 <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg
                 opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100
                 group-hover:visible transition-all duration-200 z-10">
-                    <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور آبيض وآسود</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">صور ملونه</a>
+                    <a href="{{route('ClientBlackAndWhite')}}" class="block px-4 py-2 hover:bg-gray-100 ">صور آبيض وآسود</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">صور ملونه</a>
                 </div>
             </div>
 
@@ -100,22 +100,22 @@
                 opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100
                 group-hover:visible transition-all duration-200 z-10">
 
-                    <a href="{{route('kitchen')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مطابخ</a>
-                    <a href="{{route('pool')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مسابح</a>
-                    <a href="{{route('office')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">مكتب منزلي</a>
-                    <a href="{{route('bathroom')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">حمامات</a>
-                    <a href="{{route('diningroom')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف طعام</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف غسيل</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف جلوس</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">خزائن</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">جلسات خارجية</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">لاند سكيب</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف نوم أولاد وبنات</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">تصميم درج</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">غرف نوم</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">جيم منزلي</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">برندة</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">منازل ريفية</a>
+                    <a href="{{route('kitchen')}}" class="block px-4 py-2 hover:bg-gray-100 ">مطابخ</a>
+                    <a href="{{route('pool')}}" class="block px-4 py-2 hover:bg-gray-100 ">مسابح</a>
+                    <a href="{{route('office')}}" class="block px-4 py-2 hover:bg-gray-100 ">مكتب منزلي</a>
+                    <a href="{{route('bathroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">حمامات</a>
+                    <a href="{{route('diningroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف طعام</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف غسيل</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف جلوس</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">خزائن</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">جلسات خارجية</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">لاند سكيب</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف نوم أولاد وبنات</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">تصميم درج</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف نوم</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">جيم منزلي</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">برندة</a>
+                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">منازل ريفية</a>
                 </div>
             </div>
 
@@ -157,8 +157,8 @@
                 <div class="absolute left-0 mt-2 w-56 bg-white text-black rounded-lg shadow-lg
                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
                 transition-all duration-300 ease-in-out z-10">
-                    <a href="{{route('channel')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">قناة اليوتيوب</a>
-                    <a href="{{route('channeltik')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">قناة التيك توك</a>
+                    <a href="{{route('channel')}}" class="block px-4 py-2 hover:bg-gray-100 ">قناة اليوتيوب</a>
+                    <a href="{{route('channeltik')}}" class="block px-4 py-2 hover:bg-gray-100 ">قناة التيك توك</a>
                 </div>
             </div>
 
