@@ -321,12 +321,22 @@
         }
 
         /* عند مرور الماوس */
+        .nav-link:hover {
+            color: #1e3a8a; /* كحلي غامق */
+            transform: scale(1.2); /* تكبير أوضح */
+            text-decoration: none;
+        }
 
+        /* عند الضغط بالماوس */
+        .nav-link:active {
+            transform: scale(1.3); /* تكبير أكبر عند الضغط */
+
+        }
+    }
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
             color: black !important; /* اجعل النص أسود */
-            font-weight: 800 !important; /* نص ثقيل جدًا */
             transition: color 0.3s ease; /* انتقال سلس للون */
 
         }
