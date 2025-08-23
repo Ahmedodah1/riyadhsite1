@@ -171,18 +171,20 @@ Route::prefix('auth')->group(function () {
 
 
     Route::get('/kitchen/index', \App\Actions\Kitchens\Admin\KitchenAdminIndex::class)->name('kitchen-index');
-
     Route::get('/kitchen/create/view', \App\Actions\Kitchens\Admin\KitchenCreateViewIndex::class)->name('kitchen-create-view');
-
     Route::get('/kitchen/edit/view/{kitchen}', \App\Actions\Kitchens\Admin\KitchenEditViewIndex::class)->name('kitchen-edit-view');
-
-
     Route::post('/kitchen/create', \App\Actions\Kitchens\Admin\CreateAction::class)->name('kitchen-create');
-
     Route::post('/kitchen/delete/{kitchen}', \App\Actions\Kitchens\Admin\DeleteKitchenAction::class)->name('kitchen-delete');
-
     Route::post('/kitchen/update/{kitchen}', \App\Actions\Kitchens\Admin\EditKitchenAction::class)->name('kitchen-edit');
 
+
+
+    Route::get('/sumbook/index', \App\Actions\SumBooks\Admin\SumBookAdminIndex::class)->name('sumbook-index');
+    Route::post('/sumbook/create', \App\Actions\SumBooks\Admin\CreateAction::class)->name('sumbook-create');
+    Route::get('/sumbook/create/view', \App\Actions\SumBooks\Admin\SumBookCreateViewIndex::class)->name('sumbook-create-view');
+    Route::post('/sumbook/update/{sumbook}', \App\Actions\SumBooks\Admin\EditSumBookAction::class)->name('sumbook-edit');
+    Route::get('/sumbook/edit/view/{sumbook}', \App\Actions\SumBooks\Admin\SumBookEditView::class)->name('sumbook-edit-view');
+    Route::post('/sumbook/delete/{sumbook}', \App\Actions\SumBooks\Admin\DeleteSumBookAction::class)->name('sumbook-delete');
 
 
 

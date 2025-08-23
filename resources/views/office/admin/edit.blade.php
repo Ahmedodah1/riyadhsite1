@@ -4,12 +4,12 @@
     <div class="max-w-2xl mx-auto mt-10 bg-white p-6 rounded shadow text-right">
         <h2 class="text-2xl font-bold mb-6">تعديل الصورة</h2>
 
-        <form action="{{ route('office-update', $office->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('office-update', $sumbook->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-4">
                 <label for="title" class="block mb-1 font-medium">عنوان الصورة</label>
-                <input dir="rtl" value="{{ $office->title }}" type="text" id="title" name="title"
+                <input dir="rtl" value="{{ $sumbook->title }}" type="text" id="title" name="title"
                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
             </div>
 
@@ -17,20 +17,20 @@
                 <label for="description" class="block mb-1 font-medium">وصف الصورة</label>
                 <textarea dir="rtl" id="description" name="description" rows="4"
                           class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                          required>{{ $office->description }}</textarea>
+                          required>{{ $sumbook->description }}</textarea>
             </div>
 
-            @if($office->cover_url)
+            @if($sumbook->cover_url)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الملف الحالي:</label>
-                    <a href="{{ asset('storage/' . $office->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
+                    <a href="{{ asset('storage/' . $sumbook->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
                 </div>
             @endif
 
-            @if($office->image)
+            @if($sumbook->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
-                    <img src="{{ asset('public/storage/' . $office->image) }}" class="h-24 rounded">
+                    <img src="{{ asset('public/storage/' . $sumbook->image) }}" class="h-24 rounded">
                 </div>
             @endif
 
