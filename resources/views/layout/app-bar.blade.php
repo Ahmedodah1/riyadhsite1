@@ -306,9 +306,10 @@
     /* اللون الأبيض مع التمرير يشتغل فقط من الشاشات الكبيرة */
     @media (min-width: 1024px) {
         nav.navbar-scrolled {
-            background-color: white;
+            background-color: white !important;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: black !important; /        }
+            color: black !important;
+        }
 
         .nav-link {
             @apply transition-all duration-300 ease-in-out font-extrabold; /* نص أكثر سمكًا */
@@ -335,8 +336,9 @@
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
-        color: black !important;
-            font-weight: 800; /* لتقوية النص (extrabold) */
+            color: black !important; /* اجعل النص أسود */
+            font-weight: 800 !important; /* نص ثقيل جدًا */
+            transition: color 0.3s ease; /* انتقال سلس للون */
 
         }
 
