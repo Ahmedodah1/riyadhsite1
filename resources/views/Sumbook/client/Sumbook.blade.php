@@ -7,17 +7,17 @@
 
             <!-- شبكة الصور -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-11">
-                @foreach($pools as $pool)
+                @foreach($sumbooks as $sumbook)
                     <div class="bg-white rounded-2xl border border-gray-200 shadow hover:shadow-md transition duration-300 overflow-hidden">
-                        <button @click="open = true; image = @js(asset('public/storage/' . $pool->image))" class="block w-full">
-                            <img src="{{ asset('public/storage/' . $pool->image) }}"
-                                 alt="{{ $pool->title }}"
+                        <button @click="open = true; image = @js(asset('public/storage/' . $sumbook->image))" class="block w-full">
+                            <img src="{{ asset('public/storage/' . $sumbook->image) }}"
+                                 alt="{{ $sumbook->title }}"
                                  class="w-full h-64 object-cover hover:scale-105 transition duration-300" />
                         </button>
 
                         <div class="p-4 text-right">
-                            <h2 class="text-lg font-semibold text-gray-900 truncate">{{ $pool->title }}</h2>
-                            <p class="text-sm text-gray-600 mt-1">{{ $pool->description }}</p>
+                            <h2 class="text-lg font-semibold text-gray-900 truncate">{{ $sumbook->title }}</h2>
+                            <p class="text-sm text-gray-600 mt-1">{{ $sumbook->description }}</p>
                         </div>
                     </div>
                 @endforeach
