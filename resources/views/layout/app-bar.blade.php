@@ -305,7 +305,7 @@
 
     /* اللون الأبيض مع التمرير يشتغل فقط من الشاشات الكبيرة */
     @media (min-width: 1024px) {
-        nav.navbar-scrolled {
+        nav.navbar-scrolled .nav-link {
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: black !important;
