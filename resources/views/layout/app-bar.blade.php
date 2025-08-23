@@ -312,12 +312,13 @@
         }
 
         .nav-link {
-            @apply transition-all duration-300 ease-in-out;
+            @apply transition-all duration-300 ease-in-out font-bold;
+            /* جعل النص Bold */
         }
 
         /* عند مرور الماوس */
         .nav-link:hover {
-            color: #3b82f6; /* Tailwind Blue */
+            color: #1e3a8a; /* كحلي غامق */
             transform: scale(1.2); /* تكبير أوضح */
             text-decoration: none;
         }
@@ -325,11 +326,10 @@
         /* عند الضغط بالماوس */
         .nav-link:active {
             transform: scale(1.3); /* تكبير أكبر عند الضغط */
-            color: #1d4ed8; /* أزرق أغمق */
+            color: #1e40af; /* كحلي أغمق قليلاً */
         }
     }
-
-    nav.navbar-scrolled a,
+        nav.navbar-scrolled a,
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
         color: black !important;
