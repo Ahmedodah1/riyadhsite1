@@ -185,6 +185,18 @@ Route::prefix('auth')->group(function () {
 
 
 
+    Route::get('/laundryroom/index', \App\Actions\Laundryroom\Admin\LaundryroomAdminIndex::class)->name('laundryroom-index');
+    Route::post('/laundryroom/create', \App\Actions\Laundryroom\Admin\CreateAction::class)->name('laundryroom-create');
+    Route::get('/laundryroom/create/view', \App\Actions\Laundryroom\Admin\LaundryroomCreateViewIndex::class)->name('laundryroom-create-view');
+    Route::get('/laundryroom/edit/view/{laundryroom}', \App\Actions\Laundryroom\Admin\LaundryEditView::class)->name('laundry-edit-view');
+    Route::post('/laundryroom/update/{laundryroom}', \App\Actions\Laundryroom\Admin\EditLaundryroomAction::class)->name('laundryroon-update');
+    Route::post('/laundryroom/delete/{laundryroom}', \App\Actions\SumBooks\Admin\DeleteSumBookAction::class)->name('laundryroom-delete');
+
+
+
+
+
+
 
     Route::get('/sumbook/index', \App\Actions\SumBooks\Admin\SumBookAdminIndex::class)->name('sumbook-index');
     Route::post('/sumbook/create', \App\Actions\SumBooks\Admin\CreateAction::class)->name('sumbook-create');
