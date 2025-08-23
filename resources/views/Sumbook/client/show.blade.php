@@ -6,7 +6,7 @@
 
             {{-- شريط علوي بار --}}
             <div class="w-full h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-t-xl flex items-center justify-center shadow-md mb-10">
-                <span class="text-white text-xl font-bold">ملخص الكتاب</span>
+                <span class="text-black text-xl font-bold">ملخص الكتاب</span>
             </div>
 
             {{-- عنوان الملخص --}}
