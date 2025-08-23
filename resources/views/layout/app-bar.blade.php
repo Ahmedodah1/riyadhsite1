@@ -337,7 +337,9 @@
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
         color: black !important;
-    }
+            font-weight: 800; /* لتقوية النص (extrabold) */
+
+        }
 
 
 </style>
