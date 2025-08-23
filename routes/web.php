@@ -45,7 +45,7 @@ Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::
 
 Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->name('kitchen');
 
-Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->name('office');
+Route::get('/office', \App\Actions\Office\Client\SumBookClientAction::class)->name('office');
 
 Route::get('/bathroom', \App\Actions\Bathrooms\Client\BathroomClientIndex::class)->name('bathroom');
 
@@ -59,6 +59,9 @@ Route::get('/coins/{id}/', \App\Actions\Coins\Client\ShowCoinIndex::class)->name
 
 
 Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
+
+Route::get('/sumbook', \App\Actions\SumBooks\Client\SumBookClientAction::class)->name('sumbook');
+
 
 Route::get('/diningroom', \App\Actions\Diningroom\Client\DiningroomClientIndex::class)->name('diningroom');
 
