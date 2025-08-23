@@ -31,7 +31,7 @@
             </style>
 
             <div>
-                <a href="{{route('homepage')}}" class="nav-link">الرئيسية</a>
+                <a href="{{route('homepage')}}" class="nav-link flex items-center">الرئيسية</a>
             </div>
 
 
