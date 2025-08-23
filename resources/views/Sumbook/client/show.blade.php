@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-    <div class="bg-gray-100  py-12 px-6 flex justify-center">
+    <div class="bg-gray-100 min-h-screen py-12 px-6 flex justify-center">
         <div class="a4-container rounded-2xl shadow-xl p-12 relative" style="width:210mm; min-height:297mm; padding:20mm;">
 
             {{-- شريط علوي بار --}}
