@@ -16,7 +16,6 @@
 
                     <div class="p-4 text-right">
                         <h2 class="text-lg font-semibold text-gray-900 truncate">{{ $sumbook->title }}</h2>
-                        <p class="text-sm text-gray-600 mt-1">{{ $sumbook->description }}</p>
                     </div>
                 </div>
             @endforeach
