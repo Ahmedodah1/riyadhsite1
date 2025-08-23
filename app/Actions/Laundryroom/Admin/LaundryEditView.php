@@ -13,6 +13,6 @@ class LaundryEditView
     public function handle($id)
     {
         $laundryroom = Laundryroom::findOrFail($id);
-        return view('office.admin.edit', compact('laundryroom'));
+        return view('laundryroom.admin.edit', compact('laundryroom'));
     }
 }

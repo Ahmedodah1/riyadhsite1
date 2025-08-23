@@ -190,7 +190,7 @@ Route::prefix('auth')->group(function () {
     Route::get('/laundryroom/create/view', \App\Actions\Laundryroom\Admin\LaundryroomCreateViewIndex::class)->name('laundryroom-create-view');
     Route::get('/laundryroom/edit/view/{laundryroom}', \App\Actions\Laundryroom\Admin\LaundryEditView::class)->name('laundry-edit-view');
     Route::post('/laundryroom/update/{laundryroom}', \App\Actions\Laundryroom\Admin\EditLaundryroomAction::class)->name('laundryroon-update');
-    Route::post('/laundryroom/delete/{laundryroom}', \App\Actions\SumBooks\Admin\DeleteSumBookAction::class)->name('laundryroom-delete');
+    Route::post('/laundryroom/delete/{laundryroom}', \App\Actions\Laundryroom\Admin\DeleteLaundryroomAction::class)->name('laundryroom-delete');
 
 
 
