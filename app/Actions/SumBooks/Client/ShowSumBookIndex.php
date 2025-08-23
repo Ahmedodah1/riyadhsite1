@@ -9,13 +9,13 @@ class ShowSumBookIndex
 {
     use AsAction;
 
-    // Route Model Binding يحول $sumbook تلقائيًا إلى موديل SumBook
+    // Laravel Route Model Binding يحول {sumbook} تلقائيًا إلى موديل SumBook
     public function handle(SumBook $sumbook)
     {
         return $sumbook;
     }
 
-    // إرجاع الـ Blade مع البيانات
+    // عرض الـ Blade وتمرير البيانات
     public function htmlResponse(SumBook $sumbook)
     {
         return view('Sumbook.client.show', compact('sumbook'));
