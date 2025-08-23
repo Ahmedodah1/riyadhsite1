@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-gray-100 min-h-screen py-12 px-6 flex justify-center">
-        <div class="a4-container bg-white rounded-2xl shadow-xl p-12 relative" style="width:210mm; min-height:297mm; padding:20mm;">
+        <div class="a4-container bg-white rounded-2xl shadow-xl p-12 relative" style="width:21mm; min-height:297mm; padding:20mm;">
 
             {{-- شريط علوي بار --}}
             <div class="w-full h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-t-xl flex items-center justify-center shadow-md mb-10">
