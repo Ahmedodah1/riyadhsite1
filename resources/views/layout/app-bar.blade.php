@@ -300,7 +300,7 @@
         padding: 1rem;
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         background-color: transparent;
-        color: white;
+        color: black;
     }
 
     /* اللون الأبيض مع التمرير يشتغل فقط من الشاشات الكبيرة */
