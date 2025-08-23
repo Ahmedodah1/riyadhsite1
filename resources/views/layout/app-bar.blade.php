@@ -311,7 +311,7 @@
         }
 
         /* جميع الروابط داخل الـ navbar عند التمرير */
-        nav.navbar-scrolled .nav-link {
+        nav.navbar-scrolled {
             @apply transition-all duration-300 ease-in-out font-extrabold;
             color: white !important; /* النص أسود عند التمرير */
         }
