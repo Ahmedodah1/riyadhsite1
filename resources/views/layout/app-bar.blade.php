@@ -92,9 +92,10 @@
                     </a>
                 </div>
 
+            </div>
 
 
-                <div class="relative group">
+            <div class="relative group">
                 <a href="{{route('decor')}}" class="nav-link flex items-center">
                     <span>صور الديكورات</span>
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">
