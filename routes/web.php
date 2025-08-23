@@ -49,6 +49,8 @@ Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->nam
 
 Route::get('/bathroom', \App\Actions\Bathrooms\Client\BathroomClientIndex::class)->name('bathroom');
 
+Route::get('/laundryroom', \App\Actions\Laundryroom\Client\LaundruroomClientAction::class)->name('laundryroom');
+
 
 Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coin');
 
