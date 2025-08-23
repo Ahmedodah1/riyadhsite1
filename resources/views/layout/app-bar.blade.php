@@ -306,14 +306,14 @@
     /* للتمرير على الشاشات الكبيرة */
     @media (min-width: 1024px) {
         nav.navbar-scrolled {
-            background-color: black;
+            background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* جميع الروابط داخل الـ navbar عند التمرير */
-        nav.navbar-scrolled {
+        nav.navbar-scrolled .nav-link {
             @apply transition-all duration-300 ease-in-out font-extrabold;
-            color: white !important; /* النص أسود عند التمرير */
+            color: black !important; /* النص أسود عند التمرير */
         }
 
         /* عند مرور الماوس داخل navbar عند التمرير */
