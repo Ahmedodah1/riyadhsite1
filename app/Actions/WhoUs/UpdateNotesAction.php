@@ -29,6 +29,6 @@ class UpdateNotesAction
 
 
     public function viewForm(Note $note) {
-        return view('WhoUs.admin.update', compact('note'));
+        return view('WhoUs.Admin.update', compact('note'));
     }
 }
