@@ -12,6 +12,6 @@ class LaundruroomClientAction
     public function handle()
     {
         $laundryrooms = Laundryroom::query()->get();
-        return view('laundryroom.client.office', compact('laundryrooms'));
+        return view('laundryroom.client.laundryroom', compact('laundryrooms'));
     }
 }
