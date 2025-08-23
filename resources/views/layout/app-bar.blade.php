@@ -297,16 +297,23 @@
             color: black !important;
         }
 
-        .nav-link {
-            @apply transition-all duration-300 ease-in-out;
-        }
+    .nav-link {
+        @apply transition-all duration-300 ease-in-out;
+    }
 
+        /* عند مرور الماوس */
         .nav-link:hover {
-            color: #3b82f6; /* أزرق Tailwind */
+            color: #3b82f6; /* Tailwind Blue */
             transform: scale(1.1);
             text-decoration: none;
         }
-    }
+
+        /* عند الضغط بالماوس */
+        .nav-link:active {
+            transform: scale(0.95); /* ينكمش شوي */
+        }
+
+}
 
     nav.navbar-scrolled a,
     nav.navbar-scrolled span,
