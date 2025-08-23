@@ -11,7 +11,7 @@ class SumBookAdminIndex
 
     public function handle()
     {
-        $sumbooks = SumBook::query()->get();
-        return view('SumBooks.admin.index' , compact('sumbooks'));
+        $sumbook = SumBook::query()->get();
+        return view('SumBooks.admin.index' , compact('sumbook'));
     }
 }
