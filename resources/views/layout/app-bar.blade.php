@@ -151,14 +151,17 @@
 
             <div class="relative group">
                 <a href="#" class="nav-link flex items-center">
-                    <span>قنواتي </span>
+                    <span>قنواتي</span>
                     <span class="material-icons transform group-hover:rotate-180 transition-transform">expand_more</span>
                 </a>
-                <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                <div class="absolute left-0 mt-2 w-56 bg-white text-black rounded-lg shadow-lg
+                opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                transition-all duration-300 ease-in-out z-10">
                     <a href="{{route('channel')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">قناة اليوتيوب</a>
                     <a href="{{route('channeltik')}}" class="block px-4 py-2 hover:bg-gray-100 nav-link">قناة التيك توك</a>
                 </div>
             </div>
+
 
             <div>
                 @if(\Illuminate\Support\Facades\Auth::check())
