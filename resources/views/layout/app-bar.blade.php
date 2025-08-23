@@ -321,18 +321,7 @@
         }
 
         /* عند مرور الماوس */
-        .nav-link:hover {
-            color: #1e3a8a; /* كحلي غامق */
-            transform: scale(1.2); /* تكبير أوضح */
-            text-decoration: none;
-        }
 
-        /* عند الضغط بالماوس */
-        .nav-link:active {
-            transform: scale(1.3); /* تكبير أكبر عند الضغط */
-            color: #ffffff; /* كحلي أغمق قليلاً */
-        }
-    }
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
     nav.navbar-scrolled button {
@@ -346,15 +335,3 @@
 </style>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
-<script>
-    // مراقبة التمرير لإضافة/إزالة الكلاس navbar-scrolled
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) { // يمكنك تغيير القيمة حسب الحاجة
-            nav.classList.add('navbar-scrolled');
-        } else {
-            nav.classList.remove('navbar-scrolled');
-        }
-    });
-</script>
