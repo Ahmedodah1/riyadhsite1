@@ -296,6 +296,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: black !important;
         }
+
+        .nav-link {
+            @apply transition-all duration-300 ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #3b82f6; /* أزرق Tailwind */
+            transform: scale(1.1);
+            text-decoration: none;
+        }
     }
 
     nav.navbar-scrolled a,
