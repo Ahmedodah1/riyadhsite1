@@ -62,7 +62,7 @@ Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('poo
 
 Route::get('/sumbook', \App\Actions\SumBooks\Client\SumBookClientAction::class)->name('sumbook');
 
-Route::get('/sumbook/{show}', \App\Actions\SumBooks\Client\SumBookShowAction::class)->name('sumbook.show');
+Route::get('/sumbook/{id}', \App\Actions\SumBooks\Client\SumBookShowAction::class)->name('sumbook.show');
 
 Route::get('/diningroom', \App\Actions\Diningroom\Client\DiningroomClientIndex::class)->name('diningroom');
 
