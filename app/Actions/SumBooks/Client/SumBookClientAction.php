@@ -12,6 +12,6 @@ class SumBookClientAction
     public function handle()
     {
         $sumbooks = SumBook::query()->get();
-        return view('Sumbook.client.show', compact('sumbooks'));
+        return view('Sumbook.client.Sumbook', compact('sumbooks'));
     }
 }
