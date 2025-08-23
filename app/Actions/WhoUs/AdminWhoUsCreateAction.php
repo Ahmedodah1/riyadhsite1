@@ -10,6 +10,6 @@ class AdminWhoUsCreateAction
 
     public function handle()
     {
-        return view('WhoUs.Admin.create');
+        return view('WhoUs.admin.create');
     }
 }

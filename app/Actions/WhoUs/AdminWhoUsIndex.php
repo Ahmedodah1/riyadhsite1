@@ -12,6 +12,6 @@ class AdminWhoUsIndex
     public function handle()
     {
         $notes = Note::query()->get();
-        return view('WhoUs.Admin.index', compact('notes'));
+        return view('WhoUs.admin.index', compact('notes'));
     }
 }

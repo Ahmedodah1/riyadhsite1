@@ -13,6 +13,6 @@ class SumBookEditView
     public function handle($id)
     {
         $sumbook = SumBook::findOrFail($id);
-        return view('Sumbook.Admin.edit', compact('sumbook'));
+        return view('Sumbook.admin.edit', compact('sumbook'));
     }
 }

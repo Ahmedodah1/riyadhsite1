@@ -216,7 +216,7 @@ Route::prefix('auth')->group(function () {
     Route::get('/books', \App\Actions\Books\Admin\BooksIndexAction::class)->name('books');
     Route::get('/book-create', \App\Actions\Books\Admin\BookCreateView::class)->name('book-create');
     Route::post('/book-post', \App\Actions\Books\Admin\BookPostAction::class)->name('book-post');
-    Route::get('/Admin-create-who-us', \App\Actions\WhoUs\AdminWhoUsCreateAction::class)->name('admin.create.who.us');
+    Route::get('/admin-create-who-us', \App\Actions\WhoUs\AdminWhoUsCreateAction::class)->name('admin.create.who.us');
     Route::get('/whous-index', \App\Actions\WhoUs\AdminWhoUsIndex::class)->name('whous-index');
     Route::post('/create-notes', \App\Actions\WhoUs\CreateNotesAction::class)->name('create.notes');
     Route::post('/update-notes/{note}', \App\Actions\WhoUs\UpdateNotesAction::class)->name('update.notes');
