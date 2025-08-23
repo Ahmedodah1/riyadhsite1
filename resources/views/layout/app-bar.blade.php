@@ -324,10 +324,7 @@
 
 
         /* عند الضغط بالماوس */
-        .nav-link:active {
-            transform: scale(1.3); /* تكبير أكبر عند الضغط */
-            color: #ffffff; /* كحلي أغمق قليلاً */
-        }
+
     }
         nav.navbar-scrolled a,
     nav.navbar-scrolled span,
