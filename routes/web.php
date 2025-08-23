@@ -1,4 +1,10 @@
 <?php
+use App\Actions\SumBooks\Admin\SumBookAdminIndex;
+use App\Actions\SumBooks\Admin\CreateAction;
+use App\Actions\SumBooks\Admin\SumBookCreateViewIndex;
+use App\Actions\SumBooks\Admin\EditSumBookAction;
+use App\Actions\SumBooks\Admin\SumBookEditView;
+use App\Actions\SumBooks\Admin\DeleteSumBookAction;
 
 use App\Http\Controllers\SwitchLanguage;
 use App\Models\Book;
@@ -176,6 +182,8 @@ Route::prefix('auth')->group(function () {
     Route::post('/kitchen/create', \App\Actions\Kitchens\Admin\CreateAction::class)->name('kitchen-create');
     Route::post('/kitchen/delete/{kitchen}', \App\Actions\Kitchens\Admin\DeleteKitchenAction::class)->name('kitchen-delete');
     Route::post('/kitchen/update/{kitchen}', \App\Actions\Kitchens\Admin\EditKitchenAction::class)->name('kitchen-edit');
+
+
 
 
 
