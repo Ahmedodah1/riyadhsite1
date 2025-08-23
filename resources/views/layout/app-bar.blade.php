@@ -312,7 +312,11 @@
         }
 
         .nav-link {
-            @apply transition-all duration-300 ease-in-out font-bold;
+            @apply transition-all duration-300 ease-in-out font-extrabold; /* نص أكثر سمكًا */
+        }
+
+        /* إذا أحببت، يمكنك اختيار font-black ليكون أسمك */
+
             /* جعل النص Bold */
         }
 
@@ -326,7 +330,7 @@
         /* عند الضغط بالماوس */
         .nav-link:active {
             transform: scale(1.3); /* تكبير أكبر عند الضغط */
-            color: #1e40af; /* كحلي أغمق قليلاً */
+            color: #2ac3a2; /* كحلي أغمق قليلاً */
         }
     }
         nav.navbar-scrolled a,
