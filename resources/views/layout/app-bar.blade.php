@@ -105,7 +105,7 @@
                     <a href="{{route('office')}}" class="block px-4 py-2 hover:bg-gray-100 ">مكتب منزلي</a>
                     <a href="{{route('bathroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">حمامات</a>
                     <a href="{{route('diningroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف طعام</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف غسيل</a>
+                    <a href="{{route('laundryroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف غسيل</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف جلوس</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">خزائن</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">جلسات خارجية</a>
