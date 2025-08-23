@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Actions\SumBooks\Admin;
-use App\Actions\Office\Admin\Log;
-use Illuminate\Http\Request; // ✅ الصحيح
 use App\Models\SumBook;
-
+use Illuminate\Http\Request; // ✅ الصحيح
+use Illuminate\Support\Facades\Log;
 use Lorisleiva\Actions\Concerns\AsAction;
+
 
 class CreateAction
 {
