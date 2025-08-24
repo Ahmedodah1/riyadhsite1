@@ -11,7 +11,7 @@ class AdminDashboardViewAction
     public function handle()
     {
         // تحقق إذا المستخدم دخل لأول مرة
-        $showWelcome = false;
+        $showWelcome = true;
         if (!session()->has('welcomed')) {
             $showWelcome = true;
             session(['welcomed' => true]); // تعيين الجلسة هنا وليس في Blade
