@@ -10,13 +10,14 @@ class AdminDashboardViewAction
 
     public function handle()
     {
-        // إذا لم يدخل قبل، أعطه الترحيب
+        // إذا لم يُرحب بالمستخدم مسبقاً
         $showWelcome = !session()->has('welcomed');
 
         if ($showWelcome) {
-            session(['welcomed' => true]); // لا يظهر الترحيب مرة أخرى
+            session(['welcomed' => true]);
         }
 
-        return view('admin.layout.dashboard', compact('showWelcome'));
+        // تأكد من أن Blade الذي تعرضه هو dashboard.blade.php وليس layout
+        return view('admin.dashboard', compact('showWelcome'));
     }
 }
