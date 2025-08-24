@@ -10,12 +10,10 @@ class AdminDashboardViewAction
 
     public function handle()
     {
-        // إذا ما دخل قبل
-        if (!session()->has('welcomed')) {
+        $showWelcome = !session()->has('welcomed');
+
+        if ($showWelcome) {
             session(['welcomed' => true]);
-            $showWelcome = true;
-        } else {
-            $showWelcome = false;
         }
 
         return view('admin.layout.dashboard', compact('showWelcome'));
