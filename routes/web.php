@@ -76,6 +76,7 @@ Route::get('/sumbook/{sumbook}', \App\Actions\SumBooks\Client\ShowSumBookIndex::
 
 Route::get('/diningroom', \App\Actions\Diningroom\Client\DiningroomClientIndex::class)->name('diningroom');
 
+Route::get('/landscape', \App\Actions\Landscape\Client\LandscapeClientAction::class)->name('landscape');
 
 
 Route::get('/blogs', \App\Actions\Blog\Client\BlogClientViewAction::class)->name('blogs');
