@@ -26,7 +26,7 @@
 {{-- شاشة الترحيب تظهر فقط على صفحة Dashboard --}}
 {{-- شاشة الترحيب تظهر فقط على صفحة Dashboard --}}
 @if(isset($showWelcome) && $showWelcome)
-    <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-25 flex items-center justify-center z-50">
+    <div id="welcomeModal" class="fixed inset-0 flex items-center justify-center z-50" style="background-color: rgba(0, 0, 0, 0.25);">
         <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md text-center animate-fade-in">
             <img src="{{ asset('resha.png') }}" alt="logo" class="w-20 mx-auto mb-4">
             <h1 class="text-2xl font-bold mb-2">مرحباً بك 👋</h1>
