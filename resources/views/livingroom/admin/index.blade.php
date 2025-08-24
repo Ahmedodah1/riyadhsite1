@@ -20,7 +20,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($laundryrooms as $laundryroom)
+                @foreach($livingrooms as $livingroom)
                     <tr class="text-gray-800 text-right">
                         <td class="px-4 py-2 border-b">
                             <form action="{{ route('livingroom-delete', $livingroom->id) }}" method="POST" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
