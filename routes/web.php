@@ -56,6 +56,9 @@ Route::get('/livingroom', \App\Actions\Livingroom\Client\LivingroomClientAction:
 Route::get('/warehouse', \App\Actions\Warehouses\Client\WarehouseClientAction::class)->name('warehouse');
 
 
+
+
+
 Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coin');
 
 Route::get('/channel', \App\Actions\Chanels\ChannelClientIndex::class)->name('channel');
@@ -215,6 +218,17 @@ Route::prefix('auth')->group(function () {
     Route::get('/warehouse/edit/view/{warehouse}', \App\Actions\Warehouses\Admin\WareEditView::class)->name('warehouse-edit-view');
     Route::post('/warehouse/update/{warehouse}', \App\Actions\Warehouses\Admin\EditWareHouseAction::class)->name('warehouse-update');
     Route::post('/warehouse/delete/{warehouse}', \App\Actions\Warehouses\Admin\DeleteWarehouseAction::class)->name('warehouse-delete');
+
+
+
+    Route::get('/externalsession/index', \App\Actions\Externalsessions\Admin\ExternalsessionsAdminIndex::class)->name('externalsession-index');
+    Route::post('/externalsession/create', \App\Actions\Externalsessions\Admin\CreateAction::class)->name('externalsession-create');
+    Route::get('/externalsession/create/view', \App\Actions\Externalsessions\Admin\ExternalsessionCreateViewIndex::class)->name('externalsession-create-view');
+    Route::get('/externalsession/edit/view/{warehouse}', \App\Actions\Externalsessions\Admin\ExternalEditView::class)->name('externalsession-edit-view');
+    Route::post('/externalsession/update/{warehouse}', \App\Actions\Externalsessions\Admin\EditExternalsessionAction::class)->name('externalsession-update');
+    Route::post('/externalsession/delete/{warehouse}', \App\Actions\Externalsessions\Admin\DeleteExternalsessionAction::class)->name('externalsession-delete');
+
+
 
 
 

@@ -12,6 +12,6 @@ class BlackAndWhitetIndexAction
     public function handle()
     {
         $photos=BlackAndWhite::query()->get();
-        return view('BlackAndWhite.Index', compact('photos'));
+        return view('BlackAndWhite.ExternalsessionsAdminIndex', compact('photos'));
     }
 }
