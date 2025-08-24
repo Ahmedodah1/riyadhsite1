@@ -1,7 +1,7 @@
 @extends('admin.layout.dashboard')
 
 @section('content')
-    <div class="max-w-2xl mx-auto mt-10 bg-white p-6 rounded shadow text-right">
+    <div class="max-w-3xl mx-auto mt-10 bg-white p-6 rounded-2xl shadow-lg text-right">
 
         {{-- إشعار النجاح --}}
         @if(session('success'))
@@ -33,53 +33,105 @@
             {{-- بيانات العملة الرئيسية --}}
             <div class="mb-4">
                 <label for="title" class="block mb-1 font-medium">عنوان العملة</label>
-                <input dir="rtl" type="text" id="title" name="title" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                <input dir="rtl" type="text" id="title" name="title"
+                       class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                       required>
             </div>
 
             <div class="mb-4">
                 <label for="description" class="block mb-1 font-medium">وصف العملة</label>
-                <textarea dir="rtl" id="description" name="description" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+                <textarea dir="rtl" id="description" name="description" rows="4"
+                          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                          required></textarea>
             </div>
 
             <div class="mb-4">
                 <label for="country" class="block mb-1 font-medium">الدولة</label>
-                <input dir="rtl" type="text" id="country" name="country" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="مثال: السعودية" required>
+                <input dir="rtl" type="text" id="country" name="country"
+                       class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                       placeholder="مثال: السعودية" required>
             </div>
 
             <div class="mb-6">
                 <label for="image" class="block mb-1 font-medium">صورة العملة</label>
-                <input dir="rtl" type="file" id="image" name="image" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <input dir="rtl" type="file" id="image" name="image" accept="image/*"
+                       class="w-full border border-gray-300 rounded px-3 py-2" required>
             </div>
 
             {{-- العملات المشابهة --}}
-            <h3 class="text-lg font-semibold mb-2">العملات المشابهة (اختياري)</h3>
-            <div id="related-coins-wrapper">
-                <div class="related-coin mb-4 border p-3 rounded">
-                    <input type="text" name="related_title[]" placeholder="عنوان العملة المشابهة" class="w-full mb-2 border border-gray-300 rounded px-2 py-1">
-                    <input type="file" name="related_image[]" accept="image/*" class="w-full">
+            <h3 class="text-lg font-semibold mb-4">العملات المشابهة (اختياري)</h3>
+            <div id="related-coins-wrapper" class="space-y-4">
+                <div class="related-coin bg-gray-50 border rounded-xl p-4 shadow-sm relative">
+                    <button type="button" class="remove-related absolute top-2 left-2 text-red-500 hover:text-red-700 hidden">
+                        ✖
+                    </button>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <label class="block text-sm font-medium">عنوان العملة المشابهة</label>
+                            <input type="text" name="related_title[]"
+                                   class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                   placeholder="مثال: ريال قطري">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium">صورة العملة المشابهة</label>
+                            <input type="file" name="related_image[]" accept="image/*"
+                                   class="w-full border border-gray-300 rounded px-3 py-2">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button type="button" id="add-related-coin" class="mb-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">+ إضافة عملة مشابهة</button>
+
+            <button type="button" id="add-related-coin"
+                    class="mt-4 mb-6 bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition">
+                + إضافة عملة مشابهة
+            </button>
 
             <div class="text-right">
-                <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition w-full">
+                <button type="submit"
+                        class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition w-full">
                     حفظ العملة
                 </button>
             </div>
         </form>
     </div>
 
-    {{-- جافاسكريبت لإضافة حقول جديدة --}}
+    {{-- جافاسكريبت لإضافة/حذف حقول جديدة --}}
     <script>
-        document.getElementById('add-related-coin').addEventListener('click', function() {
+        document.getElementById('add-related-coin').addEventListener('click', function () {
             const wrapper = document.getElementById('related-coins-wrapper');
             const newField = document.createElement('div');
-            newField.classList.add('related-coin', 'mb-4', 'border', 'p-3', 'rounded');
+            newField.classList.add('related-coin', 'bg-gray-50', 'border', 'rounded-xl', 'p-4', 'shadow-sm', 'relative', 'mt-4');
             newField.innerHTML = `
-                <input type="text" name="related_title[]" placeholder="عنوان العملة المشابهة" class="w-full mb-2 border border-gray-300 rounded px-2 py-1">
-                <input type="file" name="related_image[]" accept="image/*" class="w-full">
+                <button type="button" class="remove-related absolute top-2 left-2 text-red-500 hover:text-red-700">
+                    ✖
+                </button>
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <label class="block text-sm font-medium">عنوان العملة المشابهة</label>
+                        <input type="text" name="related_title[]"
+                               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                               placeholder="مثال: دينار بحريني">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">صورة العملة المشابهة</label>
+                        <input type="file" name="related_image[]" accept="image/*"
+                               class="w-full border border-gray-300 rounded px-3 py-2">
+                    </div>
+                </div>
             `;
             wrapper.appendChild(newField);
+
+            // تفعيل زر الحذف
+            newField.querySelector('.remove-related').addEventListener('click', function () {
+                newField.remove();
+            });
+        });
+
+        // تفعيل زر الحذف لأول حقل عند الحاجة
+        document.querySelectorAll('.remove-related').forEach(btn => {
+            btn.addEventListener('click', function () {
+                btn.parentElement.remove();
+            });
         });
     </script>
 @endsection
