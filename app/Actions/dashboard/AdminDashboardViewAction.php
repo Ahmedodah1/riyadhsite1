@@ -12,8 +12,8 @@ class AdminDashboardViewAction
     {
         // إذا ما دخل قبل
         if (!session()->has('welcomed')) {
-            session(['welcomed' => false]);
-            $showWelcome = false;
+            session(['welcomed' => true]);
+            $showWelcome = true;
         } else {
             $showWelcome = false;
         }
