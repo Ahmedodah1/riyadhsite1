@@ -235,8 +235,8 @@ Route::prefix('auth')->group(function () {
     Route::post('/landscape/create', \App\Actions\Landscape\Admin\CreateAction::class)->name('landscape-create');
     Route::get('/landscape/create/view', \App\Actions\Landscape\Admin\LandscapeCreateViewIndex::class)->name('landscape-create-view');
     Route::get('/landscape/edit/view/{warehouse}', \App\Actions\Landscape\Admin\LandscapeEditView::class)->name('landscape-edit-view');
-    Route::post('/landscape/update/{externalsession}', \App\Actions\Landscape\Admin\EditLandscapeAction::class)->name('landscape-update');
-    Route::post('/landscape/delete/{externalsession}', \App\Actions\Landscape\Admin\DeleteLandscapeAction::class)->name('landscape-delete');
+    Route::post('/landscape/update/{landscape}', \App\Actions\Landscape\Admin\EditLandscapeAction::class)->name('landscape-update');
+    Route::post('/landscape/delete/{landscape}', \App\Actions\Landscape\Admin\DeleteLandscapeAction::class)->name('landscape-delete');
 
 
 
