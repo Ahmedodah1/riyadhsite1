@@ -75,8 +75,9 @@
                         <div>
                             <label class="block text-sm font-medium">صورة العملة المشابهة</label>
                             <input type="file" name="related_image[]" accept="image/*"
-                                   class="w-full border border-gray-300 rounded px-3 py-2">
+                                   class="w-full border border-gray-300 rounded px-3 py-2 cursor-pointer hover:border-blue-400 hover:shadow-md transition">
                         </div>
+
                     </div>
                 </div>
             </div>
