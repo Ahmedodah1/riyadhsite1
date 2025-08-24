@@ -225,8 +225,8 @@ Route::prefix('auth')->group(function () {
     Route::post('/externalsession/create', \App\Actions\Externalsessions\Admin\CreateAction::class)->name('externalsession-create');
     Route::get('/externalsession/create/view', \App\Actions\Externalsessions\Admin\ExternalsessionCreateViewIndex::class)->name('externalsession-create-view');
     Route::get('/externalsession/edit/view/{warehouse}', \App\Actions\Externalsessions\Admin\ExternalEditView::class)->name('externalsession-edit-view');
-    Route::post('/externalsession/update/{warehouse}', \App\Actions\Externalsessions\Admin\EditExternalsessionAction::class)->name('externalsession-update');
-    Route::post('/externalsession/delete/{warehouse}', \App\Actions\Externalsessions\Admin\DeleteExternalsessionAction::class)->name('externalsession-delete');
+    Route::post('/externalsession/update/{externalsession}', \App\Actions\Externalsessions\Admin\EditExternalsessionAction::class)->name('externalsession-update');
+    Route::post('/externalsession/delete/{externalsession}', \App\Actions\Externalsessions\Admin\DeleteExternalsessionAction::class)->name('externalsession-delete');
 
 
 
