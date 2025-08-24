@@ -56,6 +56,7 @@ Route::get('/livingroom', \App\Actions\Livingroom\Client\LivingroomClientAction:
 Route::get('/warehouse', \App\Actions\Warehouses\Client\WarehouseClientAction::class)->name('warehouse');
 
 
+Route::get('/externalsession', \App\Actions\Externalsessions\Client\ExternalsessionClientAction::class)->name('externalsession');
 
 
 
