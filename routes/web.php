@@ -51,6 +51,8 @@ Route::get('/bathroom', \App\Actions\Bathrooms\Client\BathroomClientIndex::class
 
 Route::get('/laundryroom', \App\Actions\Laundryroom\Client\LaundruroomClientAction::class)->name('laundryroom');
 
+Route::get('/livingroom', \App\Actions\Livingroom\Client\LivingroomClientAction::class)->name('livingroom');
+
 
 Route::get('/coin', \App\Actions\Coins\Client\CoinClientIndex::class)->name('coin');
 
