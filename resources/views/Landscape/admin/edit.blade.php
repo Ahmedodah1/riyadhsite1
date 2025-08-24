@@ -4,12 +4,12 @@
     <div class="max-w-2xl mx-auto mt-10 bg-white p-6 rounded shadow text-right">
         <h2 class="text-2xl font-bold mb-6">تعديل الصورة</h2>
 
-        <form action="{{ route('landscape-update', $Landscape->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('landscape-update', $landscape->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-4">
                 <label for="title" class="block mb-1 font-medium">عنوان الصورة</label>
-                <input dir="rtl" value="{{ $Landscape->title }}" type="text" id="title" name="title"
+                <input dir="rtl" value="{{ $landscape->title }}" type="text" id="title" name="title"
                        class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
             </div>
 
@@ -17,20 +17,20 @@
                 <label for="description" class="block mb-1 font-medium">وصف الصورة</label>
                 <textarea dir="rtl" id="description" name="description" rows="4"
                           class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                          required>{{ $Landscape->description }}</textarea>
+                          required>{{ $landscape->description }}</textarea>
             </div>
 
-            @if($Landscape->cover_url)
+            @if($landscape->cover_url)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الملف الحالي:</label>
-                    <a href="{{ asset('storage/' . $Landscape->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
+                    <a href="{{ asset('storage/' . $landscape->cover_url) }}" target="_blank" class="text-blue-600 underline">عرض الملف</a>
                 </div>
             @endif
 
-            @if($Landscape->image)
+            @if($landscape->image)
                 <div class="mb-2">
                     <label class="block mb-1 font-medium">الصورة الحالية:</label>
-                    <img src="{{ asset('public/storage/' . $Landscape->image) }}" class="h-24 rounded">
+                    <img src="{{ asset('public/storage/' . $landscape->image) }}" class="h-24 rounded">
                 </div>
             @endif
 
