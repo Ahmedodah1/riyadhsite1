@@ -1,7 +1,7 @@
 @extends('admin.layout.dashboard')
 
 @section('content')
-    <div class="max-w-3xl mx-auto mt-10 bg-white p-6 rounded-2xl shadow-lg text-right">
+    <div class="max-w-3xl mx-auto mt-20 bg-white p-6 rounded-2xl shadow-lg text-right">
 
         {{-- إشعار النجاح --}}
         @if(session('success'))
