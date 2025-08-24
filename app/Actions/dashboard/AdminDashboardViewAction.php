@@ -10,13 +10,6 @@ class AdminDashboardViewAction
 
     public function handle()
     {
-        // تحقق إذا المستخدم دخل أول مرة في الجلسة
-        $showWelcome = !session()->has('welcomed');
-
-        if ($showWelcome) {
-            session(['welcomed' => true]);
-        }
-
-        return view('admin.layout.dashboard', compact('showWelcome'));
+        return view('admin.layout.dashboard');
     }
 }
