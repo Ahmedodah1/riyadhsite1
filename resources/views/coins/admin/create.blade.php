@@ -54,9 +54,15 @@
 
             <div class="mb-6">
                 <label for="image" class="block mb-1 font-medium">صورة العملة</label>
-                <input dir="rtl" type="file" id="image" name="image" accept="image/*"
-                       class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <input dir="rtl"
+                       type="file"
+                       id="image"
+                       name="image"
+                       accept="image/*"
+                       class="w-full border border-gray-300 rounded px-3 py-2 cursor-pointer hover:border-blue-400 hover:shadow-md transition"
+                       required>
             </div>
+
 
             {{-- العملات المشابهة --}}
             <h3 class="text-lg font-semibold mb-4">العملات المشابهة (اختياري)</h3>
