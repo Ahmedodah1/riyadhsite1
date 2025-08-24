@@ -12,6 +12,6 @@ class LivingroomAdminIndex
     public function handle()
     {
         $livingrooms = Livingroom::query()->get();
-        return view('laundryroom.admin.index' , compact('livingrooms'));
+        return view('livingroom.admin.index' , compact('livingrooms'));
     }
 }
