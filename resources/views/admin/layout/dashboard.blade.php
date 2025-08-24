@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
     <!-- أيقونة -->
-    <link rel="icon" type="image/png" href="{{ asset('resha.png') }}">
+    <link rel="icon" type="image/png" sizes="256x256" href="{{ asset('resha.png') }}">
 
     <title>لوحة التحكم</title>
     @vite('resources/css/app.css')
