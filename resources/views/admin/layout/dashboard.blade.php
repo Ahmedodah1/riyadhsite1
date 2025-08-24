@@ -29,7 +29,7 @@
     <div id="welcomeModal" class="fixed inset-0 flex items-center justify-center z-50" style="background-color: rgba(0, 0, 0, 0.80);">
         <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md text-center animate-fade-in">
             <img src="{{ asset('resha.png') }}" alt="logo" class="w-20 mx-auto mb-4">
-            <h1 class="text-2xl font-bold mb-2">مرحباً بك 👋</h1>
+            <h1 class="text-2xl font-bold mb-2">مرحباً بك دكتور رياض 👋</h1>
             <p class="text-gray-600 mb-6">
                 لقد دخلت إلى <span class="font-semibold text-blue-600">لوحة التحكم</span>
             </p>
