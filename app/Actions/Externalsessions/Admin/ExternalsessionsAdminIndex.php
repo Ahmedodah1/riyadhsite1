@@ -12,6 +12,6 @@ class ExternalsessionsAdminIndex
     public function handle()
     {
         $externalsessions = Externalsessions::query()->get();
-        return view('$externalsession.admin.index' , compact('externalsessions'));
+        return view('externalsession.admin.index' , compact('externalsessions'));
     }
 }
