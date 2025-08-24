@@ -13,6 +13,6 @@ class WareEditView
     public function handle($id)
     {
         $warehouse = Warehouses::findOrFail($id);
-        return view('warehouse.admin.edit', compact('warehouse'));
+        return view('warehouses.admin.edit', compact('warehouse'));
     }
 }

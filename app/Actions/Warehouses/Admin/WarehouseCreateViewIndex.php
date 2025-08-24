@@ -10,6 +10,6 @@ class WarehouseCreateViewIndex
 
     public function handle()
     {
-        return view('warehouse.admin.create');
+        return view('warehouses.admin.create');
     }
 }
