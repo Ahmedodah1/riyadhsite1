@@ -10,11 +10,11 @@ class AdminDashboardViewAction
 
     public function handle()
     {
-        // تحقق إذا هي أول زيارة للصفحة
+        // تحقق إذا المستخدم دخل لأول مرة
         $showWelcome = false;
         if (!session()->has('welcomed')) {
-            session(['welcomed' => true]);
             $showWelcome = true;
+            session(['welcomed' => true]); // تعيين الجلسة هنا وليس في Blade
         }
 
         return view('admin.layout.dashboard', compact('showWelcome'));
