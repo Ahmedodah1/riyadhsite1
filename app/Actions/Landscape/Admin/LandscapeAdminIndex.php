@@ -12,6 +12,6 @@ class LandscapeAdminIndex
     public function handle()
     {
         $landscapes = Landscapes::query()->get();
-        return view('landscape.admin.index' , compact('landscapes'));
+        return view('Landscape.admin.index' , compact('landscapes'));
     }
 }
