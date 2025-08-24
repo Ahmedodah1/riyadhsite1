@@ -13,6 +13,6 @@ class LandscapeEditView
     public function handle($id)
     {
         $landscape = Landscapes::findOrFail($id);
-        return view('landscape.admin.edit', compact('landscape'));
+        return view('Landscape.admin.edit', compact('landscape'));
     }
 }

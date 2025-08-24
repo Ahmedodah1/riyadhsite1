@@ -10,6 +10,6 @@ class LandscapeCreateViewIndex
 
     public function handle()
     {
-        return view('landscape.admin.create');
+        return view('Landscape.admin.create');
     }
 }
