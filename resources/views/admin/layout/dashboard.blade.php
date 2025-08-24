@@ -24,7 +24,7 @@
 </div>
 
 <!-- شاشة الترحيب -->
-@if(!session()->has('welcomed'))
+@if(isset($showWelcome) && $showWelcome)
     <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md text-center animate-fade-in">
             <img src="{{ asset('resha.png') }}" alt="logo" class="w-20 mx-auto mb-4">
@@ -38,10 +38,9 @@
             </button>
         </div>
     </div>
-
-    {{-- ضع علامة تم الترحيب --}}
-    {{ session(['welcomed' => true]) }}
 @endif
+
+
 
 <script>
     function closeWelcome() {
