@@ -10,7 +10,7 @@ class EditWareHouseAction
 {
     use AsAction;
 
-    public function handle(Request $request, Warehouses $warehouse)
+    public function handle(Request $request, Warehouses $warehouses)
     {
         $data = [
             'title' => $request->get('title'),
@@ -25,7 +25,7 @@ class EditWareHouseAction
             $data['cover_url'] = $request->file('cover_url')->store('pdfs', 'public');
         }
 
-        $warehouse->update($data);
+        $warehouses->update($data);
 
         return redirect()->route('dashboard')->with('success', 'تم تحديث الكتاب بنجاح');
     }
