@@ -196,6 +196,17 @@ Route::prefix('auth')->group(function () {
 
 
 
+    Route::get('/livingroom/index', \App\Actions\Livingroom\Admin\LivingroomAdminIndex::class)->name('livingroom-index');
+    Route::post('/livingroom/create', \App\Actions\Livingroom\Admin\CreateAction::class)->name('livingroom-create');
+    Route::get('/livingroom/create/view', \App\Actions\Livingroom\Admin\LivingroomCreateViewIndex::class)->name('livingroom-create-view');
+    Route::get('/livingroom/edit/view/{livingroom}', \App\Actions\Livingroom\Admin\LivingEditView::class)->name('livingroom-edit-view');
+    Route::post('/livingroom/update/{livingroom}', \App\Actions\Livingroom\Admin\EditLivingroomroomAction::class)->name('livingroom-update');
+    Route::post('/livingroom/delete/{livingroom}', \App\Actions\Livingroom\Admin\DeleteLivingroomAction::class)->name('livingroom-delete');
+
+
+
+
+
 
 
 
