@@ -233,7 +233,6 @@ Route::prefix('auth')->group(function () {
 
 
 
-    Route::get('/home/index', \App\Actions\Homee\Admin\HomeAdminIndex::class)->name('home-index');
 
 
 
