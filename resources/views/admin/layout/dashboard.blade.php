@@ -47,7 +47,7 @@
         document.getElementById('welcomeModal').style.display = 'none';
     }
 
-    setTimeout(closeWelcome, 3000);
+    setTimeout(closeWelcome, 4000);
 </script>
 
 <style>
