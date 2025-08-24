@@ -17,6 +17,6 @@ class AdminDashboardViewAction
             session(['welcomed' => true]);
         }
 
-        return view('admin.dashboard', compact('showWelcome'));
+        return view('admin.layout.dashboard', compact('showWelcome'));
     }
 }
