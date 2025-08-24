@@ -11,7 +11,7 @@ class LandscapeClientAction
     public function handle()
     {
         $landscapes = Livingroom::query()->get();
-        return view('landscape.client.landscape', compact('landscapes'));
+        return view('Landscape.client.landscape', compact('landscapes'));
     }
 }
 
