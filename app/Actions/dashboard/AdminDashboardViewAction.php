@@ -18,6 +18,6 @@ class AdminDashboardViewAction
         }
 
         // تأكد من أن Blade الذي تعرضه هو dashboard.blade.php وليس layout
-        return view('admin.lsyout.dashboard', compact('showWelcome'));
+        return view('admin.layout.dashboard', compact('showWelcome'));
     }
 }
