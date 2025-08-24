@@ -207,7 +207,7 @@ Route::prefix('auth')->group(function () {
 
 
 
-    Route::get('/warehouse/index', \Webmozart\Assert\InvalidArgumentException::class)->name('warehouse-index');
+    Route::get('/warehouse/index', \App\Actions\Warehouses\Admin\WarehousesAdminIndex::class)->name('warehouse-index');
     Route::post('/warehouse/create', \App\Actions\Warehouses\Admin\CreateAction::class)->name('warehouse-create');
     Route::get('/warehouse/create/view', \App\Actions\Warehouses\Admin\WarehouseCreateViewIndex::class)->name('warehouse-create-view');
     Route::get('/warehouse/edit/view/{livingroom}', \App\Actions\Warehouses\Admin\WareEditView::class)->name('warehouse-edit-view');
