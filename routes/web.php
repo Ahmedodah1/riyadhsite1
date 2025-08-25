@@ -57,6 +57,8 @@ Route::get('/warehouse', \App\Actions\Warehouses\Client\WarehouseClientAction::c
 
 
 Route::get('/externalsession', \App\Actions\Externalsessions\Client\ExternalsessionClientAction::class)->name('externalsession');
+Route::get('/bedroom', \App\Actions\Bedrooms\Client\BedroomClientIndex::class)->name('bedroom');
+
 
 
 
