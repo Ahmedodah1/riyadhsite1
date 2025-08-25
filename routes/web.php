@@ -50,6 +50,9 @@ Route::get('/kitchen', \App\Actions\Kitchens\Client\KitchenClientIndex::class)->
 
 Route::get('/office', \App\Actions\Office\Client\OfficeClientAction::class)->name('office');
 
+Route::get('/terrace', \App\Actions\Terrace\Client\TerraceClientAction::class)->name('terrace');
+
+
 Route::get('/bathroom', \App\Actions\Bathrooms\Client\BathroomClientIndex::class)->name('bathroom');
 
 Route::get('/laundryroom', \App\Actions\Laundryroom\Client\LaundruroomClientAction::class)->name('laundryroom');
