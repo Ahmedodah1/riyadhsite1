@@ -12,6 +12,6 @@ class BedroomClientIndex
     public function handle()
     {
         $bedrooms = bedroom::query()->get();
-        return view('bedroom.client.bathroom', compact('bedrooms'));
+        return view('bedroom.client.bedroom', compact('bedrooms'));
     }
 }
