@@ -272,6 +272,16 @@ Route::prefix('auth')->group(function () {
 
 
 
+    Route::get('/chamber/index', \App\Actions\Chambers\Admin\ChamberAdminIndex::class)->name('chamber-index');
+    Route::post('/chamber/create', \App\Actions\Chambers\Admin\CreateAction::class)->name('chamber-create');
+    Route::get('/chamber/create/view', \App\Actions\Chambers\Admin\ChamberCreateViewIndex::class)->name('chamber-create-view');
+    Route::get('/chamber/edit/view/{chamber}', \App\Actions\Chambers\Admin\ChamberEditView::class)->name('chamber-edit-view');
+    Route::post('/chamber/update/{chamber}', \App\Actions\Chambers\Admin\EditChamberAction::class)->name('chamber-update');
+    Route::post('/chamber/delete/{chamber}', \App\Actions\Chambers\Admin\DeleteChamberAction::class)->name('chamber-delete');
+
+
+
+
 
 
 
