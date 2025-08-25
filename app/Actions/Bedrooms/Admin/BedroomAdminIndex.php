@@ -11,7 +11,7 @@ class BedroomAdminIndex
 
     public function handle()
     {
-        $bedrooms = Bathroom::query()->get();
+        $bedrooms = bedroom::query()->get();
         return view('bedroom.admin.index' , compact('bedrooms'));
     }
 }
