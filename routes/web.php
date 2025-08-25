@@ -161,7 +161,6 @@ Route::prefix('auth')->group(function () {
     Route::get('/diningroom/index', \App\Actions\Diningroom\Admin\DiningroomAdminIndex::class)->name('diningroom-index');
     Route::post('/diningroom/create', \App\Actions\Diningroom\Admin\CreateAction::class)->name('diningroom-create');
     Route::get('/diningroom/create/view', \App\Actions\Diningroom\Admin\DiningroomCreateViewIndex::class)->name('diningroom-create-view');
-
     Route::post('/diningroom/delete/{diningroom}',\App\Actions\Diningroom\Admin\DeleteDiningroomAction::class)->name('diningroom-delete');
     Route::post('/diningroom/update/{diningroom}',\App\Actions\Diningroom\Admin\EditDiningroomAction::class)->name('diningroom-update');
     Route::get('/diningroom/edit/view/{diningroom}', \App\Actions\Diningroom\Admin\DiningroomEditView::class)->name('diningroom-edit-view');
@@ -228,7 +227,7 @@ Route::prefix('auth')->group(function () {
     Route::get('/externalsession/index', \App\Actions\Externalsessions\Admin\ExternalsessionsAdminIndex::class)->name('externalsession-index');
     Route::post('/externalsession/create', \App\Actions\Externalsessions\Admin\CreateAction::class)->name('externalsession-create');
     Route::get('/externalsession/create/view', \App\Actions\Externalsessions\Admin\ExternalsessionCreateViewIndex::class)->name('externalsession-create-view');
-    Route::get('/externalsession/edit/view/{warehouse}', \App\Actions\Externalsessions\Admin\ExternalEditView::class)->name('externalsession-edit-view');
+    Route::get('/externalsession/edit/view/{externalsession}', \App\Actions\Externalsessions\Admin\ExternalEditView::class)->name('externalsession-edit-view');
     Route::post('/externalsession/update/{externalsession}', \App\Actions\Externalsessions\Admin\EditExternalsessionAction::class)->name('externalsession-update');
     Route::post('/externalsession/delete/{externalsession}', \App\Actions\Externalsessions\Admin\DeleteExternalsessionAction::class)->name('externalsession-delete');
 
@@ -238,7 +237,7 @@ Route::prefix('auth')->group(function () {
     Route::get('/bedroom/index', \App\Actions\Bedrooms\Admin\BedroomAdminIndex::class)->name('bedroom-index');
     Route::post('/bedroom/create', \App\Actions\Bedrooms\Admin\CreateAction::class)->name('bedroom-create');
     Route::get('/bedroom/create/view', \App\Actions\Bedrooms\Admin\BedroomCreateViewIndex::class)->name('bedroom-create-view');
-    Route::get('/bedroom/edit/view/{warehouse}', \App\Actions\Bedrooms\Admin\BedroomEditView::class)->name('bedroom-edit-view');
+    Route::get('/bedroom/edit/view/{bedroom}', \App\Actions\Bedrooms\Admin\BedroomEditView::class)->name('bedroom-edit-view');
     Route::post('/bedroom/update/{bedroom}', \App\Actions\Bedrooms\Admin\EditBedroomAction::class)->name('bedroom-update');
     Route::post('/bedroom/delete/{bedroom}', \App\Actions\Bedrooms\Admin\DeleteBedroomAction::class)->name('bedroom-delete');
 
@@ -256,9 +255,21 @@ Route::prefix('auth')->group(function () {
     Route::get('/landscape/index', \App\Actions\Landscape\Admin\LandscapeAdminIndex::class)->name('landscape-index');
     Route::post('/landscape/create', \App\Actions\Landscape\Admin\CreateAction::class)->name('landscape-create');
     Route::get('/landscape/create/view', \App\Actions\Landscape\Admin\LandscapeCreateViewIndex::class)->name('landscape-create-view');
-    Route::get('/landscape/edit/view/{warehouse}', \App\Actions\Landscape\Admin\LandscapeEditView::class)->name('landscape-edit-view');
+    Route::get('/landscape/edit/view/{landscape}', \App\Actions\Landscape\Admin\LandscapeEditView::class)->name('landscape-edit-view');
     Route::post('/landscape/update/{landscape}', \App\Actions\Landscape\Admin\EditLandscapeAction::class)->name('landscape-update');
     Route::post('/landscape/delete/{landscape}', \App\Actions\Landscape\Admin\DeleteLandscapeAction::class)->name('landscape-delete');
+
+
+
+    Route::get('/drawer/index', \App\Actions\Drawers\Admin\DrawerAdminIndex::class)->name('drawer-index');
+    Route::post('/drawer/create', \App\Actions\Drawers\Admin\CreateAction::class)->name('drawer-create');
+    Route::get('/drawer/create/view', \App\Actions\Drawers\Admin\DrawerCreateViewIndex::class)->name('drawer-create-view');
+    Route::get('/drawer/edit/view/{drawer}', \App\Actions\Drawers\Admin\DiningroomEditView::class)->name('drawer-edit-view');
+    Route::post('/drawer/update/{drawer}', \App\Actions\Drawers\Admin\EditDrawerAction::class)->name('drawer-update');
+    Route::post('/drawer/delete/{drawer}', \App\Actions\Drawers\Admin\DeleteDrawerAction::class)->name('drawer-delete');
+
+
+
 
 
 
