@@ -12,6 +12,6 @@ class ChamberAdminIndex
     public function handle()
     {
         $chambers = Chambers::query()->get();
-        return view('chambers.admin.index' , compact('chambers'));
+        return view('chamber.admin.index' , compact('chambers'));
     }
 }
