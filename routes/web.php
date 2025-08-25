@@ -70,6 +70,7 @@ Route::get('/channell', \App\Actions\Chanels\ChannelTikIndex::class)->name('chan
 
 Route::get('/coins/{id}/', \App\Actions\Coins\Client\ShowCoinIndex::class)->name('coins.show');
 
+Route::get('/chamber', \App\Actions\Chambers\Client\ChamberClientAction::class)->name('chamber');
 
 Route::get('/pool', \App\Actions\Pools\Client\PoolClientIndex::class)->name('pool');
 
