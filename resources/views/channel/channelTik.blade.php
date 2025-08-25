@@ -22,7 +22,7 @@
             </p>
 
             <!-- زر متابعة تيك توك -->
-            <a href="https://www.tiktok.com/@اسم_قناتك" target="_blank"
+            <a href="https://www.tiktok.com/@riyadhalmokayad?_t=ZS-8yLbZwQ1ELY&_r=1" target="_blank"
                class="inline-block bg-black text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-gray-800 transform hover:scale-110 transition duration-300 shadow-xl hover:shadow-2xl relative overflow-hidden">
 
                 تابع الآن على تيك توك
