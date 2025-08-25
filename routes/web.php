@@ -40,6 +40,8 @@ Route::get('/ClientBlackAndWhite', \App\Actions\ClientBlackAndWhite\BlackAndWhit
 Route::get('/blog', \App\Actions\Blog::class)->name('blog');
 
 Route::get('/drawer', \App\Actions\Drawers\Client\DrawerClientAction::class)->name('drawer');
+Route::get('/gym', \App\Actions\Gym\Client\Client\GymClientAction::class)->name('gym');
+
 
 Route::get('/paintings', \App\Actions\Pintings::class)->name('paintings');
 Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::class)->name('colorphotos');

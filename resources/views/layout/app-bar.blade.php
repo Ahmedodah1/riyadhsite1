@@ -113,7 +113,7 @@
                     <a href="{{route('bedroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف نوم أولاد وبنات</a>
                     <a href="{{route('drawer')}}" class="block px-4 py-2 hover:bg-gray-100 ">تصميم درج</a>
                     <a href="{{route('chamber')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف نوم</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">جيم منزلي</a>
+                    <a href="{{route('gym')}}" class="block px-4 py-2 hover:bg-gray-100 ">جيم منزلي</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">برندة</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">منازل ريفية</a>
                 </div>
