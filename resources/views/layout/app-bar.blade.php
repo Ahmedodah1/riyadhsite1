@@ -111,7 +111,7 @@
                     <a href="{{route('externalsession')}}" class="block px-4 py-2 hover:bg-gray-100 ">جلسات خارجية</a>
                     <a href="{{route('landscape')}}" class="block px-4 py-2 hover:bg-gray-100 ">لاند سكيب</a>
                     <a href="{{route('bedroom')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف نوم أولاد وبنات</a>
-                    <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">تصميم درج</a>
+                    <a href="{{route('drawer')}}" class="block px-4 py-2 hover:bg-gray-100 ">تصميم درج</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">غرف نوم</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">جيم منزلي</a>
                     <a href="{{route('colorphotos')}}" class="block px-4 py-2 hover:bg-gray-100 ">برندة</a>

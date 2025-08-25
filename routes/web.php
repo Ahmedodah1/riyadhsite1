@@ -39,6 +39,7 @@ Route::get('/whous', \App\Actions\WhoUs\WhoUsAction::class,)->name('whous');
 Route::get('/ClientBlackAndWhite', \App\Actions\ClientBlackAndWhite\BlackAndWhite::class)->name('ClientBlackAndWhite');
 Route::get('/blog', \App\Actions\Blog::class)->name('blog');
 
+Route::get('/drawer', \App\Actions\Drawers\Client\DrawerClientAction::class)->name('drawer');
 
 Route::get('/paintings', \App\Actions\Pintings::class)->name('paintings');
 Route::get('/colorphoto', \App\Actions\Colorphoto\Client\ColorphotoClientIndex::class)->name('colorphotos');
