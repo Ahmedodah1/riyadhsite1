@@ -232,6 +232,25 @@ Route::prefix('auth')->group(function () {
 
 
 
+
+    Route::get('/bedroom/index', \App\Actions\Bedrooms\Admin\BedroomAdminIndex::class)->name('bedroom-index');
+    Route::post('/bedroom/create', \App\Actions\Bedrooms\Admin\CreateAction::class)->name('bedroom-create');
+    Route::get('/bedroom/create/view', \App\Actions\Bedrooms\Admin\BedroomCreateViewIndex::class)->name('bedroom-create-view');
+    Route::get('/bedroom/edit/view/{warehouse}', \App\Actions\Bedrooms\Admin\BedroomEditView::class)->name('bedroom-edit-view');
+    Route::post('/bedroom/update/{bedroom}', \App\Actions\Bedrooms\Admin\EditBedroomAction::class)->name('bedroom-update');
+    Route::post('/bedroom/delete/{bedroom}', \App\Actions\Bedrooms\Admin\DeleteBedroomAction::class)->name('bedroom-delete');
+
+
+
+
+
+
+
+
+
+
+
+
     Route::get('/landscape/index', \App\Actions\Landscape\Admin\LandscapeAdminIndex::class)->name('landscape-index');
     Route::post('/landscape/create', \App\Actions\Landscape\Admin\CreateAction::class)->name('landscape-create');
     Route::get('/landscape/create/view', \App\Actions\Landscape\Admin\LandscapeCreateViewIndex::class)->name('landscape-create-view');
