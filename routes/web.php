@@ -285,9 +285,9 @@ Route::prefix('auth')->group(function () {
     Route::get('/gym/index', \App\Actions\Gym\Admin\GymAdminIndex::class)->name('gym-index');
     Route::post('/gym/create', \App\Actions\Gym\Admin\CreateAction::class)->name('gym-create');
     Route::get('/gym/create/view', \App\Actions\Gym\Admin\GymCreateViewIndex::class)->name('gym-create-view');
-    Route::get('/gym/edit/view/{chamber}', \App\Actions\Gym\Admin\GymEditView::class)->name('gym-edit-view');
-    Route::post('/gym/update/{chamber}', \App\Actions\Gym\Admin\EditGymAction::class)->name('gym-update');
-    Route::post('/gym/delete/{chamber}', \App\Actions\Gym\Admin\DeleteGymAction::class)->name('gym-delete');
+    Route::get('/gym/edit/view/{gym}', \App\Actions\Gym\Admin\GymEditView::class)->name('gym-edit-view');
+    Route::post('/gym/update/{gym}', \App\Actions\Gym\Admin\EditGymAction::class)->name('gym-update');
+    Route::post('/gym/delete/{gym}', \App\Actions\Gym\Admin\DeleteGymAction::class)->name('gym-delete');
 
 
 
