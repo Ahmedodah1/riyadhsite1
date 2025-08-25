@@ -18,7 +18,7 @@
             </p>
 
             <!-- زر الاشتراك -->
-            <a href="https://www.youtube.com/@اسم_قناتك" target="_blank"
+            <a href="https://youtube.com/@riyadhstar?feature=shared" target="_blank"
                class="inline-block bg-red-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-red-700 transition shadow-lg">
                 اشترك الآن
             </a>
