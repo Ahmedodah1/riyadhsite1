@@ -4,7 +4,8 @@
         <div class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-10 text-center transform hover:scale-105 transition duration-500">
 
             <!-- شعار القناة -->
-            <img src="resha.png" alt="قناة يوتيوب" class="mx-auto w-32 h-32 rounded-full shadow-lg mb-6">
+            <img src="resha.png" alt="قناة يوتيوب"
+                 class="mx-auto w-20 h-20 md:w-24 md:h-24 rounded-full shadow-lg mb-6">
 
             <!-- عنوان القناة -->
             <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
