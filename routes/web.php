@@ -176,6 +176,11 @@ Route::prefix('auth')->group(function () {
 
 
 
+
+
+
+
+
     Route::get('/pool/index', \App\Actions\Pools\Admin\PoolAdminIndex::class)->name('pool-index');
 
     Route::post('/pool/create', \App\Actions\Pools\Admin\CreateAction::class)->name('pool-create');
@@ -291,6 +296,15 @@ Route::prefix('auth')->group(function () {
     Route::post('/gym/update/{gym}', \App\Actions\Gym\Admin\EditGymAction::class)->name('gym-update');
     Route::post('/gym/delete/{gym}', \App\Actions\Gym\Admin\DeleteGymAction::class)->name('gym-delete');
 
+
+
+
+    Route::get('/terrace/index', \App\Actions\Terrace\Admin\TerraceAdminIndex::class)->name('terrace-index');
+    Route::post('/terrace/create', \App\Actions\Terrace\Admin\CreateAction::class)->name('terrace-create');
+    Route::get('/terrace/create/view', \App\Actions\Terrace\Admin\TerraceCreateViewIndex::class)->name('terrace-create-view');
+    Route::get('/terrace/edit/view/{terrace}', \App\Actions\Terrace\Admin\TerraceEditView::class)->name('terrace-edit-view');
+    Route::post('/terrace/update/{terrace}', \App\Actions\Terrace\Admin\EditTerraceAction::class)->name('terrace-update');
+    Route::post('/terrace/delete/{terrace}', \App\Actions\Terrace\Admin\DeleteTerraceAction::class)->name('terrace-delete');
 
 
 
