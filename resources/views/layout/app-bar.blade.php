@@ -29,7 +29,7 @@
             </style>
 
             <div>
-                <a href="{{route('homepage')}}" class="nav-link flex items-center">الرئذيسية</a>
+                <a href="{{route('homepage')}}" class="nav-link flex items-center">الرئيسية</a>
             </div>
 
             <div class="relative group">
