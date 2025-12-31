@@ -6,13 +6,10 @@
     <div class="rounded-xl overflow-hidden shadow-lg border
                 h-[75vh] sm:h-[80vh] md:h-[800px]">
 
-        <iframe
-            src="{{ route('books.pdf', $book->id) }}"
-            class="w-full h-full border-0"
-            style="display: block; width: 100%; height: 100%;"
-            allow="fullscreen"
-            allowfullscreen>
-        </iframe>
+        <a href="{{ route('books.pdf', $book->id) }}" target="_blank">
+            فتح الملف
+        </a>
+
 
     </div>
 </div>
