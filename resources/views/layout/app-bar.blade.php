@@ -312,7 +312,7 @@
         padding: 1rem;
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         background-color: transparent;
-        color: white; /* اللون الأساسي أبيض */
+        color: black; /* اللون الأساسي أبيض */
     }
 
     /* هذا الكود يوقف تكبير النصوص (hover scale) على الشاشات الصغيرة فقط */
