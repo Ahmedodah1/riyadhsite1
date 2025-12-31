@@ -5,7 +5,7 @@
         {{ $book->title }}
     </h1>
 
-    <!-- كرت أنيق -->
+    <!-- كرت العرض -->
     <div class="rounded-2xl shadow-lg border
                 h-[75vh] sm:h-[80vh] md:h-[800px]
                 flex items-center justify-center
@@ -13,7 +13,7 @@
 
         <div class="text-center space-y-4">
 
-            <!-- أيقونة PDF -->
+            <!-- أيقونة -->
             <div class="flex justify-center">
                 <div class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center">
                     <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 24 24">
@@ -22,25 +22,25 @@
                 </div>
             </div>
 
-            <!-- نص توضيحي -->
+            <!-- نص -->
             <p class="text-gray-700 text-base sm:text-lg">
-                اضغط على الزر أدناه لفتح الكتاب
+                هذا الكتاب متوفر بصيغة PDF
             </p>
 
             <p class="text-sm text-gray-500">
-                سيتم فتح الملف في عارض PDF الخاص بجهازك
+                اضغط على الزر أدناه لفتح الملف
             </p>
 
             <!-- زر فتح الملف -->
             <a href="{{ route('books.pdf', $book->id) }}"
                target="_blank"
-               class="inline-flex items-center gap-3
+               class="inline-flex items-center justify-center gap-3
                       px-8 py-4 rounded-xl
                       bg-yellow-400 text-black
                       font-semibold text-lg
                       shadow-md hover:shadow-xl
                       transition-all duration-300
-                      hover:scale-[1.04]">
+                      hover:scale-[1.05]">
 
                 <!-- أيقونة فتح -->
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
