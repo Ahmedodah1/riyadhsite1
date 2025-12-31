@@ -28,13 +28,30 @@
             <div class="md:hidden mt-12">
                 <a href="{{ route('books.pdf', $book->id) }}"
                    target="_blank"
-                   class="inline-flex items-center justify-center
-                      px-10 py-5 rounded-2xl
-                      bg-yellow-400
-                      text-black text-lg font-semibold
-                      shadow-lg hover:scale-105 transition">
-                    📖 فتح الملف
+                   class="inline-flex items-center justify-center gap-3
+          px-10 py-5 rounded-2xl
+          bg-yellow-400
+          text-black
+          shadow-lg hover:scale-105 transition">
+
+                    <!-- أيقونة -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 6v12m0 0l4-4m-4 4l-4-4" />
+                    </svg>
+
+                    <!-- النص -->
+                    <span class="flex flex-col leading-tight text-right">
+        <span class="text-lg font-bold tracking-wide">
+            فتح الملف
+        </span>
+        <span class="text-xs opacity-70">
+            عرض الكتاب بصيغة PDF
+        </span>
+    </span>
                 </a>
+
             </div>
 
         </div>
