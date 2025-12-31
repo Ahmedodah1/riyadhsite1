@@ -343,8 +343,28 @@
 
     .nav-link {
         @apply transition-all duration-300 ease-in-out font-extrabold;
-        color: black; /* أبيض قبل التمرير */
     }
+    /* الصفحة الرئيسية (الهيرو) */
+    .nav-home .nav-link,
+    .nav-home span,
+    .nav-home button {
+        color: white;
+    }
+
+    /* عند النزول في الصفحة الرئيسية */
+    .nav-home.navbar-scrolled .nav-link,
+    .nav-home.navbar-scrolled span,
+    .nav-home.navbar-scrolled button {
+        color: black;
+    }
+
+    /* الصفحات الداخلية */
+    .nav-inner .nav-link,
+    .nav-inner span,
+    .nav-inner button {
+        color: black;
+    }
+
 
     .nav-link:hover {
         color: #1e3a8a;
