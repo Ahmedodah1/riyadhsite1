@@ -12,7 +12,7 @@
         <!-- زر المنيو للجوال -->
         <div class="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
             <button id="menu-toggle"
-                    class="{{ request()->routeIs('homepage') ? 'text-black' : 'text-black' }} focus:outline-none">
+                    class="{{ request()->routeIs('homepage') ? 'text-white' : 'text-black' }} focus:outline-none">
                 <span class="material-icons">menu</span>
             </button>
 
@@ -20,7 +20,7 @@
 
         <!-- روابط سطح المكتب -->
         <div class="hidden lg:flex flex-col md:flex-row items-center justify-center gap-8 md:static absolute w-full md:w-auto p-4 md:p-0 z-20 top-full left-0 md:top-auto md:left-auto
-    {{ request()->routeIs('homepage') ? 'text-black' : 'text-black' }}">
+    {{ request()->routeIs('homepage') ? 'text-white' : 'text-black' }}">
 
             <style>
                 .nav-link {
@@ -312,7 +312,7 @@
         padding: 1rem;
         transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         background-color: transparent;
-        color: black; /* اللون الأساسي أبيض */
+        color: white; /* اللون الأساسي أبيض */
     }
 
     /* هذا الكود يوقف تكبير النصوص (hover scale) على الشاشات الصغيرة فقط */
@@ -326,13 +326,13 @@
     /* زر المنيو */
     #menu-toggle,
     #menu-toggle .material-icons {
-        color: black !important; /* دايم أبيض */
+        color: white !important; /* دايم أبيض */
         transition: color 0.3s ease;
     }
 
     /* عند النزول */
     nav.navbar-scrolled {
-        background-color: black !important;
+        background-color: white !important;
         color: black !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
