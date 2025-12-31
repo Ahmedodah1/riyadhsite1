@@ -343,7 +343,7 @@
 
     .nav-link {
         @apply transition-all duration-300 ease-in-out font-extrabold;
-        color: white; /* أبيض قبل التمرير */
+        color: black; /* أبيض قبل التمرير */
     }
 
     .nav-link:hover {
