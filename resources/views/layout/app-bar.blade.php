@@ -332,7 +332,7 @@
 
     /* عند النزول */
     nav.navbar-scrolled {
-        background-color: white !important;
+        background-color: black !important;
         color: black !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
