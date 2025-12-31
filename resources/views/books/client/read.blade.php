@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
     <div class="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100
             flex items-center justify-center">
 
@@ -41,4 +39,3 @@
 
         </div>
     </div>
-@endsection
