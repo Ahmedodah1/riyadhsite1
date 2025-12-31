@@ -12,7 +12,7 @@
         <!-- زر المنيو للجوال -->
         <div class="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2">
             <button id="menu-toggle"
-                    class="{{ request()->routeIs('homepage') ? 'text-white' : 'text-black' }} focus:outline-none">
+                    class="{{ request()->routeIs('homepage') ? 'text-black' : 'text-black' }} focus:outline-none">
                 <span class="material-icons">menu</span>
             </button>
 
@@ -20,7 +20,7 @@
 
         <!-- روابط سطح المكتب -->
         <div class="hidden lg:flex flex-col md:flex-row items-center justify-center gap-8 md:static absolute w-full md:w-auto p-4 md:p-0 z-20 top-full left-0 md:top-auto md:left-auto
-    {{ request()->routeIs('homepage') ? 'text-white' : 'text-black' }}">
+    {{ request()->routeIs('homepage') ? 'text-black' : 'text-black' }}">
 
             <style>
                 .nav-link {
