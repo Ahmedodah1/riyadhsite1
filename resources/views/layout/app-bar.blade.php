@@ -326,7 +326,7 @@
     /* زر المنيو */
     #menu-toggle,
     #menu-toggle .material-icons {
-        color: white !important; /* دايم أبيض */
+        color: black !important; /* دايم أبيض */
         transition: color 0.3s ease;
     }
 
