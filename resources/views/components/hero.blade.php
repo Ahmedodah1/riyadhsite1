@@ -123,7 +123,7 @@
 
                 <!-- اسم الشخص -->
                 <p class="text-6xl md:text-4xl font-medium text-center animate-fade-in-up" style="color:#FFC107;">
-              dwsfdw      م. رياض المقيد
+                    م. رياض المقيد
                 </p>
 
 
